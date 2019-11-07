@@ -1,14 +1,11 @@
 <?php
 /**
- * Plugin Name: JetMenu
- * Plugin URI: http://jetmenu.zemez.io/
- * Description: A top-notch mega menu addon for Elementor. Use it to create a fully responsive mega menu with drop-down items, rich in content modules, and change your menu style according to your vision without any coding knowledge!
- * Version:     1.5.14
- * Author:      Zemez
- * Author URI:  https://zemez.io/zemezjet/
- * Text Domain: jet-menu
- * License:     GPL-2.0+
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * Plugin Name: Avator Menu
+ * Description: Elementor Mega Menu add-on plugin
+ * Author: Mr.Lorem
+ * Version: 1.5.14
+ *
+ * Text Domain: ava-menu
  * Domain Path: /languages
  */
 
@@ -17,13 +14,13 @@ if ( ! defined( 'WPINC' ) ) {
 	die();
 }
 
-// If class `Jet_Menu` doesn't exists yet.
-if ( ! class_exists( 'Jet_Menu' ) ) {
+// If class `Ava_Menu` doesn't exists yet.
+if ( ! class_exists( 'Ava_Menu' ) ) {
 
 	/**
 	 * Sets up and initializes the plugin.
 	 */
-	class Jet_Menu {
+	class Ava_Menu {
 
 		/**
 		 * A reference to an instance of this class.
@@ -64,7 +61,7 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 		 *
 		 * @var string
 		 */
-		public $plugin_slug = 'jet-menu';
+		public $plugin_slug = 'ava-menu';
 
 		/**
 		 * Holder for base plugin path
@@ -145,7 +142,7 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'jet-menu/core_before' );
+			do_action( 'ava-menu/core_before' );
 
 			global $chery_core_version;
 
@@ -237,41 +234,41 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 
 			$this->customizer->init_fonts();
 
-			jet_menu_assets()->init();
-			jet_menu_post_type()->init();
-			jet_menu_css_file()->init();
-			jet_menu_public_manager()->init();
-			jet_menu_integration()->init();
+			ava_menu_assets()->init();
+			ava_menu_post_type()->init();
+			ava_menu_css_file()->init();
+			ava_menu_public_manager()->init();
+			ava_menu_integration()->init();
 
-			jet_menu_option_page();
-			jet_menu_options_presets()->init();
+			ava_menu_option_page();
+			ava_menu_options_presets()->init();
 
 			$this->include_integration_theme_file();
 			$this->include_integration_plugin_file();
 
 			if ( is_admin() ) {
 
-				jet_menu_settings_item()->init();
-				jet_menu_settings_nav()->init();
+				ava_menu_settings_item()->init();
+				ava_menu_settings_nav()->init();
 
 				add_action( 'admin_init', array( $this, 'init_ui' ) );
 
-				require $this->plugin_path( 'includes/updater/class-jet-menu-plugin-update.php' );
+				require $this->plugin_path( 'includes/updater/class-ava-menu-plugin-update.php' );
 
-				jet_menu_updater()->init( array(
+				ava_menu_updater()->init( array(
 					'version' => $this->get_version(),
-					'slug'    => 'jet-menu',
+					'slug'    => 'ava-menu',
 				) );
 
 				// Init plugin changelog
-				require $this->plugin_path( 'includes/updater/class-jet-menu-plugin-changelog.php' );
+				require $this->plugin_path( 'includes/updater/class-ava-menu-plugin-changelog.php' );
 
-				jet_menu_plugin_changelog()->init( array(
-					'name'     => 'JetMenu',
-					'slug'     => 'jet-menu',
+				ava_menu_plugin_changelog()->init( array(
+					'name'     => 'AvaMenu',
+					'slug'     => 'ava-menu',
 					'version'  => $this->get_version(),
-					'author'   => '<a href="https://zemez.io/zemezjet/">Zemez</a>',
-					'homepage' => 'http://jetmenu.zemez.io/',
+					'author'   => '<a href="https://zemez.io/zemezava/">Zemez</a>',
+					'homepage' => 'http://avamenu.zemez.io/',
 					'banners'  => array(
 						'high' => $this->plugin_url( 'assets/admin/images/banner.png' ),
 						'low'  => $this->plugin_url( 'assets/admin/images/banner.png' ),
@@ -355,7 +352,7 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 			);
 
 			$config = array(
-				'id'           => 'jet-menu',
+				'id'           => 'ava-menu',
 				'default_path' => '',
 				'menu'         => 'tgmpa-install-plugins',
 				'parent_slug'  => 'plugins.php',
@@ -366,14 +363,14 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 				'is_automatic' => false,
 				'strings'      => array(
 					'notice_can_install_required'     => _n_noop(
-						'JetMenu for Elementor requires the following plugin: %1$s.',
-						'JetMenu for Elementor requires the following plugins: %1$s.',
-						'jet-menu'
+						'AvaMenu for Elementor requires the following plugin: %1$s.',
+						'AvaMenu for Elementor requires the following plugins: %1$s.',
+						'ava-menu'
 					),
 					'notice_can_install_recommended'  => _n_noop(
-						'JetMenu for Elementor recommends the following plugin: %1$s.',
-						'JetMenu for Elementor recommends the following plugins: %1$s.',
-						'jet-menu'
+						'AvaMenu for Elementor recommends the following plugin: %1$s.',
+						'AvaMenu for Elementor recommends the following plugins: %1$s.',
+						'ava-menu'
 					),
 				),
 			);
@@ -408,19 +405,19 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 		 * @return void
 		 */
 		public function load_files() {
-			require $this->plugin_path( 'includes/class-jet-menu-assets.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-dynamic-css.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-settings-item.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-settings-nav.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-post-type.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-tools.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-integration.php' );
-			require $this->plugin_path( 'includes/walkers/class-jet-menu-main-walker.php' );
-			require $this->plugin_path( 'includes/walkers/class-jet-menu-widget-walker.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-public-manager.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-options-page.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-options-presets.php' );
-			require $this->plugin_path( 'includes/class-jet-menu-css-file.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-assets.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-dynamic-css.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-settings-item.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-settings-nav.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-post-type.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-tools.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-integration.php' );
+			require $this->plugin_path( 'includes/walkers/class-ava-menu-main-walker.php' );
+			require $this->plugin_path( 'includes/walkers/class-ava-menu-widget-walker.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-public-manager.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-options-page.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-options-presets.php' );
+			require $this->plugin_path( 'includes/class-ava-menu-css-file.php' );
 		}
 
 		/**
@@ -431,7 +428,7 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 		public function include_integration_theme_file() {
 
 			$template = get_template();
-			$disabled = jet_menu_option_page()->get_option( 'jet-menu-disable-integration-' . $template, 'false' );
+			$disabled = ava_menu_option_page()->get_option( 'ava-menu-disable-integration-' . $template, 'false' );
 			$disabled = filter_var( $disabled, FILTER_VALIDATE_BOOLEAN );
 
 			if ( is_readable( $this->plugin_path( "integration/themes/{$template}/functions.php" ) ) && ! $disabled ) {
@@ -526,7 +523,7 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 		 * @return void
 		 */
 		public function lang() {
-			load_plugin_textdomain( 'jet-menu', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+			load_plugin_textdomain( 'ava-menu', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 		}
 
 		/**
@@ -535,7 +532,7 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 		 * @return string
 		 */
 		public function template_path() {
-			return apply_filters( 'jet-menu/template-path', 'jet-menu/' );
+			return apply_filters( 'ava-menu/template-path', 'ava-menu/' );
 		}
 
 		/**
@@ -551,7 +548,7 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 				$template = $this->plugin_path( 'templates/' . $name );
 			}
 
-			$template = apply_filters( 'jet-menu/get-template/found', $template, $name );
+			$template = apply_filters( 'ava-menu/get-template/found', $template, $name );
 
 			if ( file_exists( $template ) ) {
 				return $template;
@@ -567,8 +564,8 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 		 * @return void
 		 */
 		public function activation() {
-			require $this->plugin_path( 'includes/class-jet-menu-post-type.php' );
-			jet_menu_post_type()->init();
+			require $this->plugin_path( 'includes/class-ava-menu-post-type.php' );
+			ava_menu_post_type()->init();
 			flush_rewrite_rules();
 		}
 
@@ -599,7 +596,7 @@ if ( ! class_exists( 'Jet_Menu' ) ) {
 	}
 }
 
-if ( ! function_exists( 'jet_menu' ) ) {
+if ( ! function_exists( 'ava_menu' ) ) {
 
 	/**
 	 * Returns instanse of the plugin class.
@@ -607,9 +604,9 @@ if ( ! function_exists( 'jet_menu' ) ) {
 	 * @since  1.0.0
 	 * @return object
 	 */
-	function jet_menu() {
-		return Jet_Menu::get_instance();
+	function ava_menu() {
+		return Ava_Menu::get_instance();
 	}
 }
 
-jet_menu();
+ava_menu();

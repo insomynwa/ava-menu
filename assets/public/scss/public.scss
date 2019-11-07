@@ -1,4 +1,4 @@
-@import "widgets/jet-custom-menu";
+@import "widgets/ava-custom-menu";
 
 @mixin font-awesome-icon {
 	display: inline-block;
@@ -8,12 +8,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.jet-menu-container {
+.ava-menu-container {
 	position: relative;
 	width: 100%;
 }
 
-.jet-menu {
+.ava-menu {
 	width: 100%;
 	position: relative;
 	margin: 0;
@@ -28,15 +28,15 @@
 		flex-flow: row wrap;
 	}
 
-	.jet-mobile-menu-active & {
+	.ava-mobile-menu-active & {
 		flex-flow: column wrap;
 	}
 
-	.jet-desktop-menu-active & {
+	.ava-desktop-menu-active & {
 		flex-flow: row wrap;
 	}
 
-	> .jet-menu-item {
+	> .ava-menu-item {
 		display: flex;
 
 		> a {
@@ -53,7 +53,7 @@
 
 }
 
-.jet-menu-item {
+.ava-menu-item {
 	position: relative;
 
 	> a {
@@ -62,10 +62,10 @@
 		width: auto;
 	}
 
-	&.jet-mega-menu-item {
+	&.ava-mega-menu-item {
 		position: static;
 
-		&.jet-mega-menu-position-relative-item {
+		&.ava-mega-menu-position-relative-item {
 			position: relative;
 		}
 	}
@@ -78,7 +78,7 @@
 		white-space: normal;
 	}
 
-	.jet-sub-menu {
+	.ava-sub-menu {
 		display: block;
 		min-width: 200px;
 		margin: 0;
@@ -99,11 +99,11 @@
 			position: absolute;
 		}
 
-		.jet-mobile-menu-active & {
+		.ava-mobile-menu-active & {
 			position: relative;
 		}
 
-		.jet-desktop-menu-active & {
+		.ava-desktop-menu-active & {
 			position: absolute;
 			top: 100%;
 			left: 0;
@@ -117,7 +117,7 @@
 				left: auto;
 			}
 
-			.jet-sub-menu {
+			.ava-sub-menu {
 				top: 0;
 				left: 100%;
 				right: auto;
@@ -129,7 +129,7 @@
 			}
 		}
 
-		.jet-desktop-menu-active.rtl & {
+		.ava-desktop-menu-active.rtl & {
 			left: auto;
 			right: 0;
 
@@ -138,7 +138,7 @@
 				left: 0;
 			}
 
-			.jet-sub-menu {
+			.ava-sub-menu {
 				left: auto;
 				right: 100%;
 
@@ -159,12 +159,12 @@
 	}
 }
 
-.jet-menu-item-wrapper {
+.ava-menu-item-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 
-	.jet-menu-icon {
+	.ava-menu-icon {
 		align-self: center;
 		margin-right: 10px;
 
@@ -174,20 +174,20 @@
 		}
 	}
 
-	.jet-dropdown-arrow {
+	.ava-dropdown-arrow {
 		align-self: center;
 		margin-left: 10px;
 	}
 
-	.jet-menu-badge {
+	.ava-menu-badge {
 		display: none;
 		align-self: flex-start;
 		text-align: center;
 		width: 0;
 
-		&.jet-hide-mobile {
-			.jet-mobile-menu-active & {
-				.jet-menu-badge__inner {
+		&.ava-hide-mobile {
+			.ava-mobile-menu-active & {
+				.ava-menu-badge__inner {
 					display: none;
 				}
 			}
@@ -200,27 +200,27 @@
 }
 
 
-.jet-menu-inner {
+.ava-menu-inner {
 	@media ( max-width: 767px ) {
 		display: none;
 	}
 
-	.jet-desktop-menu-active & {
+	.ava-desktop-menu-active & {
 		display: block;
 	}
 }
 
-.jet-mobile-menu-active {
+.ava-mobile-menu-active {
 
-	.jet-mobile-menu-toggle-button {
+	.ava-mobile-menu-toggle-button {
 		display: block;
 	}
 
-	.jet-menu {
+	.ava-menu {
 		background-image: none;
 	}
 
-	.jet-menu-container.jet-mobile-menu {
+	.ava-menu-container.ava-mobile-menu {
 		position: fixed;
 		top: 0;
 		right: -80%;
@@ -231,14 +231,14 @@
 		transition: right .3s cubic-bezier(.35,.19,.45,.91);
 	}
 
-	.jet-menu-inner {
+	.ava-menu-inner {
 		overflow-y: scroll;
 		display: block;
 		height: 100vh;
 	}
 
-	.jet-menu {
-		.jet-menu-item {
+	.ava-menu {
+		.ava-menu-item {
 			flex-flow: column nowrap;
 			max-width: 100%;
 
@@ -249,9 +249,9 @@
 				border-right: none;
 				border-bottom-width: 1px;
 
-				.jet-menu-item-wrapper {}
+				.ava-menu-item-wrapper {}
 
-				.jet-dropdown-arrow {
+				.ava-dropdown-arrow {
 					width: 25px;
 					height: 25px;
 					display: flex;
@@ -260,36 +260,36 @@
 				}
 			}
 
-			& > .jet-sub-menu {
+			& > .ava-sub-menu {
 				border-radius: 0;
 				box-shadow: none;
 			}
 
-			& > .jet-sub-mega-menu {
+			& > .ava-sub-mega-menu {
 				border-radius: 0;
 				box-shadow: none;
 			}
 
-			&.jet-menu-hover {
-				& > .jet-sub-menu {
+			&.ava-menu-hover {
+				& > .ava-sub-menu {
 					height: auto;
 					pointer-events: auto;
 				}
 
-				& > .jet-sub-mega-menu {
+				& > .ava-sub-mega-menu {
 					height: auto;
 					pointer-events: auto;
 				}
 			}
 
-			&:not(.jet-menu-hover) {
-				& > .jet-sub-menu {
+			&:not(.ava-menu-hover) {
+				& > .ava-sub-menu {
 					padding: 0 !important;
 					border: none !important;
 					margin: 0  !important;
 				}
 
-				& > .jet-sub-mega-menu {
+				& > .ava-sub-mega-menu {
 					padding: 0 !important;
 					border: none !important;
 					margin: 0  !important;
@@ -298,14 +298,14 @@
 		}
 	}
 
-	.jet-sub-menu {
+	.ava-sub-menu {
 		height: 0;
 		opacity: 1;
 		overflow: hidden;
 		visibility: visible;
 	}
 
-	.jet-mega-menu-item .jet-sub-mega-menu {
+	.ava-mega-menu-item .ava-sub-mega-menu {
 		height: 0;
 		opacity: 1;
 		overflow: hidden;
@@ -315,14 +315,14 @@
 		width: 100% !important;
 	}
 
-	.jet-menu-item-has-children {
-		& > .jet-sub-menu {
+	.ava-menu-item-has-children {
+		& > .ava-sub-menu {
 			padding-left: 20px;
 		}
 	}
 }
 
-.jet-mobile-menu-toggle-button {
+.ava-mobile-menu-toggle-button {
 	width: 35px;
 	height: 35px;
 	display: none;
@@ -332,7 +332,7 @@
 	left: -45px;
 	top: 10px;
 
-	.jet-menu-toggle__icon {
+	.ava-menu-toggle__icon {
 		@include font-awesome-icon;
 		display: flex;
 		width: 100%;
@@ -346,8 +346,8 @@
 		}
 	}
 
-	.jet-mobile-menu-visible & {
-		.jet-menu-toggle__icon {
+	.ava-mobile-menu-visible & {
+		.ava-menu-toggle__icon {
 			&::after {
 				content: '\f00d';
 			}
@@ -355,7 +355,7 @@
 	}
 }
 
-.jet-mobile-menu-cover {
+.ava-mobile-menu-cover {
 	position: fixed;
 	display: block;
 	width: 100%;
@@ -370,7 +370,7 @@
 				visibility .1s linear;
 }
 
-.jet-sub-mega-menu {
+.ava-sub-mega-menu {
 	width: 100%;
 	display: block;
 	position: relative;
@@ -381,11 +381,11 @@
 		position: absolute;
 	}
 
-	.jet-mobile-menu-active & {
+	.ava-mobile-menu-active & {
 		position: relative;
 	}
 
-	.jet-desktop-menu-active & {
+	.ava-desktop-menu-active & {
 		width: 100%;
 		display: block;
 		position: absolute;
@@ -395,12 +395,12 @@
 		z-index: 999;
 	}
 
-	.jet-mega-menu-position-relative-item & {
+	.ava-mega-menu-position-relative-item & {
 		left: 0 !important;
 	}
 }
 
-.jet-responsive-menu {
+.ava-responsive-menu {
 	> li {
 		&[hidden] {
 			display: none;
@@ -414,12 +414,12 @@
 	}
 }
 
-body.jet-mobile-menu-visible {
+body.ava-mobile-menu-visible {
 	overflow: hidden;
 	width: 100%;
 	height: auto;
 
-	.jet-mobile-menu-cover {
+	.ava-mobile-menu-cover {
 		opacity: 1;
 		visibility: visible;
 		pointer-events: auto;
@@ -427,46 +427,46 @@ body.jet-mobile-menu-visible {
 					visibility .1s linear;
 	}
 
-	.jet-menu-container.jet-mobile-menu {
+	.ava-menu-container.ava-mobile-menu {
 		right: 0;
 		transition: all .5s cubic-bezier(.35,.19,.45,.91);
 		box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 	}
 }
 
-.admin-bar.jet-mobile-menu-active {
-	.jet-mobile-menu-toggle-button {
+.admin-bar.ava-mobile-menu-active {
+	.ava-mobile-menu-toggle-button {
 		top: 56px;
 	}
-	.jet-menu {
+	.ava-menu {
 		margin-top: 46px;
 	}
 }
 
 // FIX showing sub-menu and sub-mega-menu when loading a page.
-.jet-sub-menu,
-.jet-sub-mega-menu {
+.ava-sub-menu,
+.ava-sub-mega-menu {
 	opacity: 0;
 	visibility: hidden;
 }
 
-.jet-desktop-menu-active {
-	.jet-menu--animation-type-none {
+.ava-desktop-menu-active {
+	.ava-menu--animation-type-none {
 
-		.jet-sub-menu {
+		.ava-sub-menu {
 			opacity: 0;
 			visibility: hidden;
 		}
 
-		.jet-sub-mega-menu {
+		.ava-sub-mega-menu {
 			opacity: 0;
 			visibility: hidden;
 		}
 
-		.jet-simple-menu-item {
+		.ava-simple-menu-item {
 
-			&.jet-menu-hover {
-				& > .jet-sub-menu {
+			&.ava-menu-hover {
+				& > .ava-sub-menu {
 					top: 100%;
 					opacity: 1;
 					visibility: visible;
@@ -475,8 +475,8 @@ body.jet-mobile-menu-visible {
 			}
 
 			li {
-				&.jet-menu-hover {
-					& > .jet-sub-menu {
+				&.ava-menu-hover {
+					& > .ava-sub-menu {
 						top: 0;
 						opacity: 1;
 						visibility: visible;
@@ -486,9 +486,9 @@ body.jet-mobile-menu-visible {
 			}
 		}
 
-		.jet-mega-menu-item {
-			&.jet-menu-hover {
-				.jet-sub-mega-menu {
+		.ava-mega-menu-item {
+			&.ava-menu-hover {
+				.ava-sub-mega-menu {
 					top: 100%;
 					opacity: 1;
 					visibility: visible;
@@ -499,26 +499,26 @@ body.jet-mobile-menu-visible {
 
 	}
 
-	.jet-menu--animation-type-fade {
+	.ava-menu--animation-type-fade {
 
-		.jet-sub-menu {
+		.ava-sub-menu {
 			opacity: 0;
 			visibility: hidden;
 			transition: opacity .3s cubic-bezier(.48,.01,.5,.99),
 						visibility .1s linear;
 		}
 
-		.jet-sub-mega-menu {
+		.ava-sub-mega-menu {
 			opacity: 0;
 			visibility: hidden;
 			transition: opacity .3s cubic-bezier(.48,.01,.5,.99),
 						visibility .1s linear;
 		}
 
-		.jet-simple-menu-item {
+		.ava-simple-menu-item {
 
-			&.jet-menu-hover {
-				& > .jet-sub-menu {
+			&.ava-menu-hover {
+				& > .ava-sub-menu {
 					top: 100%;
 					opacity: 1;
 					visibility: visible;
@@ -527,8 +527,8 @@ body.jet-mobile-menu-visible {
 			}
 
 			li {
-				&.jet-menu-hover {
-					& > .jet-sub-menu {
+				&.ava-menu-hover {
+					& > .ava-sub-menu {
 						top: 0;
 						opacity: 1;
 						visibility: visible;
@@ -538,9 +538,9 @@ body.jet-mobile-menu-visible {
 			}
 		}
 
-		.jet-mega-menu-item {
-			&.jet-menu-hover {
-				.jet-sub-mega-menu {
+		.ava-mega-menu-item {
+			&.ava-menu-hover {
+				.ava-sub-mega-menu {
 					top: 100%;
 					opacity: 1;
 					visibility: visible;
@@ -551,9 +551,9 @@ body.jet-mobile-menu-visible {
 
 	}
 
-	.jet-menu--animation-type-move-up {
+	.ava-menu--animation-type-move-up {
 
-		.jet-sub-menu {
+		.ava-sub-menu {
 			opacity: 0;
 			top: 130%;
 			visibility: hidden;
@@ -562,7 +562,7 @@ body.jet-mobile-menu-visible {
 						visibility 1s linear;
 		}
 
-		.jet-sub-mega-menu {
+		.ava-sub-mega-menu {
 			opacity: 0;
 			top: 130%;
 			visibility: hidden;
@@ -571,10 +571,10 @@ body.jet-mobile-menu-visible {
 						visibility 1s linear;
 		}
 
-		.jet-simple-menu-item {
+		.ava-simple-menu-item {
 
-			&.jet-menu-hover {
-				& > .jet-sub-menu {
+			&.ava-menu-hover {
+				& > .ava-sub-menu {
 					top: 100%;
 					opacity: 1;
 					visibility: visible;
@@ -586,8 +586,8 @@ body.jet-mobile-menu-visible {
 			}
 
 			li {
-				&.jet-menu-hover {
-					& > .jet-sub-menu {
+				&.ava-menu-hover {
+					& > .ava-sub-menu {
 						top: 0;
 						opacity: 1;
 						visibility: visible;
@@ -600,9 +600,9 @@ body.jet-mobile-menu-visible {
 			}
 		}
 
-		.jet-mega-menu-item {
-			&.jet-menu-hover {
-				.jet-sub-mega-menu {
+		.ava-mega-menu-item {
+			&.ava-menu-hover {
+				.ava-sub-mega-menu {
 					top: 100%;
 					opacity: 1;
 					visibility: visible;
@@ -613,8 +613,8 @@ body.jet-mobile-menu-visible {
 
 	}
 
-	.jet-menu--animation-type-move-down {
-		.jet-sub-menu {
+	.ava-menu--animation-type-move-down {
+		.ava-sub-menu {
 			opacity: 0;
 			top: 80%;
 			visibility: visible;
@@ -623,7 +623,7 @@ body.jet-mobile-menu-visible {
 						visibility 1s linear;
 		}
 
-		.jet-sub-mega-menu {
+		.ava-sub-mega-menu {
 			opacity: 0;
 			top: 80%;
 			visibility: hidden;
@@ -632,10 +632,10 @@ body.jet-mobile-menu-visible {
 						visibility 1s linear;
 		}
 
-		.jet-simple-menu-item {
+		.ava-simple-menu-item {
 
-			&.jet-menu-hover {
-				& > .jet-sub-menu {
+			&.ava-menu-hover {
+				& > .ava-sub-menu {
 					top: 100%;
 					opacity: 1;
 					visibility: visible;
@@ -644,8 +644,8 @@ body.jet-mobile-menu-visible {
 			}
 
 			li {
-				&.jet-menu-hover {
-					& > .jet-sub-menu {
+				&.ava-menu-hover {
+					& > .ava-sub-menu {
 						top: 0;
 						opacity: 1;
 						visibility: visible;
@@ -655,9 +655,9 @@ body.jet-mobile-menu-visible {
 			}
 		}
 
-		.jet-mega-menu-item {
-			&.jet-menu-hover {
-				.jet-sub-mega-menu {
+		.ava-mega-menu-item {
+			&.ava-menu-hover {
+				.ava-sub-mega-menu {
 					top: 100%;
 					opacity: 1;
 					visibility: visible;
@@ -669,16 +669,16 @@ body.jet-mobile-menu-visible {
 }
 
 // Prevent duplicate sub-menu and mega-menu when the section is sticky
-.jet-desktop-menu-active {
+.ava-desktop-menu-active {
 	.elementor-sticky--active + .elementor-sticky {
-		.jet-sub-menu,
-		.jet-sub-mega-menu {
+		.ava-sub-menu,
+		.ava-sub-mega-menu {
 			display: none;
 		}
 	}
 }
 
 // if iphone and safari
-.jet-mobile-menu .jet-menu.jet-menu--iphone-mode {
+.ava-mobile-menu .ava-menu.ava-menu--iphone-mode {
 	margin-bottom: 75px;
 }

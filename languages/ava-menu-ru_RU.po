@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: JetMenu\n"
+"Project-Id-Version: AvaMenu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-08 15:40+0300\n"
 "PO-Revision-Date: 2019-07-08 15:40+0300\n"
 "Last-Translator: \n"
-"Language-Team: JetImpex\n"
+"Language-Team: AvaImpex\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,42 +22,42 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: cherry-framework\n"
 "X-Poedit-SearchPathExcluded-1: node_modules\n"
 
-#: includes/class-jet-menu-assets.php:77
+#: includes/class-ava-menu-assets.php:77
 msgid "Do you want to leave the editor? Changes you made may not be saved."
 msgstr ""
 "Вы уверены, что хотите покинуть редактор? Внесённые изменения могут быть не "
 "сохранены."
 
-#: includes/class-jet-menu-assets.php:78
-#: includes/class-jet-menu-options-page.php:383
+#: includes/class-ava-menu-assets.php:78
+#: includes/class-ava-menu-options-page.php:383
 #: templates/admin/presets-controls.php:19 templates/admin/settings-nav.php:36
 msgid "Save"
 msgstr "Сохранить"
 
-#: includes/class-jet-menu-assets.php:79
-#: includes/class-jet-menu-options-page.php:227
-#: includes/class-jet-menu-options-page.php:228
-#: includes/class-jet-menu-options-page.php:281
-msgid "JetMenu"
-msgstr "JetMenu"
+#: includes/class-ava-menu-assets.php:79
+#: includes/class-ava-menu-options-page.php:227
+#: includes/class-ava-menu-options-page.php:228
+#: includes/class-ava-menu-options-page.php:281
+msgid "AvaMenu"
+msgstr "AvaMenu"
 
-#: includes/class-jet-menu-assets.php:82
+#: includes/class-ava-menu-assets.php:82
 msgid "Options have been saved"
 msgstr "Параметры сохранены"
 
-#: includes/class-jet-menu-assets.php:83
+#: includes/class-ava-menu-assets.php:83
 msgid "Settings have been restored, page will be reloaded"
 msgstr "Настройки были восстановлены, страница будет перезагружена"
 
-#: includes/class-jet-menu-assets.php:84
+#: includes/class-ava-menu-assets.php:84
 msgid "Please select options file to import."
 msgstr "Пожалуйста, выберите файл параметров для импорта."
 
-#: includes/class-jet-menu-assets.php:85
+#: includes/class-ava-menu-assets.php:85
 msgid "Options file must be only in .json format."
 msgstr "Файл параметров должен быть только в формате .json."
 
-#: includes/class-jet-menu-assets.php:87
+#: includes/class-ava-menu-assets.php:87
 msgid ""
 "All menu options will be reseted to defaults. Please export current options "
 "to prevent data lost. Are you sure you want to continue?"
@@ -66,406 +66,406 @@ msgstr ""
 "экспортируйте текущие параметры, чтобы предотвратить потерю данных. Вы "
 "уверены, что хотите продолжить?"
 
-#: includes/class-jet-menu-dynamic-css.php:72
+#: includes/class-ava-menu-dynamic-css.php:72
 #, php-format
 msgid "%s typography"
 msgstr "%s - типографика"
 
-#: includes/class-jet-menu-dynamic-css.php:90
+#: includes/class-ava-menu-dynamic-css.php:90
 #, php-format
 msgid "%s font size"
 msgstr "%s - размер шрифта"
 
-#: includes/class-jet-menu-dynamic-css.php:97
+#: includes/class-ava-menu-dynamic-css.php:97
 #, php-format
 msgid "%s font family"
 msgstr "%s - семейство шрифтов"
 
-#: includes/class-jet-menu-dynamic-css.php:109
+#: includes/class-ava-menu-dynamic-css.php:109
 #, php-format
 msgid "%s font weight"
 msgstr "%s - плотность шрифта"
 
-#: includes/class-jet-menu-dynamic-css.php:115
-#: includes/class-jet-menu-dynamic-css.php:137
-#: includes/class-jet-menu-dynamic-css.php:154
-#: includes/class-jet-menu-dynamic-css.php:307
-#: includes/class-jet-menu-dynamic-css.php:329
-#: includes/class-jet-menu-dynamic-css.php:344
-#: includes/class-jet-menu-dynamic-css.php:361
-#: includes/class-jet-menu-options-page.php:708
-#: includes/class-jet-menu-options-page.php:1052
-#: includes/class-jet-menu-settings-item.php:402
+#: includes/class-ava-menu-dynamic-css.php:115
+#: includes/class-ava-menu-dynamic-css.php:137
+#: includes/class-ava-menu-dynamic-css.php:154
+#: includes/class-ava-menu-dynamic-css.php:307
+#: includes/class-ava-menu-dynamic-css.php:329
+#: includes/class-ava-menu-dynamic-css.php:344
+#: includes/class-ava-menu-dynamic-css.php:361
+#: includes/class-ava-menu-options-page.php:708
+#: includes/class-ava-menu-options-page.php:1052
+#: includes/class-ava-menu-settings-item.php:402
 msgid "Default"
 msgstr "По умолчанию"
 
-#: includes/class-jet-menu-dynamic-css.php:131
+#: includes/class-ava-menu-dynamic-css.php:131
 #, php-format
 msgid "%s text transform"
 msgstr "%s преобразование текста"
 
-#: includes/class-jet-menu-dynamic-css.php:138
+#: includes/class-ava-menu-dynamic-css.php:138
 msgid "Uppercase"
 msgstr "Заглавные буквы"
 
-#: includes/class-jet-menu-dynamic-css.php:139
+#: includes/class-ava-menu-dynamic-css.php:139
 msgid "Lowercase"
 msgstr "Строчные буквы"
 
-#: includes/class-jet-menu-dynamic-css.php:140
+#: includes/class-ava-menu-dynamic-css.php:140
 msgid "Capitalize"
 msgstr "Прописные буквы"
 
-#: includes/class-jet-menu-dynamic-css.php:141
-#: includes/class-jet-menu-dynamic-css.php:155
-#: includes/widgets/jet-widget-custom-menu.php:546
-#: includes/widgets/jet-widget-custom-menu.php:1040
-#: includes/widgets/jet-widget-custom-menu.php:1534
-#: includes/widgets/jet-widget-custom-menu.php:1949
-#: includes/widgets/jet-widget-mega-menu.php:396
+#: includes/class-ava-menu-dynamic-css.php:141
+#: includes/class-ava-menu-dynamic-css.php:155
+#: includes/widgets/ava-widget-custom-menu.php:546
+#: includes/widgets/ava-widget-custom-menu.php:1040
+#: includes/widgets/ava-widget-custom-menu.php:1534
+#: includes/widgets/ava-widget-custom-menu.php:1949
+#: includes/widgets/ava-widget-mega-menu.php:396
 msgid "Normal"
 msgstr "Стандарные"
 
-#: includes/class-jet-menu-dynamic-css.php:148
+#: includes/class-ava-menu-dynamic-css.php:148
 #, php-format
 msgid "%s font style"
 msgstr "%s стиль шрифта"
 
-#: includes/class-jet-menu-dynamic-css.php:156
+#: includes/class-ava-menu-dynamic-css.php:156
 msgid "Italic"
 msgstr "Курсив"
 
-#: includes/class-jet-menu-dynamic-css.php:157
+#: includes/class-ava-menu-dynamic-css.php:157
 msgid "Oblique"
 msgstr "Наклонный"
 
-#: includes/class-jet-menu-dynamic-css.php:170
+#: includes/class-ava-menu-dynamic-css.php:170
 #, php-format
 msgid "%s line height"
 msgstr "%s высота строки"
 
-#: includes/class-jet-menu-dynamic-css.php:183
+#: includes/class-ava-menu-dynamic-css.php:183
 #, php-format
 msgid "%s letter spacing"
 msgstr "%s интервал между символами"
 
-#: includes/class-jet-menu-dynamic-css.php:190
+#: includes/class-ava-menu-dynamic-css.php:190
 #, php-format
 msgid "%s subset"
 msgstr "%s подмножество"
 
-#: includes/class-jet-menu-dynamic-css.php:196
+#: includes/class-ava-menu-dynamic-css.php:196
 msgid "Latin"
 msgstr "Латинский шрифт"
 
-#: includes/class-jet-menu-dynamic-css.php:197
+#: includes/class-ava-menu-dynamic-css.php:197
 msgid "Greek"
 msgstr "Греческий шрифт"
 
-#: includes/class-jet-menu-dynamic-css.php:198
+#: includes/class-ava-menu-dynamic-css.php:198
 msgid "Cyrillic"
 msgstr "Кириллица"
 
-#: includes/class-jet-menu-dynamic-css.php:225
+#: includes/class-ava-menu-dynamic-css.php:225
 #, php-format
 msgid "%s background"
 msgstr "%s - фон"
 
-#: includes/class-jet-menu-dynamic-css.php:237
+#: includes/class-ava-menu-dynamic-css.php:237
 #, php-format
 msgid "%s background color"
 msgstr "%s цвет фона"
 
-#: includes/class-jet-menu-dynamic-css.php:247
+#: includes/class-ava-menu-dynamic-css.php:247
 msgid "Gradient background"
 msgstr "Градиентный фон"
 
-#: includes/class-jet-menu-dynamic-css.php:259
+#: includes/class-ava-menu-dynamic-css.php:259
 #, php-format
 msgid "%s background second color"
 msgstr "%s второй цвет фона"
 
-#: includes/class-jet-menu-dynamic-css.php:270
+#: includes/class-ava-menu-dynamic-css.php:270
 #, php-format
 msgid "%s background gradient direction"
 msgstr "%s направление градиента фона"
 
-#: includes/class-jet-menu-dynamic-css.php:276
+#: includes/class-ava-menu-dynamic-css.php:276
 msgid "From Left to Right"
 msgstr "Слева направо"
 
-#: includes/class-jet-menu-dynamic-css.php:277
+#: includes/class-ava-menu-dynamic-css.php:277
 msgid "From Right to Left"
 msgstr "Справа налево"
 
-#: includes/class-jet-menu-dynamic-css.php:278
+#: includes/class-ava-menu-dynamic-css.php:278
 msgid "From Top to Bottom"
 msgstr "Сверху вниз"
 
-#: includes/class-jet-menu-dynamic-css.php:279
+#: includes/class-ava-menu-dynamic-css.php:279
 msgid "From Bottom to Top"
 msgstr "Снизу вверх"
 
-#: includes/class-jet-menu-dynamic-css.php:286
+#: includes/class-ava-menu-dynamic-css.php:286
 #, php-format
 msgid "%s background image"
 msgstr "%s изображение фона"
 
-#: includes/class-jet-menu-dynamic-css.php:293
+#: includes/class-ava-menu-dynamic-css.php:293
 msgid "Choose Image"
 msgstr "Выбрать изображение"
 
-#: includes/class-jet-menu-dynamic-css.php:301
+#: includes/class-ava-menu-dynamic-css.php:301
 #, php-format
 msgid "%s background position"
 msgstr "%s положение фона"
 
-#: includes/class-jet-menu-dynamic-css.php:308
+#: includes/class-ava-menu-dynamic-css.php:308
 msgid "Top Left"
 msgstr "Верх лево"
 
-#: includes/class-jet-menu-dynamic-css.php:309
+#: includes/class-ava-menu-dynamic-css.php:309
 msgid "Top Center"
 msgstr "Верх центр"
 
-#: includes/class-jet-menu-dynamic-css.php:310
+#: includes/class-ava-menu-dynamic-css.php:310
 msgid "Top Right"
 msgstr "Верх право"
 
-#: includes/class-jet-menu-dynamic-css.php:311
+#: includes/class-ava-menu-dynamic-css.php:311
 msgid "Center Left"
 msgstr "Центр лево"
 
-#: includes/class-jet-menu-dynamic-css.php:312
+#: includes/class-ava-menu-dynamic-css.php:312
 msgid "Center Center"
 msgstr "Центр центр"
 
-#: includes/class-jet-menu-dynamic-css.php:313
+#: includes/class-ava-menu-dynamic-css.php:313
 msgid "Center Right"
 msgstr "Центр право"
 
-#: includes/class-jet-menu-dynamic-css.php:314
+#: includes/class-ava-menu-dynamic-css.php:314
 msgid "Bottom Left"
 msgstr "Низ лево"
 
-#: includes/class-jet-menu-dynamic-css.php:315
+#: includes/class-ava-menu-dynamic-css.php:315
 msgid "Bottom Center"
 msgstr "Низ центр"
 
-#: includes/class-jet-menu-dynamic-css.php:316
+#: includes/class-ava-menu-dynamic-css.php:316
 msgid "Bottom Right"
 msgstr "Низ право"
 
-#: includes/class-jet-menu-dynamic-css.php:323
+#: includes/class-ava-menu-dynamic-css.php:323
 #, php-format
 msgid "%s background attachment"
 msgstr "%s привязка фона"
 
-#: includes/class-jet-menu-dynamic-css.php:330
+#: includes/class-ava-menu-dynamic-css.php:330
 msgid "Scroll"
 msgstr "Прокрутка"
 
-#: includes/class-jet-menu-dynamic-css.php:331
+#: includes/class-ava-menu-dynamic-css.php:331
 msgid "Fixed"
 msgstr "Фиксированный"
 
-#: includes/class-jet-menu-dynamic-css.php:338
+#: includes/class-ava-menu-dynamic-css.php:338
 #, php-format
 msgid "%s background repeat"
 msgstr "%s повторение фона"
 
-#: includes/class-jet-menu-dynamic-css.php:345
+#: includes/class-ava-menu-dynamic-css.php:345
 msgid "No Repeat"
 msgstr "Без повторения"
 
-#: includes/class-jet-menu-dynamic-css.php:346
+#: includes/class-ava-menu-dynamic-css.php:346
 msgid "Repeat"
 msgstr "Повторение"
 
-#: includes/class-jet-menu-dynamic-css.php:347
+#: includes/class-ava-menu-dynamic-css.php:347
 msgid "Repeat X"
 msgstr "Повторение по оси Х"
 
-#: includes/class-jet-menu-dynamic-css.php:348
+#: includes/class-ava-menu-dynamic-css.php:348
 msgid "Repeat Y"
 msgstr "Повторение по оси Y"
 
-#: includes/class-jet-menu-dynamic-css.php:355
+#: includes/class-ava-menu-dynamic-css.php:355
 #, php-format
 msgid "%s background size"
 msgstr "%s размер фона"
 
-#: includes/class-jet-menu-dynamic-css.php:362
+#: includes/class-ava-menu-dynamic-css.php:362
 msgid "Auto"
 msgstr "Авто"
 
-#: includes/class-jet-menu-dynamic-css.php:363
+#: includes/class-ava-menu-dynamic-css.php:363
 msgid "Cover"
 msgstr "Обложка"
 
-#: includes/class-jet-menu-dynamic-css.php:364
+#: includes/class-ava-menu-dynamic-css.php:364
 msgid "Contain"
 msgstr "Содержание"
 
-#: includes/class-jet-menu-dynamic-css.php:391
+#: includes/class-ava-menu-dynamic-css.php:391
 #, php-format
 msgid "%s border"
 msgstr "%s граница"
 
-#: includes/class-jet-menu-dynamic-css.php:403
+#: includes/class-ava-menu-dynamic-css.php:403
 #, php-format
 msgid "%s border style"
 msgstr "%s стиль границы"
 
-#: includes/class-jet-menu-dynamic-css.php:409
+#: includes/class-ava-menu-dynamic-css.php:409
 msgid "Solid"
 msgstr "Сплошной"
 
-#: includes/class-jet-menu-dynamic-css.php:410
+#: includes/class-ava-menu-dynamic-css.php:410
 msgid "Double"
 msgstr "Двойной"
 
-#: includes/class-jet-menu-dynamic-css.php:411
+#: includes/class-ava-menu-dynamic-css.php:411
 msgid "Dotted"
 msgstr "Точечный"
 
-#: includes/class-jet-menu-dynamic-css.php:412
+#: includes/class-ava-menu-dynamic-css.php:412
 msgid "Dashed"
 msgstr "Пунктирный"
 
-#: includes/class-jet-menu-dynamic-css.php:413
-#: includes/class-jet-menu-options-page.php:400
-#: includes/widgets/jet-widget-custom-menu.php:158
+#: includes/class-ava-menu-dynamic-css.php:413
+#: includes/class-ava-menu-options-page.php:400
+#: includes/widgets/ava-widget-custom-menu.php:158
 msgid "None"
 msgstr "Отсутствует"
 
-#: includes/class-jet-menu-dynamic-css.php:420
+#: includes/class-ava-menu-dynamic-css.php:420
 #, php-format
 msgid "%s border width"
 msgstr "%s ширина границы"
 
-#: includes/class-jet-menu-dynamic-css.php:437
+#: includes/class-ava-menu-dynamic-css.php:437
 #, php-format
 msgid "%s border color"
 msgstr "%s цвет границы"
 
-#: includes/class-jet-menu-dynamic-css.php:468
+#: includes/class-ava-menu-dynamic-css.php:468
 #, php-format
 msgid "%s box shadow"
 msgstr "%s тень ячейки"
 
-#: includes/class-jet-menu-dynamic-css.php:486
+#: includes/class-ava-menu-dynamic-css.php:486
 #, php-format
 msgid "%s - position of the horizontal shadow"
 msgstr "%s - положение горизонтальной тени"
 
-#: includes/class-jet-menu-dynamic-css.php:499
+#: includes/class-ava-menu-dynamic-css.php:499
 #, php-format
 msgid "%s - position of the vertical shadow"
 msgstr "%s - положение вертикальной тени"
 
-#: includes/class-jet-menu-dynamic-css.php:512
+#: includes/class-ava-menu-dynamic-css.php:512
 #, php-format
 msgid "%s - shadow blur distance"
 msgstr "%s - размытие тени"
 
-#: includes/class-jet-menu-dynamic-css.php:525
+#: includes/class-ava-menu-dynamic-css.php:525
 #, php-format
 msgid "%s - shadow size"
 msgstr "%s - размер тени"
 
-#: includes/class-jet-menu-dynamic-css.php:532
+#: includes/class-ava-menu-dynamic-css.php:532
 #, php-format
 msgid "%s shadow color"
 msgstr "%s цвет тени"
 
-#: includes/class-jet-menu-dynamic-css.php:542
+#: includes/class-ava-menu-dynamic-css.php:542
 #, php-format
 msgid "%s shadow inset"
 msgstr "%s внутренная тень"
 
-#: includes/class-jet-menu-dynamic-css.php:568
+#: includes/class-ava-menu-dynamic-css.php:568
 msgid "Select Font..."
 msgstr "Выбрать шрифт..."
 
-#: includes/class-jet-menu-integration.php:103
-msgid "JetElements"
-msgstr "JetElements"
+#: includes/class-ava-menu-integration.php:103
+msgid "AvaElements"
+msgstr "AvaElements"
 
-#: includes/class-jet-menu-options-page.php:150
+#: includes/class-ava-menu-options-page.php:150
 msgid "Unable to process the request without nonce or server error"
 msgstr ""
 
-#: includes/class-jet-menu-options-page.php:151
+#: includes/class-ava-menu-options-page.php:151
 msgid "No right for this action"
 msgstr "Нет права на это действие"
 
-#: includes/class-jet-menu-options-page.php:152
+#: includes/class-ava-menu-options-page.php:152
 msgid "Stop CHEATING!!!"
 msgstr "Прекратите жульничать!!!"
 
-#: includes/class-jet-menu-options-page.php:154
+#: includes/class-ava-menu-options-page.php:154
 msgid "Please wait, processing the previous request"
 msgstr "Пожалуйста, подождите, предыдущий запрос находится в обработке"
 
-#: includes/class-jet-menu-options-page.php:282
-msgid "General JetMenu Settings"
-msgstr "Общие настройки JetMenu"
+#: includes/class-ava-menu-options-page.php:282
+msgid "General AvaMenu Settings"
+msgstr "Общие настройки AvaMenu"
 
-#: includes/class-jet-menu-options-page.php:324
+#: includes/class-ava-menu-options-page.php:324
 msgid "General"
 msgstr "Общее"
 
-#: includes/class-jet-menu-options-page.php:328
+#: includes/class-ava-menu-options-page.php:328
 msgid "Styles"
 msgstr "Стили"
 
-#: includes/class-jet-menu-options-page.php:332
+#: includes/class-ava-menu-options-page.php:332
 msgid "Main Menu Styles"
 msgstr "Стили главного меню"
 
-#: includes/class-jet-menu-options-page.php:336
+#: includes/class-ava-menu-options-page.php:336
 msgid "Sub Menu Styles"
 msgstr "Стили Меню второго порядка"
 
-#: includes/class-jet-menu-options-page.php:340
-#: includes/widgets/jet-widget-mega-menu.php:846
+#: includes/class-ava-menu-options-page.php:340
+#: includes/widgets/ava-widget-mega-menu.php:846
 msgid "Mobile Menu"
 msgstr "Меню мобильного устройства"
 
-#: includes/class-jet-menu-options-page.php:344
+#: includes/class-ava-menu-options-page.php:344
 msgid "Advanced"
 msgstr "Расширенные"
 
-#: includes/class-jet-menu-options-page.php:375
+#: includes/class-ava-menu-options-page.php:375
 msgid "Reset"
 msgstr "Сброс"
 
-#: includes/class-jet-menu-options-page.php:395
-#: includes/widgets/jet-widget-custom-menu.php:154
+#: includes/class-ava-menu-options-page.php:395
+#: includes/widgets/ava-widget-custom-menu.php:154
 msgid "Animation"
 msgstr "Анимация"
 
-#: includes/class-jet-menu-options-page.php:401
-#: includes/widgets/jet-widget-custom-menu.php:159
+#: includes/class-ava-menu-options-page.php:401
+#: includes/widgets/ava-widget-custom-menu.php:159
 msgid "Fade"
 msgstr "Растворение"
 
-#: includes/class-jet-menu-options-page.php:402
-#: includes/widgets/jet-widget-custom-menu.php:160
+#: includes/class-ava-menu-options-page.php:402
+#: includes/widgets/ava-widget-custom-menu.php:160
 msgid "Move Up"
 msgstr "Движение вверх"
 
-#: includes/class-jet-menu-options-page.php:403
-#: includes/widgets/jet-widget-custom-menu.php:161
+#: includes/class-ava-menu-options-page.php:403
+#: includes/widgets/ava-widget-custom-menu.php:161
 msgid "Move Down"
 msgstr "Движение вниз"
 
-#: includes/class-jet-menu-options-page.php:413
+#: includes/class-ava-menu-options-page.php:413
 msgid "Menu rollUp"
 msgstr ""
 
-#: includes/class-jet-menu-options-page.php:414
+#: includes/class-ava-menu-options-page.php:414
 msgid ""
 "Enable this option in order to reduce the menu size by grouping extra menu "
 "items  and hiding them under the suspension dots."
@@ -473,54 +473,54 @@ msgstr ""
 "Включите эту опцию, чтобы уменьшить размер меню, группируя дополнительные "
 "пункты меню и скрывая их с помощью эллипсиса."
 
-#: includes/class-jet-menu-options-page.php:425
+#: includes/class-ava-menu-options-page.php:425
 msgid "Mouse Leave Delay"
 msgstr "Задержать при отведении курсора"
 
-#: includes/class-jet-menu-options-page.php:435
+#: includes/class-ava-menu-options-page.php:435
 msgid "Mega menu base width"
 msgstr "Ширина основания Mega Menu"
 
-#: includes/class-jet-menu-options-page.php:439
+#: includes/class-ava-menu-options-page.php:439
 msgid "Width same as main container width"
 msgstr "Ширина такая же, как и ширина основного контейнера"
 
-#: includes/class-jet-menu-options-page.php:442
+#: includes/class-ava-menu-options-page.php:442
 msgid "Width same as total items width"
 msgstr "Ширина такая же, как и общая ширина элементов"
 
-#: includes/class-jet-menu-options-page.php:445
+#: includes/class-ava-menu-options-page.php:445
 msgid "Width same as Custom css selector width"
 msgstr "Использовать пользовательскую ширину селектора CSS"
 
-#: includes/class-jet-menu-options-page.php:456
+#: includes/class-ava-menu-options-page.php:456
 msgid "Mega menu width selector"
 msgstr "Селектор ширины Mega Menu"
 
-#: includes/class-jet-menu-options-page.php:466
+#: includes/class-ava-menu-options-page.php:466
 msgid "Sub menu open event"
 msgstr "Способ открытия Меню второго порядка"
 
-#: includes/class-jet-menu-options-page.php:471
-#: includes/class-jet-menu-options-page.php:712
-#: includes/class-jet-menu-options-page.php:1056
-#: includes/widgets/jet-widget-custom-menu.php:687
-#: includes/widgets/jet-widget-custom-menu.php:1181
-#: includes/widgets/jet-widget-custom-menu.php:1572
-#: includes/widgets/jet-widget-custom-menu.php:1986
-#: includes/widgets/jet-widget-mega-menu.php:397
+#: includes/class-ava-menu-options-page.php:471
+#: includes/class-ava-menu-options-page.php:712
+#: includes/class-ava-menu-options-page.php:1056
+#: includes/widgets/ava-widget-custom-menu.php:687
+#: includes/widgets/ava-widget-custom-menu.php:1181
+#: includes/widgets/ava-widget-custom-menu.php:1572
+#: includes/widgets/ava-widget-custom-menu.php:1986
+#: includes/widgets/ava-widget-mega-menu.php:397
 msgid "Hover"
 msgstr "При наведении курсора"
 
-#: includes/class-jet-menu-options-page.php:472
+#: includes/class-ava-menu-options-page.php:472
 msgid "Click"
 msgstr "На клик"
 
-#: includes/class-jet-menu-options-page.php:482
+#: includes/class-ava-menu-options-page.php:482
 msgid "Mobile breakpoint (px)"
 msgstr "Брейкпоинты мобильного устройства (px)"
 
-#: includes/class-jet-menu-options-page.php:483
+#: includes/class-ava-menu-options-page.php:483
 msgid ""
 "Sets the breakpoint between desktop menu and mobile menu. Below this "
 "breakpoint mobile menu will appear."
@@ -528,670 +528,670 @@ msgstr ""
 "Установите брейкпонт между меню для десктопа и мобильным меню. Ниже "
 "заданного брейкпоинта будет появляться мобильное меню."
 
-#: includes/class-jet-menu-options-page.php:501
+#: includes/class-ava-menu-options-page.php:501
 msgid "Disable default theme integration file"
 msgstr "Отключить файл интеграции темы по умолчанию"
 
-#: includes/class-jet-menu-options-page.php:518
+#: includes/class-ava-menu-options-page.php:518
 msgid "Cache menu CSS"
 msgstr "Кешировать CSS меню"
 
-#: includes/class-jet-menu-options-page.php:537
+#: includes/class-ava-menu-options-page.php:537
 msgid "Menu items alignment"
 msgstr "Выравнивание элементов меню"
 
-#: includes/class-jet-menu-options-page.php:541
-#: includes/widgets/jet-widget-mega-menu.php:191
+#: includes/class-ava-menu-options-page.php:541
+#: includes/widgets/ava-widget-mega-menu.php:191
 msgid "End"
 msgstr ""
 
-#: includes/class-jet-menu-options-page.php:542
-#: includes/class-jet-menu-options-page.php:1310
-#: includes/class-jet-menu-options-page.php:1325
-#: includes/class-jet-menu-options-page.php:1471
-#: includes/class-jet-menu-options-page.php:1484
-#: includes/class-jet-menu-options-page.php:1587
-#: includes/class-jet-menu-options-page.php:1601
-#: includes/widgets/jet-widget-custom-menu.php:284
-#: includes/widgets/jet-widget-custom-menu.php:1750
-#: includes/widgets/jet-widget-custom-menu.php:1873
-#: includes/widgets/jet-widget-custom-menu.php:2142
-#: includes/widgets/jet-widget-mega-menu.php:187
-#: includes/widgets/jet-widget-mega-menu.php:967
-#: includes/widgets/jet-widget-mega-menu.php:997
-#: includes/widgets/jet-widget-mega-menu.php:1154
-#: includes/widgets/jet-widget-mega-menu.php:1184
-#: includes/widgets/jet-widget-mega-menu.php:1315
-#: includes/widgets/jet-widget-mega-menu.php:1341
+#: includes/class-ava-menu-options-page.php:542
+#: includes/class-ava-menu-options-page.php:1310
+#: includes/class-ava-menu-options-page.php:1325
+#: includes/class-ava-menu-options-page.php:1471
+#: includes/class-ava-menu-options-page.php:1484
+#: includes/class-ava-menu-options-page.php:1587
+#: includes/class-ava-menu-options-page.php:1601
+#: includes/widgets/ava-widget-custom-menu.php:284
+#: includes/widgets/ava-widget-custom-menu.php:1750
+#: includes/widgets/ava-widget-custom-menu.php:1873
+#: includes/widgets/ava-widget-custom-menu.php:2142
+#: includes/widgets/ava-widget-mega-menu.php:187
+#: includes/widgets/ava-widget-mega-menu.php:967
+#: includes/widgets/ava-widget-mega-menu.php:997
+#: includes/widgets/ava-widget-mega-menu.php:1154
+#: includes/widgets/ava-widget-mega-menu.php:1184
+#: includes/widgets/ava-widget-mega-menu.php:1315
+#: includes/widgets/ava-widget-mega-menu.php:1341
 msgid "Center"
 msgstr "По центру"
 
-#: includes/class-jet-menu-options-page.php:543
-#: includes/widgets/jet-widget-mega-menu.php:183
+#: includes/class-ava-menu-options-page.php:543
+#: includes/widgets/ava-widget-mega-menu.php:183
 msgid "Start"
 msgstr ""
 
-#: includes/class-jet-menu-options-page.php:544
-#: includes/widgets/jet-widget-mega-menu.php:195
+#: includes/class-ava-menu-options-page.php:544
+#: includes/widgets/ava-widget-mega-menu.php:195
 msgid "Stretch"
 msgstr ""
 
-#: includes/class-jet-menu-options-page.php:554
-#: includes/class-jet-menu-options-page.php:563
-#: includes/class-jet-menu-options-page.php:575
+#: includes/class-ava-menu-options-page.php:554
+#: includes/class-ava-menu-options-page.php:563
+#: includes/class-ava-menu-options-page.php:575
 msgid "Menu container"
 msgstr "Контейнер меню"
 
-#: includes/class-jet-menu-options-page.php:584
+#: includes/class-ava-menu-options-page.php:584
 msgid "Menu container border radius"
 msgstr "Скругление углов контейнера меню"
 
-#: includes/class-jet-menu-options-page.php:601
-#: includes/widgets/jet-widget-mega-menu.php:273
+#: includes/class-ava-menu-options-page.php:601
+#: includes/widgets/ava-widget-mega-menu.php:273
 msgid "Inherit border radius for the first menu item from main container"
 msgstr ""
 "Наследовать скругление углов для первого пункта меню из основного контейнера"
 
-#: includes/class-jet-menu-options-page.php:611
-#: includes/widgets/jet-widget-mega-menu.php:289
+#: includes/class-ava-menu-options-page.php:611
+#: includes/widgets/ava-widget-mega-menu.php:289
 msgid "Inherit border radius for the last menu item from main container"
 msgstr ""
 "Наследовать скругление углов для последнего пункта меню из основного "
 "контейнера"
 
-#: includes/class-jet-menu-options-page.php:622
+#: includes/class-ava-menu-options-page.php:622
 msgid "Menu container padding"
 msgstr "Внутренний отступ контейнера меню"
 
-#: includes/class-jet-menu-options-page.php:635
+#: includes/class-ava-menu-options-page.php:635
 msgid "Menu container min width (px)"
 msgstr "Минимальная ширина контейнера меню (px)"
 
-#: includes/class-jet-menu-options-page.php:636
-#: includes/class-jet-menu-options-page.php:686
-#: includes/widgets/jet-widget-mega-menu.php:326
+#: includes/class-ava-menu-options-page.php:636
+#: includes/class-ava-menu-options-page.php:686
+#: includes/widgets/ava-widget-mega-menu.php:326
 msgid "Set 0 to automatic width detection"
 msgstr "Установить 0 для автоматического определения ширины"
 
-#: includes/class-jet-menu-options-page.php:651
+#: includes/class-ava-menu-options-page.php:651
 msgid "Top level menu"
 msgstr "Меню верхнего уровня"
 
-#: includes/class-jet-menu-options-page.php:662
+#: includes/class-ava-menu-options-page.php:662
 msgid "Show Item Description"
 msgstr "Показать описание элементов"
 
-#: includes/class-jet-menu-options-page.php:674
+#: includes/class-ava-menu-options-page.php:674
 msgid "Top level menu description"
 msgstr "Описание Меню верхнего уровня"
 
-#: includes/class-jet-menu-options-page.php:685
+#: includes/class-ava-menu-options-page.php:685
 msgid "Top level item max width (%)"
 msgstr "Максимальная ширина (%) Меню верхнего уровня"
 
-#: includes/class-jet-menu-options-page.php:716
-#: includes/class-jet-menu-options-page.php:1060
+#: includes/class-ava-menu-options-page.php:716
+#: includes/class-ava-menu-options-page.php:1060
 #: includes/lib/class-tgm-plugin-activation.php:2414
-#: includes/widgets/jet-widget-custom-menu.php:813
-#: includes/widgets/jet-widget-custom-menu.php:1307
-#: includes/widgets/jet-widget-custom-menu.php:1610
-#: includes/widgets/jet-widget-custom-menu.php:2023
-#: includes/widgets/jet-widget-mega-menu.php:398
+#: includes/widgets/ava-widget-custom-menu.php:813
+#: includes/widgets/ava-widget-custom-menu.php:1307
+#: includes/widgets/ava-widget-custom-menu.php:1610
+#: includes/widgets/ava-widget-custom-menu.php:2023
+#: includes/widgets/ava-widget-mega-menu.php:398
 msgid "Active"
 msgstr "Активный"
 
-#: includes/class-jet-menu-options-page.php:736
-#: includes/class-jet-menu-options-page.php:1080
+#: includes/class-ava-menu-options-page.php:736
+#: includes/class-ava-menu-options-page.php:1080
 msgid "Item text color"
 msgstr "Цвет текста элемента"
 
-#: includes/class-jet-menu-options-page.php:748
+#: includes/class-ava-menu-options-page.php:748
 msgid "Item description color"
 msgstr "Цвет описания элемента"
 
-#: includes/class-jet-menu-options-page.php:760
+#: includes/class-ava-menu-options-page.php:760
 msgid "Item Icon Color"
 msgstr "Цвет иконки элемента"
 
-#: includes/class-jet-menu-options-page.php:772
-#: includes/class-jet-menu-options-page.php:1116
+#: includes/class-ava-menu-options-page.php:772
+#: includes/class-ava-menu-options-page.php:1116
 msgid "Item drop-down arrow color"
 msgstr "Цвет стрелки ракрывающегося списка элементов"
 
-#: includes/class-jet-menu-options-page.php:781
-#: includes/class-jet-menu-options-page.php:787
-#: includes/class-jet-menu-options-page.php:823
-#: includes/class-jet-menu-options-page.php:1125
-#: includes/class-jet-menu-options-page.php:1131
-#: includes/class-jet-menu-options-page.php:1167
+#: includes/class-ava-menu-options-page.php:781
+#: includes/class-ava-menu-options-page.php:787
+#: includes/class-ava-menu-options-page.php:823
+#: includes/class-ava-menu-options-page.php:1125
+#: includes/class-ava-menu-options-page.php:1131
+#: includes/class-ava-menu-options-page.php:1167
 msgid "Item"
 msgstr "Элемент"
 
-#: includes/class-jet-menu-options-page.php:799
-#: includes/class-jet-menu-options-page.php:1143
+#: includes/class-ava-menu-options-page.php:799
+#: includes/class-ava-menu-options-page.php:1143
 msgid "First item"
 msgstr "Первый элемент"
 
-#: includes/class-jet-menu-options-page.php:811
-#: includes/class-jet-menu-options-page.php:1155
+#: includes/class-ava-menu-options-page.php:811
+#: includes/class-ava-menu-options-page.php:1155
 msgid "Last item"
 msgstr "Последний элемент"
 
-#: includes/class-jet-menu-options-page.php:832
-#: includes/class-jet-menu-options-page.php:1176
+#: includes/class-ava-menu-options-page.php:832
+#: includes/class-ava-menu-options-page.php:1176
 msgid "Item border radius"
 msgstr "Скругление углов элемента"
 
-#: includes/class-jet-menu-options-page.php:850
-#: includes/class-jet-menu-options-page.php:1194
+#: includes/class-ava-menu-options-page.php:850
+#: includes/class-ava-menu-options-page.php:1194
 msgid "Item padding"
 msgstr "Внтуренний отступ элемента"
 
-#: includes/class-jet-menu-options-page.php:863
-#: includes/class-jet-menu-options-page.php:1207
+#: includes/class-ava-menu-options-page.php:863
+#: includes/class-ava-menu-options-page.php:1207
 msgid "Item margin"
 msgstr "Внешний оступ элемента"
 
-#: includes/class-jet-menu-options-page.php:893
+#: includes/class-ava-menu-options-page.php:893
 msgid "Simple Submenu Panel"
 msgstr "Панель простого Меню второго порядка"
 
-#: includes/class-jet-menu-options-page.php:897
+#: includes/class-ava-menu-options-page.php:897
 msgid "Mega Submenu Panel"
 msgstr "Панель Mega меню второго порядка"
 
-#: includes/class-jet-menu-options-page.php:920
+#: includes/class-ava-menu-options-page.php:920
 msgid "Panel Width"
 msgstr "Ширина панели"
 
-#: includes/class-jet-menu-options-page.php:929
-#: includes/class-jet-menu-options-page.php:935
-#: includes/class-jet-menu-options-page.php:947
+#: includes/class-ava-menu-options-page.php:929
+#: includes/class-ava-menu-options-page.php:935
+#: includes/class-ava-menu-options-page.php:947
 msgid "Panel"
 msgstr "Панель"
 
-#: includes/class-jet-menu-options-page.php:956
+#: includes/class-ava-menu-options-page.php:956
 msgid "Panel border radius"
 msgstr "Скругление углов панели"
 
-#: includes/class-jet-menu-options-page.php:974
+#: includes/class-ava-menu-options-page.php:974
 msgid "Panel padding"
 msgstr "Внутренний отступ панели"
 
-#: includes/class-jet-menu-options-page.php:987
+#: includes/class-ava-menu-options-page.php:987
 msgid "Panel margin"
 msgstr "Внешний отступ панели"
 
-#: includes/class-jet-menu-options-page.php:1008
+#: includes/class-ava-menu-options-page.php:1008
 msgid "Submenu"
 msgstr "Меню второго порядка"
 
-#: includes/class-jet-menu-options-page.php:1019
+#: includes/class-ava-menu-options-page.php:1019
 msgid "Show Submenu Item Description"
 msgstr "Показать описание элемента Меню второго порядка"
 
-#: includes/class-jet-menu-options-page.php:1031
+#: includes/class-ava-menu-options-page.php:1031
 msgid "Submenu descriptions"
 msgstr "Описания Меню второго порядка"
 
-#: includes/class-jet-menu-options-page.php:1092
+#: includes/class-ava-menu-options-page.php:1092
 msgid "Item descriptions color"
 msgstr "Цвет описаний элемента"
 
-#: includes/class-jet-menu-options-page.php:1104
+#: includes/class-ava-menu-options-page.php:1104
 msgid "Item icon color"
 msgstr "Цвет иконки элемента"
 
-#: includes/class-jet-menu-options-page.php:1237
-#: includes/class-jet-menu-settings-item.php:108
-#: includes/widgets/jet-widget-custom-menu.php:1523
-#: includes/widgets/jet-widget-custom-menu.php:1905
-#: includes/widgets/jet-widget-mega-menu.php:909
+#: includes/class-ava-menu-options-page.php:1237
+#: includes/class-ava-menu-settings-item.php:108
+#: includes/widgets/ava-widget-custom-menu.php:1523
+#: includes/widgets/ava-widget-custom-menu.php:1905
+#: includes/widgets/ava-widget-mega-menu.php:909
 msgid "Icon"
 msgstr "Иконка"
 
-#: includes/class-jet-menu-options-page.php:1241
-#: includes/class-jet-menu-options-page.php:1374
-#: includes/class-jet-menu-options-page.php:1394
-#: includes/class-jet-menu-options-page.php:1400
-#: includes/class-jet-menu-options-page.php:1412
-#: includes/widgets/jet-widget-custom-menu.php:1773
-#: includes/widgets/jet-widget-mega-menu.php:1046
+#: includes/class-ava-menu-options-page.php:1241
+#: includes/class-ava-menu-options-page.php:1374
+#: includes/class-ava-menu-options-page.php:1394
+#: includes/class-ava-menu-options-page.php:1400
+#: includes/class-ava-menu-options-page.php:1412
+#: includes/widgets/ava-widget-custom-menu.php:1773
+#: includes/widgets/ava-widget-mega-menu.php:1046
 msgid "Badge"
 msgstr "Значок"
 
-#: includes/class-jet-menu-options-page.php:1245
-#: includes/widgets/jet-widget-mega-menu.php:1247
+#: includes/class-ava-menu-options-page.php:1245
+#: includes/widgets/ava-widget-mega-menu.php:1247
 msgid "Drop-down Arrow"
 msgstr "Стрелка раскрывающегося списка"
 
-#: includes/class-jet-menu-options-page.php:1262
+#: includes/class-ava-menu-options-page.php:1262
 msgid "Top Level Icon"
 msgstr "Иконка верхнего уровня"
 
-#: includes/class-jet-menu-options-page.php:1267
+#: includes/class-ava-menu-options-page.php:1267
 msgid "Sub Level Icon"
 msgstr "Иконка второго уровня"
 
-#: includes/class-jet-menu-options-page.php:1286
+#: includes/class-ava-menu-options-page.php:1286
 msgid "Icon size"
 msgstr "Размер иконки"
 
-#: includes/class-jet-menu-options-page.php:1292
+#: includes/class-ava-menu-options-page.php:1292
 msgid "Icon margin"
 msgstr "Внешний отступ иконки"
 
-#: includes/class-jet-menu-options-page.php:1305
+#: includes/class-ava-menu-options-page.php:1305
 msgid "Icon vertical position"
 msgstr "Вертикальное положение иконки"
 
-#: includes/class-jet-menu-options-page.php:1311
-#: includes/class-jet-menu-options-page.php:1470
-#: includes/class-jet-menu-options-page.php:1588
-#: includes/widgets/jet-widget-custom-menu.php:1746
-#: includes/widgets/jet-widget-custom-menu.php:1869
-#: includes/widgets/jet-widget-custom-menu.php:2138
-#: includes/widgets/jet-widget-mega-menu.php:993
-#: includes/widgets/jet-widget-mega-menu.php:1180
-#: includes/widgets/jet-widget-mega-menu.php:1337
+#: includes/class-ava-menu-options-page.php:1311
+#: includes/class-ava-menu-options-page.php:1470
+#: includes/class-ava-menu-options-page.php:1588
+#: includes/widgets/ava-widget-custom-menu.php:1746
+#: includes/widgets/ava-widget-custom-menu.php:1869
+#: includes/widgets/ava-widget-custom-menu.php:2138
+#: includes/widgets/ava-widget-mega-menu.php:993
+#: includes/widgets/ava-widget-mega-menu.php:1180
+#: includes/widgets/ava-widget-mega-menu.php:1337
 msgid "Top"
 msgstr "Верх"
 
-#: includes/class-jet-menu-options-page.php:1312
-#: includes/class-jet-menu-options-page.php:1472
-#: includes/class-jet-menu-options-page.php:1589
-#: includes/widgets/jet-widget-custom-menu.php:1754
-#: includes/widgets/jet-widget-custom-menu.php:1877
-#: includes/widgets/jet-widget-custom-menu.php:2146
-#: includes/widgets/jet-widget-mega-menu.php:1001
-#: includes/widgets/jet-widget-mega-menu.php:1188
-#: includes/widgets/jet-widget-mega-menu.php:1345
+#: includes/class-ava-menu-options-page.php:1312
+#: includes/class-ava-menu-options-page.php:1472
+#: includes/class-ava-menu-options-page.php:1589
+#: includes/widgets/ava-widget-custom-menu.php:1754
+#: includes/widgets/ava-widget-custom-menu.php:1877
+#: includes/widgets/ava-widget-custom-menu.php:2146
+#: includes/widgets/ava-widget-mega-menu.php:1001
+#: includes/widgets/ava-widget-mega-menu.php:1188
+#: includes/widgets/ava-widget-mega-menu.php:1345
 msgid "Bottom"
 msgstr "Низ"
 
-#: includes/class-jet-menu-options-page.php:1318
+#: includes/class-ava-menu-options-page.php:1318
 msgid "Icon horizontal position"
 msgstr "Горизонтальное положение иконки"
 
-#: includes/class-jet-menu-options-page.php:1323
-#: includes/class-jet-menu-options-page.php:1485
-#: includes/class-jet-menu-options-page.php:1602
-#: includes/widgets/jet-widget-custom-menu.php:280
-#: includes/widgets/jet-widget-mega-menu.php:963
-#: includes/widgets/jet-widget-mega-menu.php:1150
-#: includes/widgets/jet-widget-mega-menu.php:1311
+#: includes/class-ava-menu-options-page.php:1323
+#: includes/class-ava-menu-options-page.php:1485
+#: includes/class-ava-menu-options-page.php:1602
+#: includes/widgets/ava-widget-custom-menu.php:280
+#: includes/widgets/ava-widget-mega-menu.php:963
+#: includes/widgets/ava-widget-mega-menu.php:1150
+#: includes/widgets/ava-widget-mega-menu.php:1311
 msgid "Left"
 msgstr "Слева"
 
-#: includes/class-jet-menu-options-page.php:1324
-#: includes/class-jet-menu-options-page.php:1483
-#: includes/class-jet-menu-options-page.php:1600
-#: includes/widgets/jet-widget-custom-menu.php:288
-#: includes/widgets/jet-widget-mega-menu.php:971
-#: includes/widgets/jet-widget-mega-menu.php:1158
-#: includes/widgets/jet-widget-mega-menu.php:1319
+#: includes/class-ava-menu-options-page.php:1324
+#: includes/class-ava-menu-options-page.php:1483
+#: includes/class-ava-menu-options-page.php:1600
+#: includes/widgets/ava-widget-custom-menu.php:288
+#: includes/widgets/ava-widget-mega-menu.php:971
+#: includes/widgets/ava-widget-mega-menu.php:1158
+#: includes/widgets/ava-widget-mega-menu.php:1319
 msgid "Right"
 msgstr "Справа"
 
-#: includes/class-jet-menu-options-page.php:1334
+#: includes/class-ava-menu-options-page.php:1334
 msgid "Icon order"
 msgstr "Порядок иконки"
 
-#: includes/class-jet-menu-options-page.php:1356
+#: includes/class-ava-menu-options-page.php:1356
 msgid "Top Level Badge"
 msgstr "Значок верхнего уровня"
 
-#: includes/class-jet-menu-options-page.php:1361
+#: includes/class-ava-menu-options-page.php:1361
 msgid "Sub Level Badge"
 msgstr "Значок второго уровня"
 
-#: includes/class-jet-menu-options-page.php:1385
+#: includes/class-ava-menu-options-page.php:1385
 msgid "Badge text color"
 msgstr "Цвет текста значка"
 
-#: includes/class-jet-menu-options-page.php:1421
+#: includes/class-ava-menu-options-page.php:1421
 msgid "Badge border radius"
 msgstr "Скругление углов значка"
 
-#: includes/class-jet-menu-options-page.php:1439
+#: includes/class-ava-menu-options-page.php:1439
 msgid "Badge padding"
 msgstr "Внутренний отступ значка"
 
-#: includes/class-jet-menu-options-page.php:1452
+#: includes/class-ava-menu-options-page.php:1452
 msgid "Badge margin"
 msgstr "Внешний отступ значка"
 
-#: includes/class-jet-menu-options-page.php:1465
+#: includes/class-ava-menu-options-page.php:1465
 msgid "Badge vertical position (may be overridden with order)"
 msgstr "Вертикальное положение значка (может быть предопределено порядком)"
 
-#: includes/class-jet-menu-options-page.php:1478
+#: includes/class-ava-menu-options-page.php:1478
 msgid "Badge horizontal position"
 msgstr "Горизонтальное положение значка"
 
-#: includes/class-jet-menu-options-page.php:1494
+#: includes/class-ava-menu-options-page.php:1494
 msgid "Badge order"
 msgstr "Порядок значка"
 
-#: includes/class-jet-menu-options-page.php:1500
+#: includes/class-ava-menu-options-page.php:1500
 msgid "Hide badge on mobile"
 msgstr "Скрыть значок на мобильном устройстве"
 
-#: includes/class-jet-menu-options-page.php:1526
+#: includes/class-ava-menu-options-page.php:1526
 msgid "Top Level Arrow"
 msgstr "Стрелка верхнего уровня"
 
-#: includes/class-jet-menu-options-page.php:1531
+#: includes/class-ava-menu-options-page.php:1531
 msgid "Sub Level Arrow"
 msgstr "Стрелка второго уровня"
 
-#: includes/class-jet-menu-options-page.php:1546
+#: includes/class-ava-menu-options-page.php:1546
 msgid "Arrow icon"
 msgstr "Иконка стрелки"
 
-#: includes/class-jet-menu-options-page.php:1563
+#: includes/class-ava-menu-options-page.php:1563
 msgid "Arrow size"
 msgstr "Размер стрелки"
 
-#: includes/class-jet-menu-options-page.php:1569
+#: includes/class-ava-menu-options-page.php:1569
 msgid "Arrow margin"
 msgstr "Внешний отступ стрелки"
 
-#: includes/class-jet-menu-options-page.php:1582
+#: includes/class-ava-menu-options-page.php:1582
 msgid "Arrow vertical position"
 msgstr "Верикальное положение стрелки"
 
-#: includes/class-jet-menu-options-page.php:1595
+#: includes/class-ava-menu-options-page.php:1595
 msgid "Arrow horizontal position"
 msgstr "Горизонтальное положение стрелки"
 
-#: includes/class-jet-menu-options-page.php:1611
+#: includes/class-ava-menu-options-page.php:1611
 msgid "Arrow order"
 msgstr "Порядок стрелки"
 
-#: includes/class-jet-menu-options-page.php:1628
-#: includes/widgets/jet-widget-mega-menu.php:855
+#: includes/class-ava-menu-options-page.php:1628
+#: includes/widgets/ava-widget-mega-menu.php:855
 msgid "Toggle text color"
 msgstr "Цвет текста тумблера"
 
-#: includes/class-jet-menu-options-page.php:1635
-#: includes/widgets/jet-widget-mega-menu.php:866
+#: includes/class-ava-menu-options-page.php:1635
+#: includes/widgets/ava-widget-mega-menu.php:866
 msgid "Toggle background color"
 msgstr "Цвет фона тумблера"
 
-#: includes/class-jet-menu-options-page.php:1642
-#: includes/widgets/jet-widget-mega-menu.php:877
+#: includes/class-ava-menu-options-page.php:1642
+#: includes/widgets/ava-widget-mega-menu.php:877
 msgid "Container background color"
 msgstr "Цвет фона контейнера"
 
-#: includes/class-jet-menu-options-page.php:1649
-#: includes/widgets/jet-widget-mega-menu.php:888
+#: includes/class-ava-menu-options-page.php:1649
+#: includes/widgets/ava-widget-mega-menu.php:888
 msgid "Cover background color"
 msgstr "Цвет фона обложки"
 
-#: includes/class-jet-menu-options-page.php:1814
+#: includes/class-ava-menu-options-page.php:1814
 msgid "Incorrect data in options file"
 msgstr "Неверные данные в файле параметров"
 
-#: includes/class-jet-menu-options-page.php:1821
+#: includes/class-ava-menu-options-page.php:1821
 msgid "Options successfully imported. Page will be reloaded."
 msgstr "Параметры успешно импортированы. Страница будет перезагружена."
 
-#: includes/class-jet-menu-options-presets.php:74
-#: includes/class-jet-menu-options-presets.php:340
+#: includes/class-ava-menu-options-presets.php:74
+#: includes/class-ava-menu-options-presets.php:340
 msgid "Not Selected"
 msgstr "Не выбран"
 
-#: includes/class-jet-menu-options-presets.php:79
+#: includes/class-ava-menu-options-presets.php:79
 msgid "Menu Preset"
 msgstr "Предустановки меню"
 
-#: includes/class-jet-menu-options-presets.php:113
-#: includes/class-jet-menu-options-presets.php:170
-#: includes/class-jet-menu-options-presets.php:200
-#: includes/class-jet-menu-options-presets.php:231
-#: includes/class-jet-menu-settings-item.php:160
-#: includes/class-jet-menu-settings-item.php:200
-#: includes/class-jet-menu-settings-item.php:246
-#: includes/class-jet-menu-settings-item.php:292
-#: includes/class-jet-menu-settings-item.php:340
-#: includes/class-jet-menu-settings-item.php:388
-#: includes/class-jet-menu-settings-item.php:436
-#: includes/class-jet-menu-settings-nav.php:62
+#: includes/class-ava-menu-options-presets.php:113
+#: includes/class-ava-menu-options-presets.php:170
+#: includes/class-ava-menu-options-presets.php:200
+#: includes/class-ava-menu-options-presets.php:231
+#: includes/class-ava-menu-settings-item.php:160
+#: includes/class-ava-menu-settings-item.php:200
+#: includes/class-ava-menu-settings-item.php:246
+#: includes/class-ava-menu-settings-item.php:292
+#: includes/class-ava-menu-settings-item.php:340
+#: includes/class-ava-menu-settings-item.php:388
+#: includes/class-ava-menu-settings-item.php:436
+#: includes/class-ava-menu-settings-nav.php:62
 msgid "You are not allowed to do this"
 msgstr "Вам не разрешено это делать"
 
-#: includes/class-jet-menu-options-presets.php:122
+#: includes/class-ava-menu-options-presets.php:122
 msgid "Settings not provided"
 msgstr "Настройки не указаны"
 
-#: includes/class-jet-menu-options-presets.php:128
-#: includes/class-jet-menu-options-presets.php:278
+#: includes/class-ava-menu-options-presets.php:128
+#: includes/class-ava-menu-options-presets.php:278
 msgid "Please, specify preset name"
 msgstr "Пожалуйста, укажите имя предустановки"
 
-#: includes/class-jet-menu-options-presets.php:136
+#: includes/class-ava-menu-options-presets.php:136
 msgid "Preset with the same name already exists, please change it"
 msgstr ""
 "Предустановка с подобным именем уже существует, пожалуйста, измените его"
 
-#: includes/class-jet-menu-options-presets.php:179
-#: includes/class-jet-menu-options-presets.php:208
-#: includes/class-jet-menu-options-presets.php:239
+#: includes/class-ava-menu-options-presets.php:179
+#: includes/class-ava-menu-options-presets.php:208
+#: includes/class-ava-menu-options-presets.php:239
 msgid "Preset ID not defined"
 msgstr "ID предустановки не определено"
 
-#: includes/class-jet-menu-options-presets.php:261
+#: includes/class-ava-menu-options-presets.php:261
 msgid "Presets Manager"
 msgstr "Менеджер предустановок"
 
-#: includes/class-jet-menu-options-presets.php:279
+#: includes/class-ava-menu-options-presets.php:279
 msgid "Please, select preset to load"
 msgstr "Пожалуйста, выберите предустановку для загрузки"
 
-#: includes/class-jet-menu-options-presets.php:280
+#: includes/class-ava-menu-options-presets.php:280
 msgid "Please, select preset to update"
 msgstr "Пожалуйста, выберите предустановку для обновления"
 
-#: includes/class-jet-menu-options-presets.php:281
+#: includes/class-ava-menu-options-presets.php:281
 msgid "Please, select preset to delete"
 msgstr "Пожалуйста, выберите предустановку  для удаления"
 
-#: includes/class-jet-menu-options-presets.php:282
+#: includes/class-ava-menu-options-presets.php:282
 msgid "New preset was created. Page will be reloaded"
 msgstr "Новая предустановка была создана. Страница будет перезагружена"
 
-#: includes/class-jet-menu-options-presets.php:283
+#: includes/class-ava-menu-options-presets.php:283
 msgid "Preset updated"
 msgstr "Предустановка была обновлена"
 
-#: includes/class-jet-menu-options-presets.php:284
+#: includes/class-ava-menu-options-presets.php:284
 msgid "Preset loaded. Page will be reloaded to apply changes"
 msgstr ""
 "Предустановка загрузилась. Страница будет перезагружена, чтобы применить "
 "изменения"
 
-#: includes/class-jet-menu-options-presets.php:285
+#: includes/class-ava-menu-options-presets.php:285
 msgid "Preset deleted. Page will be reloaded to apply changes"
 msgstr ""
 "Предустановка удалена. Страница будет перезагружена, чтобы применить "
 "изменения"
 
-#: includes/class-jet-menu-options-presets.php:286
+#: includes/class-ava-menu-options-presets.php:286
 msgid "Are you sure you want to rewrite existig preset?"
 msgstr "Вы уверены, что хотите переписать существующую предустановку?"
 
-#: includes/class-jet-menu-options-presets.php:287
+#: includes/class-ava-menu-options-presets.php:287
 msgid "Are you sure you want to delete this preset?"
 msgstr "Вы уверены, что хотите удалить эту предустановку?"
 
-#: includes/class-jet-menu-options-presets.php:288
+#: includes/class-ava-menu-options-presets.php:288
 msgid ""
 "Are you sure you want to load this preset? All unsaved options will be lost."
 msgstr ""
 "Вы уверены, что вы хотите загрузить эту предустановку? Все несохранённые "
 "параметры будут потеряны."
 
-#: includes/class-jet-menu-options-presets.php:348
+#: includes/class-ava-menu-options-presets.php:348
 msgid "Select menu preset"
 msgstr "Выбрать предустановку меню"
 
-#: includes/class-jet-menu-post-type.php:106
-#: includes/class-jet-menu-post-type.php:111
+#: includes/class-ava-menu-post-type.php:106
+#: includes/class-ava-menu-post-type.php:111
 msgid "Mega Menu Items"
 msgstr "Элементы Mega Menu"
 
-#: includes/class-jet-menu-post-type.php:107
+#: includes/class-ava-menu-post-type.php:107
 msgid "Mega Menu Item"
 msgstr "Элемент Mega Menu"
 
-#: includes/class-jet-menu-post-type.php:108
-#: includes/class-jet-menu-post-type.php:109
+#: includes/class-ava-menu-post-type.php:108
+#: includes/class-ava-menu-post-type.php:109
 msgid "Add New Mega Menu Item"
 msgstr "Добавить новый элемент Mega Menu"
 
-#: includes/class-jet-menu-post-type.php:110
+#: includes/class-ava-menu-post-type.php:110
 msgid "Edit Mega Menu Item"
 msgstr "Редактировать элемент Mega Menu"
 
-#: includes/class-jet-menu-settings-item.php:88
+#: includes/class-ava-menu-settings-item.php:88
 msgid "Content"
 msgstr "Контент"
 
-#: includes/class-jet-menu-settings-item.php:98
-#: includes/widgets/jet-widget-custom-menu.php:134
+#: includes/class-ava-menu-settings-item.php:98
+#: includes/widgets/ava-widget-custom-menu.php:134
 msgid "Settings"
 msgstr "Настройки"
 
-#: includes/class-jet-menu-settings-item.php:118
+#: includes/class-ava-menu-settings-item.php:118
 msgid "Badges"
 msgstr "Значки"
 
-#: includes/class-jet-menu-settings-item.php:128
+#: includes/class-ava-menu-settings-item.php:128
 msgid "Misc"
 msgstr "Разное"
 
-#: includes/class-jet-menu-settings-item.php:138
+#: includes/class-ava-menu-settings-item.php:138
 msgid "Vertical Menu"
 msgstr "Вертикальное меню"
 
-#: includes/class-jet-menu-settings-item.php:174
-#: includes/class-jet-menu-settings-nav.php:207
-#: includes/widgets/jet-widget-custom-menu.php:943
-#: includes/widgets/jet-widget-custom-menu.php:985
-#: includes/widgets/jet-widget-custom-menu.php:1437
-#: includes/widgets/jet-widget-custom-menu.php:1479
-#: includes/widgets/jet-widget-mega-menu.php:275
-#: includes/widgets/jet-widget-mega-menu.php:291
-#: includes/widgets/jet-widget-mega-menu.php:1225
+#: includes/class-ava-menu-settings-item.php:174
+#: includes/class-ava-menu-settings-nav.php:207
+#: includes/widgets/ava-widget-custom-menu.php:943
+#: includes/widgets/ava-widget-custom-menu.php:985
+#: includes/widgets/ava-widget-custom-menu.php:1437
+#: includes/widgets/ava-widget-custom-menu.php:1479
+#: includes/widgets/ava-widget-mega-menu.php:275
+#: includes/widgets/ava-widget-mega-menu.php:291
+#: includes/widgets/ava-widget-mega-menu.php:1225
 msgid "Yes"
 msgstr "Да"
 
-#: includes/class-jet-menu-settings-item.php:175
-#: includes/class-jet-menu-settings-nav.php:208
-#: includes/widgets/jet-widget-custom-menu.php:944
-#: includes/widgets/jet-widget-custom-menu.php:986
-#: includes/widgets/jet-widget-custom-menu.php:1438
-#: includes/widgets/jet-widget-custom-menu.php:1480
-#: includes/widgets/jet-widget-mega-menu.php:276
-#: includes/widgets/jet-widget-mega-menu.php:292
-#: includes/widgets/jet-widget-mega-menu.php:1226
+#: includes/class-ava-menu-settings-item.php:175
+#: includes/class-ava-menu-settings-nav.php:208
+#: includes/widgets/ava-widget-custom-menu.php:944
+#: includes/widgets/ava-widget-custom-menu.php:986
+#: includes/widgets/ava-widget-custom-menu.php:1438
+#: includes/widgets/ava-widget-custom-menu.php:1480
+#: includes/widgets/ava-widget-mega-menu.php:276
+#: includes/widgets/ava-widget-mega-menu.php:292
+#: includes/widgets/ava-widget-mega-menu.php:1226
 msgid "No"
 msgstr "Нет"
 
-#: includes/class-jet-menu-settings-item.php:177
+#: includes/class-ava-menu-settings-item.php:177
 msgid "Mega Submenu Enabled"
 msgstr "Включить Mega меню второго порядка"
 
-#: includes/class-jet-menu-settings-item.php:211
+#: includes/class-ava-menu-settings-item.php:211
 msgid "Menu icon"
 msgstr "Иконка меню"
 
-#: includes/class-jet-menu-settings-item.php:228
-#: includes/widgets/jet-widget-mega-menu.php:437
-#: includes/widgets/jet-widget-mega-menu.php:727
+#: includes/class-ava-menu-settings-item.php:228
+#: includes/widgets/ava-widget-mega-menu.php:437
+#: includes/widgets/ava-widget-mega-menu.php:727
 msgid "Icon color"
 msgstr "Цвет иконки"
 
-#: includes/class-jet-menu-settings-item.php:257
+#: includes/class-ava-menu-settings-item.php:257
 msgid "Menu badge"
 msgstr "Значок меню"
 
-#: includes/class-jet-menu-settings-item.php:266
+#: includes/class-ava-menu-settings-item.php:266
 msgid "Badge color"
 msgstr "Цвет значка"
 
-#: includes/class-jet-menu-settings-item.php:274
+#: includes/class-ava-menu-settings-item.php:274
 msgid "Badge background color"
 msgstr "Цвет фона значка"
 
-#: includes/class-jet-menu-settings-item.php:303
+#: includes/class-ava-menu-settings-item.php:303
 msgid "Hide item navigation label"
 msgstr "Скрыть ярлык навигации"
 
-#: includes/class-jet-menu-settings-item.php:314
+#: includes/class-ava-menu-settings-item.php:314
 msgid "Set custom padding for this item"
 msgstr "Установить кастомный внутренний отступ для этого элемента"
 
-#: includes/class-jet-menu-settings-item.php:355
-#: includes/class-jet-menu-settings-item.php:418
+#: includes/class-ava-menu-settings-item.php:355
+#: includes/class-ava-menu-settings-item.php:418
 msgid "Set custom mega menu width for this item (px)"
 msgstr "Установить кастомную ширину Mega Menu для этого элемента (px)"
 
-#: includes/class-jet-menu-settings-item.php:364
-#: includes/class-jet-menu-settings-item.php:405
+#: includes/class-ava-menu-settings-item.php:364
+#: includes/class-ava-menu-settings-item.php:405
 msgid "Relative the menu item"
 msgstr ""
 
-#: includes/class-jet-menu-settings-item.php:367
+#: includes/class-ava-menu-settings-item.php:367
 msgid "Relative the menu container"
 msgstr ""
 
-#: includes/class-jet-menu-settings-item.php:370
+#: includes/class-ava-menu-settings-item.php:370
 msgid "Vertical mega menu position"
 msgstr ""
 
-#: includes/class-jet-menu-settings-item.php:408
+#: includes/class-ava-menu-settings-item.php:408
 msgid "Mega menu position"
 msgstr ""
 
-#: includes/class-jet-menu-settings-item.php:465
-#: includes/class-jet-menu-settings-nav.php:90
+#: includes/class-ava-menu-settings-item.php:465
+#: includes/class-ava-menu-settings-nav.php:90
 msgid "Success!"
 msgstr "Успех!"
 
-#: includes/class-jet-menu-settings-item.php:512
-#: includes/class-jet-menu-settings-nav.php:70
+#: includes/class-ava-menu-settings-item.php:512
+#: includes/class-ava-menu-settings-nav.php:70
 msgid "Incorrect input data"
 msgstr "Неправильные исходные данные"
 
-#: includes/class-jet-menu-settings-nav.php:129
-msgid "JetMenu Settings"
-msgstr "Настройки JetMenu"
+#: includes/class-ava-menu-settings-nav.php:129
+msgid "AvaMenu Settings"
+msgstr "Настройки AvaMenu"
 
-#: includes/class-jet-menu-settings-nav.php:210
-msgid "Enable JetMenu for current location"
-msgstr "Включить JetMenu для данной области отображения"
+#: includes/class-ava-menu-settings-nav.php:210
+msgid "Enable AvaMenu for current location"
+msgstr "Включить AvaMenu для данной области отображения"
 
-#: includes/class-jet-menu-settings-nav.php:222
+#: includes/class-ava-menu-settings-nav.php:222
 msgid "This theme does not register any menu locations."
 msgstr "Эта тема не регистрирует никаких областей отображения меню."
 
-#: includes/class-jet-menu-settings-nav.php:223
+#: includes/class-ava-menu-settings-nav.php:223
 msgid ""
-"You will need to create a new menu location to use the JetMenu on your site."
+"You will need to create a new menu location to use the AvaMenu on your site."
 msgstr ""
 "Вам нужно будет создать новую область отображения меню, чтобы использовать "
-"JetMenu на вашем сайте."
+"AvaMenu на вашем сайте."
 
-#: includes/class-jet-menu-settings-nav.php:232
+#: includes/class-ava-menu-settings-nav.php:232
 msgid ""
-"Please assign this menu to a theme location to enable the JetMenu settings."
+"Please assign this menu to a theme location to enable the AvaMenu settings."
 msgstr ""
 "Пожалуйста, назначьте область отображения для данного меню, чтобы включить "
-"настройки JetMenu."
+"настройки AvaMenu."
 
-#: includes/class-jet-menu-settings-nav.php:233
+#: includes/class-ava-menu-settings-nav.php:233
 msgid ""
 "To assign this menu to a theme location, scroll to the bottom of this page "
 "and tag the menu to a 'Display location'."
@@ -1662,250 +1662,250 @@ msgstr "Все установки завершены."
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Установка плагина %1$s (%2$d/%3$d)"
 
-#: includes/updater/class-jet-menu-plugin-changelog.php:127
+#: includes/updater/class-ava-menu-plugin-changelog.php:127
 #, php-format
 msgid "More information about %s"
 msgstr ""
 
-#: includes/updater/class-jet-menu-plugin-changelog.php:129
+#: includes/updater/class-ava-menu-plugin-changelog.php:129
 msgid "View details"
 msgstr ""
 
-#: includes/widgets/jet-widget-custom-menu.php:32
+#: includes/widgets/ava-widget-custom-menu.php:32
 msgid "Vertical Mega Menu"
 msgstr "Vertical Mega Menu"
 
-#: includes/widgets/jet-widget-custom-menu.php:115
-#: includes/widgets/jet-widget-mega-menu.php:71
+#: includes/widgets/ava-widget-custom-menu.php:115
+#: includes/widgets/ava-widget-mega-menu.php:71
 msgid "Menu"
 msgstr "Меню"
 
-#: includes/widgets/jet-widget-custom-menu.php:122
-#: includes/widgets/jet-widget-mega-menu.php:89
+#: includes/widgets/ava-widget-custom-menu.php:122
+#: includes/widgets/ava-widget-mega-menu.php:89
 msgid "Select Menu"
 msgstr "Выбрать меню"
 
-#: includes/widgets/jet-widget-custom-menu.php:141
+#: includes/widgets/ava-widget-custom-menu.php:141
 msgid "Sub Menu Position"
 msgstr "Положение меню второго уровня"
 
-#: includes/widgets/jet-widget-custom-menu.php:145
+#: includes/widgets/ava-widget-custom-menu.php:145
 msgid "Right Side"
 msgstr "Правая сторона"
 
-#: includes/widgets/jet-widget-custom-menu.php:146
+#: includes/widgets/ava-widget-custom-menu.php:146
 msgid "Left Side"
 msgstr "Левая сторона"
 
-#: includes/widgets/jet-widget-custom-menu.php:162
+#: includes/widgets/ava-widget-custom-menu.php:162
 msgid "Move Left"
 msgstr "Сдвинуть влево"
 
-#: includes/widgets/jet-widget-custom-menu.php:163
+#: includes/widgets/ava-widget-custom-menu.php:163
 msgid "Move Right"
 msgstr "Сдвинуть вправо"
 
-#: includes/widgets/jet-widget-custom-menu.php:176
+#: includes/widgets/ava-widget-custom-menu.php:176
 msgid "Main Menu"
 msgstr "Главное меню"
 
-#: includes/widgets/jet-widget-custom-menu.php:185
+#: includes/widgets/ava-widget-custom-menu.php:185
 msgid "Main Menu Width"
 msgstr "Ширина главного меню"
 
-#: includes/widgets/jet-widget-custom-menu.php:221
-#: includes/widgets/jet-widget-custom-menu.php:360
-#: includes/widgets/jet-widget-custom-menu.php:468
-#: includes/widgets/jet-widget-custom-menu.php:629
-#: includes/widgets/jet-widget-custom-menu.php:755
-#: includes/widgets/jet-widget-custom-menu.php:881
-#: includes/widgets/jet-widget-custom-menu.php:1123
-#: includes/widgets/jet-widget-custom-menu.php:1249
-#: includes/widgets/jet-widget-custom-menu.php:1375
-#: includes/widgets/jet-widget-custom-menu.php:1838
-#: includes/widgets/jet-widget-mega-menu.php:313
-#: includes/widgets/jet-widget-mega-menu.php:522
-#: includes/widgets/jet-widget-mega-menu.php:637
-#: includes/widgets/jet-widget-mega-menu.php:812
-#: includes/widgets/jet-widget-mega-menu.php:1122
+#: includes/widgets/ava-widget-custom-menu.php:221
+#: includes/widgets/ava-widget-custom-menu.php:360
+#: includes/widgets/ava-widget-custom-menu.php:468
+#: includes/widgets/ava-widget-custom-menu.php:629
+#: includes/widgets/ava-widget-custom-menu.php:755
+#: includes/widgets/ava-widget-custom-menu.php:881
+#: includes/widgets/ava-widget-custom-menu.php:1123
+#: includes/widgets/ava-widget-custom-menu.php:1249
+#: includes/widgets/ava-widget-custom-menu.php:1375
+#: includes/widgets/ava-widget-custom-menu.php:1838
+#: includes/widgets/ava-widget-mega-menu.php:313
+#: includes/widgets/ava-widget-mega-menu.php:522
+#: includes/widgets/ava-widget-mega-menu.php:637
+#: includes/widgets/ava-widget-mega-menu.php:812
+#: includes/widgets/ava-widget-mega-menu.php:1122
 msgid "Padding"
 msgstr "Внутренний отступ"
 
-#: includes/widgets/jet-widget-custom-menu.php:233
-#: includes/widgets/jet-widget-custom-menu.php:372
-#: includes/widgets/jet-widget-custom-menu.php:481
-#: includes/widgets/jet-widget-custom-menu.php:642
-#: includes/widgets/jet-widget-custom-menu.php:768
-#: includes/widgets/jet-widget-custom-menu.php:894
-#: includes/widgets/jet-widget-custom-menu.php:1136
-#: includes/widgets/jet-widget-custom-menu.php:1262
-#: includes/widgets/jet-widget-custom-menu.php:1388
-#: includes/widgets/jet-widget-custom-menu.php:1720
-#: includes/widgets/jet-widget-custom-menu.php:1851
-#: includes/widgets/jet-widget-mega-menu.php:534
-#: includes/widgets/jet-widget-mega-menu.php:649
-#: includes/widgets/jet-widget-mega-menu.php:824
-#: includes/widgets/jet-widget-mega-menu.php:947
-#: includes/widgets/jet-widget-mega-menu.php:1134
-#: includes/widgets/jet-widget-mega-menu.php:1285
+#: includes/widgets/ava-widget-custom-menu.php:233
+#: includes/widgets/ava-widget-custom-menu.php:372
+#: includes/widgets/ava-widget-custom-menu.php:481
+#: includes/widgets/ava-widget-custom-menu.php:642
+#: includes/widgets/ava-widget-custom-menu.php:768
+#: includes/widgets/ava-widget-custom-menu.php:894
+#: includes/widgets/ava-widget-custom-menu.php:1136
+#: includes/widgets/ava-widget-custom-menu.php:1262
+#: includes/widgets/ava-widget-custom-menu.php:1388
+#: includes/widgets/ava-widget-custom-menu.php:1720
+#: includes/widgets/ava-widget-custom-menu.php:1851
+#: includes/widgets/ava-widget-mega-menu.php:534
+#: includes/widgets/ava-widget-mega-menu.php:649
+#: includes/widgets/ava-widget-mega-menu.php:824
+#: includes/widgets/ava-widget-mega-menu.php:947
+#: includes/widgets/ava-widget-mega-menu.php:1134
+#: includes/widgets/ava-widget-mega-menu.php:1285
 msgid "Margin"
 msgstr "Внешний отступ"
 
-#: includes/widgets/jet-widget-custom-menu.php:245
-#: includes/widgets/jet-widget-custom-menu.php:386
-#: includes/widgets/jet-widget-custom-menu.php:498
-#: includes/widgets/jet-widget-custom-menu.php:654
-#: includes/widgets/jet-widget-custom-menu.php:780
-#: includes/widgets/jet-widget-custom-menu.php:906
-#: includes/widgets/jet-widget-custom-menu.php:954
-#: includes/widgets/jet-widget-custom-menu.php:995
-#: includes/widgets/jet-widget-custom-menu.php:1148
-#: includes/widgets/jet-widget-custom-menu.php:1274
-#: includes/widgets/jet-widget-custom-menu.php:1400
-#: includes/widgets/jet-widget-custom-menu.php:1448
-#: includes/widgets/jet-widget-custom-menu.php:1489
-#: includes/widgets/jet-widget-custom-menu.php:1707
-#: includes/widgets/jet-widget-custom-menu.php:1825
-#: includes/widgets/jet-widget-custom-menu.php:2112
-#: includes/widgets/jet-widget-mega-menu.php:261
-#: includes/widgets/jet-widget-mega-menu.php:510
-#: includes/widgets/jet-widget-mega-menu.php:625
-#: includes/widgets/jet-widget-mega-menu.php:800
-#: includes/widgets/jet-widget-mega-menu.php:1110
+#: includes/widgets/ava-widget-custom-menu.php:245
+#: includes/widgets/ava-widget-custom-menu.php:386
+#: includes/widgets/ava-widget-custom-menu.php:498
+#: includes/widgets/ava-widget-custom-menu.php:654
+#: includes/widgets/ava-widget-custom-menu.php:780
+#: includes/widgets/ava-widget-custom-menu.php:906
+#: includes/widgets/ava-widget-custom-menu.php:954
+#: includes/widgets/ava-widget-custom-menu.php:995
+#: includes/widgets/ava-widget-custom-menu.php:1148
+#: includes/widgets/ava-widget-custom-menu.php:1274
+#: includes/widgets/ava-widget-custom-menu.php:1400
+#: includes/widgets/ava-widget-custom-menu.php:1448
+#: includes/widgets/ava-widget-custom-menu.php:1489
+#: includes/widgets/ava-widget-custom-menu.php:1707
+#: includes/widgets/ava-widget-custom-menu.php:1825
+#: includes/widgets/ava-widget-custom-menu.php:2112
+#: includes/widgets/ava-widget-mega-menu.php:261
+#: includes/widgets/ava-widget-mega-menu.php:510
+#: includes/widgets/ava-widget-mega-menu.php:625
+#: includes/widgets/ava-widget-mega-menu.php:800
+#: includes/widgets/ava-widget-mega-menu.php:1110
 msgid "Border Radius"
 msgstr "Скругление углов"
 
-#: includes/widgets/jet-widget-custom-menu.php:258
-#: includes/widgets/jet-widget-custom-menu.php:399
-#: includes/widgets/jet-widget-custom-menu.php:512
-#: includes/widgets/jet-widget-custom-menu.php:667
-#: includes/widgets/jet-widget-custom-menu.php:793
-#: includes/widgets/jet-widget-custom-menu.php:919
-#: includes/widgets/jet-widget-custom-menu.php:970
-#: includes/widgets/jet-widget-custom-menu.php:1011
-#: includes/widgets/jet-widget-custom-menu.php:1161
-#: includes/widgets/jet-widget-custom-menu.php:1287
-#: includes/widgets/jet-widget-custom-menu.php:1413
-#: includes/widgets/jet-widget-custom-menu.php:1464
-#: includes/widgets/jet-widget-custom-menu.php:1505
-#: includes/widgets/jet-widget-custom-menu.php:1697
-#: includes/widgets/jet-widget-custom-menu.php:1816
-#: includes/widgets/jet-widget-custom-menu.php:2102
+#: includes/widgets/ava-widget-custom-menu.php:258
+#: includes/widgets/ava-widget-custom-menu.php:399
+#: includes/widgets/ava-widget-custom-menu.php:512
+#: includes/widgets/ava-widget-custom-menu.php:667
+#: includes/widgets/ava-widget-custom-menu.php:793
+#: includes/widgets/ava-widget-custom-menu.php:919
+#: includes/widgets/ava-widget-custom-menu.php:970
+#: includes/widgets/ava-widget-custom-menu.php:1011
+#: includes/widgets/ava-widget-custom-menu.php:1161
+#: includes/widgets/ava-widget-custom-menu.php:1287
+#: includes/widgets/ava-widget-custom-menu.php:1413
+#: includes/widgets/ava-widget-custom-menu.php:1464
+#: includes/widgets/ava-widget-custom-menu.php:1505
+#: includes/widgets/ava-widget-custom-menu.php:1697
+#: includes/widgets/ava-widget-custom-menu.php:1816
+#: includes/widgets/ava-widget-custom-menu.php:2102
 msgid "Border"
 msgstr "Граница"
 
-#: includes/widgets/jet-widget-custom-menu.php:276
-#: includes/widgets/jet-widget-custom-menu.php:1741
-#: includes/widgets/jet-widget-custom-menu.php:1864
-#: includes/widgets/jet-widget-custom-menu.php:2133
+#: includes/widgets/ava-widget-custom-menu.php:276
+#: includes/widgets/ava-widget-custom-menu.php:1741
+#: includes/widgets/ava-widget-custom-menu.php:1864
+#: includes/widgets/ava-widget-custom-menu.php:2133
 msgid "Alignment"
 msgstr "Выравнивание"
 
-#: includes/widgets/jet-widget-custom-menu.php:311
-#: includes/widgets/jet-widget-mega-menu.php:32
+#: includes/widgets/ava-widget-custom-menu.php:311
+#: includes/widgets/ava-widget-mega-menu.php:32
 msgid "Mega Menu"
 msgstr "Mega Menu"
 
-#: includes/widgets/jet-widget-custom-menu.php:320
+#: includes/widgets/ava-widget-custom-menu.php:320
 msgid "Mega Menu Width"
 msgstr "Ширина Mega Menu"
 
-#: includes/widgets/jet-widget-custom-menu.php:422
-#: includes/widgets/jet-widget-mega-menu.php:556
+#: includes/widgets/ava-widget-custom-menu.php:422
+#: includes/widgets/ava-widget-mega-menu.php:556
 msgid "Sub Menu"
 msgstr "Меню второго порядка"
 
-#: includes/widgets/jet-widget-custom-menu.php:431
+#: includes/widgets/ava-widget-custom-menu.php:431
 msgid "Sub Menu Width"
 msgstr "Ширина Меню второго порядка"
 
-#: includes/widgets/jet-widget-custom-menu.php:535
-#: includes/widgets/jet-widget-mega-menu.php:348
+#: includes/widgets/ava-widget-custom-menu.php:535
+#: includes/widgets/ava-widget-mega-menu.php:348
 msgid "Main Menu Items"
 msgstr "Элементы главного меню"
 
-#: includes/widgets/jet-widget-custom-menu.php:580
-#: includes/widgets/jet-widget-custom-menu.php:715
-#: includes/widgets/jet-widget-custom-menu.php:841
-#: includes/widgets/jet-widget-custom-menu.php:1074
-#: includes/widgets/jet-widget-custom-menu.php:1209
-#: includes/widgets/jet-widget-custom-menu.php:1335
+#: includes/widgets/ava-widget-custom-menu.php:580
+#: includes/widgets/ava-widget-custom-menu.php:715
+#: includes/widgets/ava-widget-custom-menu.php:841
+#: includes/widgets/ava-widget-custom-menu.php:1074
+#: includes/widgets/ava-widget-custom-menu.php:1209
+#: includes/widgets/ava-widget-custom-menu.php:1335
 msgid "Text Color"
 msgstr "Цвет текста"
 
-#: includes/widgets/jet-widget-custom-menu.php:600
-#: includes/widgets/jet-widget-custom-menu.php:735
-#: includes/widgets/jet-widget-custom-menu.php:861
-#: includes/widgets/jet-widget-custom-menu.php:1094
-#: includes/widgets/jet-widget-custom-menu.php:1229
-#: includes/widgets/jet-widget-custom-menu.php:1355
+#: includes/widgets/ava-widget-custom-menu.php:600
+#: includes/widgets/ava-widget-custom-menu.php:735
+#: includes/widgets/ava-widget-custom-menu.php:861
+#: includes/widgets/ava-widget-custom-menu.php:1094
+#: includes/widgets/ava-widget-custom-menu.php:1229
+#: includes/widgets/ava-widget-custom-menu.php:1355
 msgid "Description"
 msgstr "Описание"
 
-#: includes/widgets/jet-widget-custom-menu.php:609
-#: includes/widgets/jet-widget-custom-menu.php:744
-#: includes/widgets/jet-widget-custom-menu.php:870
-#: includes/widgets/jet-widget-custom-menu.php:1103
-#: includes/widgets/jet-widget-custom-menu.php:1238
-#: includes/widgets/jet-widget-custom-menu.php:1364
+#: includes/widgets/ava-widget-custom-menu.php:609
+#: includes/widgets/ava-widget-custom-menu.php:744
+#: includes/widgets/ava-widget-custom-menu.php:870
+#: includes/widgets/ava-widget-custom-menu.php:1103
+#: includes/widgets/ava-widget-custom-menu.php:1238
+#: includes/widgets/ava-widget-custom-menu.php:1364
 msgid "Description Color"
 msgstr "Цвет описания"
 
-#: includes/widgets/jet-widget-custom-menu.php:941
-#: includes/widgets/jet-widget-custom-menu.php:1435
+#: includes/widgets/ava-widget-custom-menu.php:941
+#: includes/widgets/ava-widget-custom-menu.php:1435
 msgid "First item custom styles"
 msgstr "Кастомные стили первого элемента"
 
-#: includes/widgets/jet-widget-custom-menu.php:983
-#: includes/widgets/jet-widget-custom-menu.php:1477
+#: includes/widgets/ava-widget-custom-menu.php:983
+#: includes/widgets/ava-widget-custom-menu.php:1477
 msgid "Last item custom styles"
 msgstr "Кастомные стили последнего элемента"
 
-#: includes/widgets/jet-widget-custom-menu.php:1029
+#: includes/widgets/ava-widget-custom-menu.php:1029
 msgid "Sub Menu Items"
 msgstr "Элементы Меню второго порядка"
 
-#: includes/widgets/jet-widget-custom-menu.php:1541
-#: includes/widgets/jet-widget-custom-menu.php:1579
-#: includes/widgets/jet-widget-custom-menu.php:1617
-#: includes/widgets/jet-widget-custom-menu.php:1956
-#: includes/widgets/jet-widget-custom-menu.php:1993
-#: includes/widgets/jet-widget-custom-menu.php:2030
+#: includes/widgets/ava-widget-custom-menu.php:1541
+#: includes/widgets/ava-widget-custom-menu.php:1579
+#: includes/widgets/ava-widget-custom-menu.php:1617
+#: includes/widgets/ava-widget-custom-menu.php:1956
+#: includes/widgets/ava-widget-custom-menu.php:1993
+#: includes/widgets/ava-widget-custom-menu.php:2030
 msgid "Icon Color"
 msgstr "Цвет иконки"
 
-#: includes/widgets/jet-widget-custom-menu.php:1557
-#: includes/widgets/jet-widget-custom-menu.php:1595
-#: includes/widgets/jet-widget-custom-menu.php:1629
-#: includes/widgets/jet-widget-custom-menu.php:1972
-#: includes/widgets/jet-widget-custom-menu.php:2009
-#: includes/widgets/jet-widget-custom-menu.php:2042
+#: includes/widgets/ava-widget-custom-menu.php:1557
+#: includes/widgets/ava-widget-custom-menu.php:1595
+#: includes/widgets/ava-widget-custom-menu.php:1629
+#: includes/widgets/ava-widget-custom-menu.php:1972
+#: includes/widgets/ava-widget-custom-menu.php:2009
+#: includes/widgets/ava-widget-custom-menu.php:2042
 msgid "Icon Background Color"
 msgstr "Цвет фона иконки"
 
-#: includes/widgets/jet-widget-custom-menu.php:1645
-#: includes/widgets/jet-widget-custom-menu.php:2058
+#: includes/widgets/ava-widget-custom-menu.php:1645
+#: includes/widgets/ava-widget-custom-menu.php:2058
 msgid "Icon Font Size"
 msgstr "Размер шрифта иконки"
 
-#: includes/widgets/jet-widget-custom-menu.php:1671
-#: includes/widgets/jet-widget-custom-menu.php:2080
+#: includes/widgets/ava-widget-custom-menu.php:1671
+#: includes/widgets/ava-widget-custom-menu.php:2080
 msgid "Icon Box Size"
 msgstr "Размер ячейки иконки"
 
-#: includes/widgets/jet-widget-custom-menu.php:1782
+#: includes/widgets/ava-widget-custom-menu.php:1782
 msgid "Color"
 msgstr "Цвет"
 
-#: includes/widgets/jet-widget-custom-menu.php:1896
+#: includes/widgets/ava-widget-custom-menu.php:1896
 msgid "Drop-down Icon"
 msgstr "Иконка раскрывающегося списка"
 
-#: includes/widgets/jet-widget-custom-menu.php:1916
+#: includes/widgets/ava-widget-custom-menu.php:1916
 msgid "Offset"
 msgstr "Смещение"
 
-#: includes/widgets/jet-widget-mega-menu.php:82
+#: includes/widgets/ava-widget-mega-menu.php:82
 msgid ""
 "This module can't be used inside Mega Menu content. Please, use it to show "
 "selected Mega Menu on specific page."
@@ -1914,133 +1914,133 @@ msgstr ""
 "используйте его, чтобы отобразить выбранное Mega Menu на определённой "
 "странице."
 
-#: includes/widgets/jet-widget-mega-menu.php:170
+#: includes/widgets/ava-widget-mega-menu.php:170
 msgid "Menu Container"
 msgstr "Контейнер меню"
 
-#: includes/widgets/jet-widget-mega-menu.php:179
+#: includes/widgets/ava-widget-mega-menu.php:179
 msgid "Menu Items Alignment"
 msgstr "Выравнивание элементов меню"
 
-#: includes/widgets/jet-widget-mega-menu.php:325
+#: includes/widgets/ava-widget-mega-menu.php:325
 msgid "Min Width (px)"
 msgstr "Минимальная ширина (px)"
 
-#: includes/widgets/jet-widget-mega-menu.php:365
-#: includes/widgets/jet-widget-mega-menu.php:683
+#: includes/widgets/ava-widget-mega-menu.php:365
+#: includes/widgets/ava-widget-mega-menu.php:683
 msgid "Description typography"
 msgstr "Типографика описания"
 
-#: includes/widgets/jet-widget-mega-menu.php:374
+#: includes/widgets/ava-widget-mega-menu.php:374
 msgid "Item max width (%)"
 msgstr "Максимальная ширина элемента (%)"
 
-#: includes/widgets/jet-widget-mega-menu.php:375
+#: includes/widgets/ava-widget-mega-menu.php:375
 msgid "Leave empty to automatic width detection"
 msgstr "Оставить пустым для автоматического определения ширины"
 
-#: includes/widgets/jet-widget-mega-menu.php:415
-#: includes/widgets/jet-widget-mega-menu.php:705
-#: includes/widgets/jet-widget-mega-menu.php:1075
+#: includes/widgets/ava-widget-mega-menu.php:415
+#: includes/widgets/ava-widget-mega-menu.php:705
+#: includes/widgets/ava-widget-mega-menu.php:1075
 msgid "Text color"
 msgstr "Цвет текста"
 
-#: includes/widgets/jet-widget-mega-menu.php:426
-#: includes/widgets/jet-widget-mega-menu.php:716
+#: includes/widgets/ava-widget-mega-menu.php:426
+#: includes/widgets/ava-widget-mega-menu.php:716
 msgid "Description color"
 msgstr "Цвет описания"
 
-#: includes/widgets/jet-widget-mega-menu.php:448
-#: includes/widgets/jet-widget-mega-menu.php:738
+#: includes/widgets/ava-widget-mega-menu.php:448
+#: includes/widgets/ava-widget-mega-menu.php:738
 msgid "Drop-down arrow color"
 msgstr "Цвет стрелки раскрывающегося списка"
 
-#: includes/widgets/jet-widget-mega-menu.php:479
-#: includes/widgets/jet-widget-mega-menu.php:769
+#: includes/widgets/ava-widget-mega-menu.php:479
+#: includes/widgets/ava-widget-mega-menu.php:769
 msgctxt "Border Control"
 msgid "First Item Border Type"
 msgstr "Тип границы первого элемента"
 
-#: includes/widgets/jet-widget-mega-menu.php:488
-#: includes/widgets/jet-widget-mega-menu.php:778
+#: includes/widgets/ava-widget-mega-menu.php:488
+#: includes/widgets/ava-widget-mega-menu.php:778
 msgid "Last item border"
 msgstr "Граница последнего элемента"
 
-#: includes/widgets/jet-widget-mega-menu.php:493
-#: includes/widgets/jet-widget-mega-menu.php:783
+#: includes/widgets/ava-widget-mega-menu.php:493
+#: includes/widgets/ava-widget-mega-menu.php:783
 msgctxt "Border Control"
 msgid "Last Item Border Type"
 msgstr "Тип границы последнего элемента"
 
-#: includes/widgets/jet-widget-mega-menu.php:565
+#: includes/widgets/ava-widget-mega-menu.php:565
 msgid "Simple Panel"
 msgstr "Простая панель"
 
-#: includes/widgets/jet-widget-mega-menu.php:566
+#: includes/widgets/ava-widget-mega-menu.php:566
 msgid "Mega Panel"
 msgstr "Панель Mega"
 
-#: includes/widgets/jet-widget-mega-menu.php:583
+#: includes/widgets/ava-widget-mega-menu.php:583
 msgid "Width (px)"
 msgstr "Ширина (px)"
 
-#: includes/widgets/jet-widget-mega-menu.php:666
+#: includes/widgets/ava-widget-mega-menu.php:666
 msgid "Sub Menu Items Style"
 msgstr "Стиль элемента меню второго уровня"
 
-#: includes/widgets/jet-widget-mega-menu.php:899
+#: includes/widgets/ava-widget-mega-menu.php:899
 msgid "Top Level"
 msgstr "Верхний уровень"
 
-#: includes/widgets/jet-widget-mega-menu.php:900
+#: includes/widgets/ava-widget-mega-menu.php:900
 msgid "Sub Level"
 msgstr "Уровень второго порядка"
 
-#: includes/widgets/jet-widget-mega-menu.php:930
-#: includes/widgets/jet-widget-mega-menu.php:1268
+#: includes/widgets/ava-widget-mega-menu.php:930
+#: includes/widgets/ava-widget-mega-menu.php:1268
 msgid "Font size"
 msgstr "Размер шрифта"
 
-#: includes/widgets/jet-widget-mega-menu.php:959
-#: includes/widgets/jet-widget-mega-menu.php:1146
-#: includes/widgets/jet-widget-mega-menu.php:1307
+#: includes/widgets/ava-widget-mega-menu.php:959
+#: includes/widgets/ava-widget-mega-menu.php:1146
+#: includes/widgets/ava-widget-mega-menu.php:1307
 msgid "Horizontal position"
 msgstr "Горизонтальное положение"
 
-#: includes/widgets/jet-widget-mega-menu.php:989
-#: includes/widgets/jet-widget-mega-menu.php:1176
-#: includes/widgets/jet-widget-mega-menu.php:1333
+#: includes/widgets/ava-widget-mega-menu.php:989
+#: includes/widgets/ava-widget-mega-menu.php:1176
+#: includes/widgets/ava-widget-mega-menu.php:1333
 msgid "Vertical position"
 msgstr "Вертикальное положение"
 
-#: includes/widgets/jet-widget-mega-menu.php:1019
-#: includes/widgets/jet-widget-mega-menu.php:1206
-#: includes/widgets/jet-widget-mega-menu.php:1363
+#: includes/widgets/ava-widget-mega-menu.php:1019
+#: includes/widgets/ava-widget-mega-menu.php:1206
+#: includes/widgets/ava-widget-mega-menu.php:1363
 msgid "Order"
 msgstr "Порядок"
 
-#: includes/widgets/jet-widget-mega-menu.php:1223
+#: includes/widgets/ava-widget-mega-menu.php:1223
 msgid "Hide on mobile"
 msgstr "Скрыть на мобильном устройстве"
 
-#: jet-menu.php:369
+#: ava-menu.php:369
 #, php-format
-msgid "JetMenu for Elementor requires the following plugin: %1$s."
-msgid_plural "JetMenu for Elementor requires the following plugins: %1$s."
-msgstr[0] "JetMenu для Elementor требует установить следующий плагин: %1$s."
-msgstr[1] "JetMenu для Elementor требует установить следующие плагины:%1$s."
-msgstr[2] "JetMenu для Elementor требует установить следующие плагины:%1$s."
+msgid "AvaMenu for Elementor requires the following plugin: %1$s."
+msgid_plural "AvaMenu for Elementor requires the following plugins: %1$s."
+msgstr[0] "AvaMenu для Elementor требует установить следующий плагин: %1$s."
+msgstr[1] "AvaMenu для Elementor требует установить следующие плагины:%1$s."
+msgstr[2] "AvaMenu для Elementor требует установить следующие плагины:%1$s."
 
-#: jet-menu.php:374
+#: ava-menu.php:374
 #, php-format
-msgid "JetMenu for Elementor recommends the following plugin: %1$s."
-msgid_plural "JetMenu for Elementor recommends the following plugins: %1$s."
+msgid "AvaMenu for Elementor recommends the following plugin: %1$s."
+msgid_plural "AvaMenu for Elementor recommends the following plugins: %1$s."
 msgstr[0] ""
-"JetMenu для Elementor рекомендует установку следующего плагина: %1$s."
+"AvaMenu для Elementor рекомендует установку следующего плагина: %1$s."
 msgstr[1] ""
-"JetMenu для Elementor рекомендует установку следующих плагинов: %1$s."
+"AvaMenu для Elementor рекомендует установку следующих плагинов: %1$s."
 msgstr[2] ""
-"JetMenu для Elementor рекомендует установку следующих плагинов: %1$s."
+"AvaMenu для Elementor рекомендует установку следующих плагинов: %1$s."
 
 #: templates/admin/presets-controls.php:9
 msgid "Create Preset"

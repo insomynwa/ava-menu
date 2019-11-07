@@ -12,12 +12,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
+if ( ! class_exists( 'Ava_Menu_Dynamic_CSS' ) ) {
 
 	/**
-	 * Define Jet_Menu_Dynamic_CSS class
+	 * Define Ava_Menu_Dynamic_CSS class
 	 */
-	class Jet_Menu_Dynamic_CSS {
+	class Ava_Menu_Dynamic_CSS {
 
 		/**
 		 * A reference to an instance of this class.
@@ -69,7 +69,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 				array(
 					$args['name'] . '-switch' => array(
 						'type'   => 'switcher',
-						'title'  => sprintf( esc_html__( '%s typography', 'jet-menu' ), $args['label'] ),
+						'title'  => sprintf( esc_html__( '%s typography', 'ava-menu' ), $args['label'] ),
 						'value'  => $this->get_option( $args['name'] . '-switch', 'false' ),
 						'toggle' => array(
 							'true_toggle'  => 'On',
@@ -87,14 +87,14 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 							isset( $args['defaults']['font-size'] ) ? $args['defaults']['font-size'] : false
 						),
 						'step_value' => 1,
-						'title'      => sprintf( esc_html__( '%s font size', 'jet-menu' ), $args['label'] ),
+						'title'      => sprintf( esc_html__( '%s font size', 'ava-menu' ), $args['label'] ),
 						'parent'     => $args['parent'],
 						'master'     => $args['name'] . '-show',
 					),
 					$args['name'] . '-font-family' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s font family', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s font family', 'ava-menu' ), $args['label'] ),
 						'filter'           => true,
 						'value'            => $this->get_option(
 							$args['name'] . '-font-family',
@@ -106,13 +106,13 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$args['name'] . '-font-weight' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s font weight', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s font weight', 'ava-menu' ), $args['label'] ),
 						'value'            => $this->get_option(
 							$args['name'] . '-font-weight',
 							isset( $args['defaults']['font-weight'] ) ? $args['defaults']['font-weight'] : false
 						),
 						'options'          => array(
-							''       => esc_html__( 'Default', 'jet-menu' ),
+							''       => esc_html__( 'Default', 'ava-menu' ),
 							'100'    => '100',
 							'200'    => '200',
 							'300'    => '300',
@@ -128,33 +128,33 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$args['name'] . '-text-transform' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s text transform', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s text transform', 'ava-menu' ), $args['label'] ),
 						'value'            => $this->get_option(
 							$args['name'] . '-text-transform',
 							isset( $args['defaults']['text-transform'] ) ? $args['defaults']['text-transform'] : false
 						),
 						'options'          => array(
-							''           => esc_html__( 'Default', 'jet-menu' ),
-							'uppercase'  => esc_html__( 'Uppercase', 'jet-menu' ),
-							'lowercase'  => esc_html__( 'Lowercase', 'jet-menu' ),
-							'capitalize' => esc_html__( 'Capitalize', 'jet-menu' ),
-							'none'       => esc_html__( 'Normal', 'jet-menu' ),
+							''           => esc_html__( 'Default', 'ava-menu' ),
+							'uppercase'  => esc_html__( 'Uppercase', 'ava-menu' ),
+							'lowercase'  => esc_html__( 'Lowercase', 'ava-menu' ),
+							'capitalize' => esc_html__( 'Capitalize', 'ava-menu' ),
+							'none'       => esc_html__( 'Normal', 'ava-menu' ),
 						),
 						'master'           => $args['name'] . '-show',
 					),
 					$args['name'] . '-font-style' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s font style', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s font style', 'ava-menu' ), $args['label'] ),
 						'value'            => $this->get_option(
 							$args['name'] . '-font-style',
 							isset( $args['defaults']['font-style'] ) ? $args['defaults']['font-style'] : false
 						),
 						'options'          => array(
-							''           => esc_html__( 'Default', 'jet-menu' ),
-							'normal' => esc_html__( 'Normal', 'jet-menu' ),
-							'italic' => esc_html__( 'Italic', 'jet-menu' ),
-							'oblique' => esc_html__( 'Oblique', 'jet-menu' ),
+							''           => esc_html__( 'Default', 'ava-menu' ),
+							'normal' => esc_html__( 'Normal', 'ava-menu' ),
+							'italic' => esc_html__( 'Italic', 'ava-menu' ),
+							'oblique' => esc_html__( 'Oblique', 'ava-menu' ),
 						),
 						'master'           => $args['name'] . '-show',
 					),
@@ -167,7 +167,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 							isset( $args['defaults']['line-height'] ) ? $args['defaults']['line-height'] : false
 						),
 						'step_value' => 0.1,
-						'title'      => sprintf( esc_html__( '%s line height', 'jet-menu' ), $args['label'] ),
+						'title'      => sprintf( esc_html__( '%s line height', 'ava-menu' ), $args['label'] ),
 						'parent'     => $args['parent'],
 						'master'     => $args['name'] . '-show',
 					),
@@ -180,22 +180,22 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 							isset( $args['defaults']['letter-spacing'] ) ? $args['defaults']['letter-spacing'] : false
 						),
 						'step_value' => 0.1,
-						'title'      => sprintf( esc_html__( '%s letter spacing', 'jet-menu' ), $args['label'] ),
+						'title'      => sprintf( esc_html__( '%s letter spacing', 'ava-menu' ), $args['label'] ),
 						'parent'     => $args['parent'],
 						'master'     => $args['name'] . '-show',
 					),
 					$args['name'] . '-subset' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s subset', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s subset', 'ava-menu' ), $args['label'] ),
 						'value'            => $this->get_option(
 							$args['name'] . '-subset',
 							isset( $args['defaults']['subset'] ) ? $args['defaults']['subset'] : false
 						),
 						'options'          => array(
-							'latin'    => esc_html__( 'Latin', 'jet-menu' ),
-							'greek'    => esc_html__( 'Greek', 'jet-menu' ),
-							'cyrillic' => esc_html__( 'Cyrillic', 'jet-menu' ),
+							'latin'    => esc_html__( 'Latin', 'ava-menu' ),
+							'greek'    => esc_html__( 'Greek', 'ava-menu' ),
+							'cyrillic' => esc_html__( 'Cyrillic', 'ava-menu' ),
 						),
 						'master'           => $args['name'] . '-show',
 					),
@@ -222,7 +222,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 				array(
 					$args['name'] . '-switch' => array(
 						'type'   => 'switcher',
-						'title'  => sprintf( esc_html__( '%s background', 'jet-menu' ), $args['label'] ),
+						'title'  => sprintf( esc_html__( '%s background', 'ava-menu' ), $args['label'] ),
 						'value'  => $this->get_option( $args['name'] . '-switch', 'false' ),
 						'toggle' => array(
 							'true_toggle'  => 'On',
@@ -234,7 +234,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$args['name'] . '-color' => array(
 						'type'        => 'colorpicker',
 						'parent'      => $args['parent'],
-						'title'       => sprintf( esc_html__( '%s background color', 'jet-menu' ), $args['label'] ),
+						'title'       => sprintf( esc_html__( '%s background color', 'ava-menu' ), $args['label'] ),
 						'value'       => $this->get_option(
 							$args['name'] . '-color',
 							isset( $args['defaults']['color'] ) ? $args['defaults']['color'] : false
@@ -244,7 +244,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					),
 					$args['name'] . '-gradient-switch' => array(
 						'type'   => 'switcher',
-						'title'  => esc_html__( 'Gradient background', 'jet-menu' ),
+						'title'  => esc_html__( 'Gradient background', 'ava-menu' ),
 						'value'  => $this->get_option( $args['name'] . '-gradient-switch', 'false' ),
 						'toggle' => array(
 							'true_toggle'  => 'On',
@@ -256,7 +256,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$args['name'] . '-second-color' => array(
 						'type'        => 'colorpicker',
 						'parent'      => $args['parent'],
-						'title'       => sprintf( esc_html__( '%s background second color', 'jet-menu' ), $args['label'] ),
+						'title'       => sprintf( esc_html__( '%s background second color', 'ava-menu' ), $args['label'] ),
 						'value'       => $this->get_option(
 							$args['name'] . '-second-color',
 							isset( $args['defaults']['second-color'] ) ? $args['defaults']['second-color'] : false
@@ -267,30 +267,30 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$args['name'] . '-direction' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s background gradient direction', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s background gradient direction', 'ava-menu' ), $args['label'] ),
 						'value'            => $this->get_option(
 							$args['name'] . '-direction',
 							isset( $args['defaults']['direction'] ) ? $args['defaults']['direction'] : false
 						),
 						'options'          => array(
-							'right'  => esc_html__( 'From Left to Right', 'jet-menu' ),
-							'left'   => esc_html__( 'From Right to Left', 'jet-menu' ),
-							'bottom' => esc_html__( 'From Top to Bottom', 'jet-menu' ),
-							'top'    => esc_html__( 'From Bottom to Top', 'jet-menu' ),
+							'right'  => esc_html__( 'From Left to Right', 'ava-menu' ),
+							'left'   => esc_html__( 'From Right to Left', 'ava-menu' ),
+							'bottom' => esc_html__( 'From Top to Bottom', 'ava-menu' ),
+							'top'    => esc_html__( 'From Bottom to Top', 'ava-menu' ),
 						),
 						'master'           => $args['name'] . '-show',
 					),
 					$args['name'] . '-image' => array(
 						'type'           => 'media',
 						'parent'         => $args['parent'],
-						'title'          => sprintf( esc_html__( '%s background image', 'jet-menu' ), $args['label'] ),
+						'title'          => sprintf( esc_html__( '%s background image', 'ava-menu' ), $args['label'] ),
 						'value'          => $this->get_option(
 							$args['name'] . '-image',
 							isset( $args['defaults']['image'] ) ? $args['defaults']['image'] : false
 						),
 						'multi_upload'       => false,
 						'library_type'       => 'image',
-						'upload_button_text' => esc_html__( 'Choose Image', 'jet-menu' ),
+						'upload_button_text' => esc_html__( 'Choose Image', 'ava-menu' ),
 						'class'              => '',
 						'label'              => '',
 						'master'             => $args['name'] . '-show',
@@ -298,70 +298,70 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$args['name'] . '-position' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s background position', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s background position', 'ava-menu' ), $args['label'] ),
 						'value'            => $this->get_option(
 							$args['name'] . '-position',
 							isset( $args['defaults']['position'] ) ? $args['defaults']['position'] : false
 						),
 						'options'          => array(
-							''              => esc_html__( 'Default', 'jet-menu' ),
-							'top left'      => esc_html__( 'Top Left', 'jet-menu' ),
-							'top center'    => esc_html__( 'Top Center', 'jet-menu' ),
-							'top right'     => esc_html__( 'Top Right', 'jet-menu' ),
-							'center left'   => esc_html__( 'Center Left', 'jet-menu' ),
-							'center center' => esc_html__( 'Center Center', 'jet-menu' ),
-							'center right'  => esc_html__( 'Center Right', 'jet-menu' ),
-							'bottom left'   => esc_html__( 'Bottom Left', 'jet-menu' ),
-							'bottom center' => esc_html__( 'Bottom Center', 'jet-menu' ),
-							'bottom right'  => esc_html__( 'Bottom Right', 'jet-menu' ),
+							''              => esc_html__( 'Default', 'ava-menu' ),
+							'top left'      => esc_html__( 'Top Left', 'ava-menu' ),
+							'top center'    => esc_html__( 'Top Center', 'ava-menu' ),
+							'top right'     => esc_html__( 'Top Right', 'ava-menu' ),
+							'center left'   => esc_html__( 'Center Left', 'ava-menu' ),
+							'center center' => esc_html__( 'Center Center', 'ava-menu' ),
+							'center right'  => esc_html__( 'Center Right', 'ava-menu' ),
+							'bottom left'   => esc_html__( 'Bottom Left', 'ava-menu' ),
+							'bottom center' => esc_html__( 'Bottom Center', 'ava-menu' ),
+							'bottom right'  => esc_html__( 'Bottom Right', 'ava-menu' ),
 						),
 						'master'           => $args['name'] . '-show',
 					),
 					$args['name'] . '-attachment' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s background attachment', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s background attachment', 'ava-menu' ), $args['label'] ),
 						'value'            => $this->get_option(
 							$args['name'] . '-attachment',
 							isset( $args['defaults']['attachment'] ) ? $args['defaults']['attachment'] : false
 						),
 						'options'          => array(
-							''       => esc_html__( 'Default', 'jet-menu' ),
-							'scroll' => esc_html__( 'Scroll', 'jet-menu' ),
-							'fixed'  => esc_html__( 'Fixed', 'jet-menu' ),
+							''       => esc_html__( 'Default', 'ava-menu' ),
+							'scroll' => esc_html__( 'Scroll', 'ava-menu' ),
+							'fixed'  => esc_html__( 'Fixed', 'ava-menu' ),
 						),
 						'master'           => $args['name'] . '-show',
 					),
 					$args['name'] . '-repeat' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s background repeat', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s background repeat', 'ava-menu' ), $args['label'] ),
 						'value'            => $this->get_option(
 							$args['name'] . '-repeat',
 							isset( $args['defaults']['repeat'] ) ? $args['defaults']['repeat'] : false
 						),
 						'options'          => array(
-							''          => esc_html__( 'Default', 'jet-menu' ),
-							'no-repeat' => esc_html__( 'No Repeat', 'jet-menu' ),
-							'repeat'    => esc_html__( 'Repeat', 'jet-menu' ),
-							'repeat-x'  => esc_html__( 'Repeat X', 'jet-menu' ),
-							'repeat-y'  => esc_html__( 'Repeat Y', 'jet-menu' ),
+							''          => esc_html__( 'Default', 'ava-menu' ),
+							'no-repeat' => esc_html__( 'No Repeat', 'ava-menu' ),
+							'repeat'    => esc_html__( 'Repeat', 'ava-menu' ),
+							'repeat-x'  => esc_html__( 'Repeat X', 'ava-menu' ),
+							'repeat-y'  => esc_html__( 'Repeat Y', 'ava-menu' ),
 						),
 						'master'           => $args['name'] . '-show',
 					),
 					$args['name'] . '-size' => array(
 						'type'             => 'select',
 						'parent'           => $args['parent'],
-						'title'            => sprintf( esc_html__( '%s background size', 'jet-menu' ), $args['label'] ),
+						'title'            => sprintf( esc_html__( '%s background size', 'ava-menu' ), $args['label'] ),
 						'value'            => $this->get_option(
 							$args['name'] . '-size',
 							isset( $args['defaults']['size'] ) ? $args['defaults']['size'] : false
 						),
 						'options'          => array(
-							''        => esc_html__( 'Default', 'jet-menu' ),
-							'auto'    => esc_html__( 'Auto', 'jet-menu' ),
-							'cover'   => esc_html__( 'Cover', 'jet-menu' ),
-							'contain' => esc_html__( 'Contain', 'jet-menu' ),
+							''        => esc_html__( 'Default', 'ava-menu' ),
+							'auto'    => esc_html__( 'Auto', 'ava-menu' ),
+							'cover'   => esc_html__( 'Cover', 'ava-menu' ),
+							'contain' => esc_html__( 'Contain', 'ava-menu' ),
 						),
 						'master'           => $args['name'] . '-show',
 					),
@@ -388,7 +388,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 				array(
 					$args['name'] . '-border-switch' => array(
 						'type'   => 'switcher',
-						'title'  => sprintf( esc_html__( '%s border', 'jet-menu' ), $args['label'] ),
+						'title'  => sprintf( esc_html__( '%s border', 'ava-menu' ), $args['label'] ),
 						'value'  => $this->get_option( $args['name'] . '-border-switch', 'false' ),
 						'toggle' => array(
 							'true_toggle'  => 'On',
@@ -400,24 +400,24 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$args['name'] . '-border-style' => array(
 						'type'    => 'select',
 						'parent'  => $args['parent'],
-						'title'   => sprintf( esc_html__( '%s border style', 'jet-menu' ), $args['label'] ),
+						'title'   => sprintf( esc_html__( '%s border style', 'ava-menu' ), $args['label'] ),
 						'value'   => $this->get_option(
 							$args['name'] . '-border-style',
 							isset( $args['defaults']['border-style'] ) ? $args['defaults']['border-style'] : false
 						),
 						'options' => array(
-							'solid'  => esc_html__( 'Solid', 'jet-menu' ),
-							'double' => esc_html__( 'Double', 'jet-menu' ),
-							'dotted' => esc_html__( 'Dotted', 'jet-menu' ),
-							'dashed' => esc_html__( 'Dashed', 'jet-menu' ),
-							'none'   => esc_html__( 'None', 'jet-menu' ),
+							'solid'  => esc_html__( 'Solid', 'ava-menu' ),
+							'double' => esc_html__( 'Double', 'ava-menu' ),
+							'dotted' => esc_html__( 'Dotted', 'ava-menu' ),
+							'dashed' => esc_html__( 'Dashed', 'ava-menu' ),
+							'none'   => esc_html__( 'None', 'ava-menu' ),
 						),
 						'master'           => $args['name'] . '-border-show',
 					),
 					$args['name'] . '-border-width' => array(
 						'type'        => 'dimensions',
 						'parent'      => $args['parent'],
-						'title'       => sprintf( esc_html__( '%s border width', 'jet-menu' ), $args['label'] ),
+						'title'       => sprintf( esc_html__( '%s border width', 'ava-menu' ), $args['label'] ),
 						'range'       => array(
 							'px' => array(
 								'min'  => 0,
@@ -434,7 +434,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$args['name'] . '-border-color' => array(
 						'type'        => 'colorpicker',
 						'parent'      => $args['parent'],
-						'title'       => sprintf( esc_html__( '%s border color', 'jet-menu' ), $args['label'] ),
+						'title'       => sprintf( esc_html__( '%s border color', 'ava-menu' ), $args['label'] ),
 						'value'       => $this->get_option(
 							$args['name'] . '-border-color',
 							isset( $args['defaults']['border-color'] ) ? $args['defaults']['border-color'] : false
@@ -465,7 +465,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 				array(
 					$args['name'] . '-box-shadow-switch' => array(
 						'type'   => 'switcher',
-						'title'  => sprintf( esc_html__( '%s box shadow', 'jet-menu' ), $args['label'] ),
+						'title'  => sprintf( esc_html__( '%s box shadow', 'ava-menu' ), $args['label'] ),
 						'value'  => $this->get_option( $args['name'] . '-box-shadow-switch', 'false' ),
 						'toggle' => array(
 							'true_toggle'  => 'On',
@@ -483,7 +483,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 							isset( $args['defaults']['box-shadow-h'] ) ? $args['defaults']['box-shadow-h'] : false
 						),
 						'step_value' => 1,
-						'title'      => sprintf( esc_html__( '%s - position of the horizontal shadow', 'jet-menu' ), $args['label'] ),
+						'title'      => sprintf( esc_html__( '%s - position of the horizontal shadow', 'ava-menu' ), $args['label'] ),
 						'parent'     => $args['parent'],
 						'master'     => $args['name'] . '-box-shadow-show',
 					),
@@ -496,7 +496,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 							isset( $args['defaults']['box-shadow-v'] ) ? $args['defaults']['box-shadow-v'] : false
 						),
 						'step_value' => 1,
-						'title'      => sprintf( esc_html__( '%s - position of the vertical shadow', 'jet-menu' ), $args['label'] ),
+						'title'      => sprintf( esc_html__( '%s - position of the vertical shadow', 'ava-menu' ), $args['label'] ),
 						'parent'     => $args['parent'],
 						'master'     => $args['name'] . '-box-shadow-show',
 					),
@@ -509,7 +509,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 							isset( $args['defaults']['box-shadow-blur'] ) ? $args['defaults']['box-shadow-blur'] : false
 						),
 						'step_value' => 1,
-						'title'      => sprintf( esc_html__( '%s - shadow blur distance', 'jet-menu' ), $args['label'] ),
+						'title'      => sprintf( esc_html__( '%s - shadow blur distance', 'ava-menu' ), $args['label'] ),
 						'parent'     => $args['parent'],
 						'master'     => $args['name'] . '-box-shadow-show',
 					),
@@ -522,14 +522,14 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 							isset( $args['defaults']['box-shadow-spread'] ) ? $args['defaults']['box-shadow-spread'] : false
 						),
 						'step_value' => 1,
-						'title'      => sprintf( esc_html__( '%s - shadow size', 'jet-menu' ), $args['label'] ),
+						'title'      => sprintf( esc_html__( '%s - shadow size', 'ava-menu' ), $args['label'] ),
 						'parent'     => $args['parent'],
 						'master'     => $args['name'] . '-box-shadow-show',
 					),
 					$args['name'] . '-box-shadow-color' => array(
 						'type'        => 'colorpicker',
 						'parent'      => $args['parent'],
-						'title'       => sprintf( esc_html__( '%s shadow color', 'jet-menu' ), $args['label'] ),
+						'title'       => sprintf( esc_html__( '%s shadow color', 'ava-menu' ), $args['label'] ),
 						'value'       => $this->get_option(
 							$args['name'] . '-box-shadow-color',
 							isset( $args['defaults']['box-shadow-color'] ) ? $args['defaults']['box-shadow-color'] : false
@@ -539,7 +539,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					),
 					$args['name'] . '-box-shadow-inset' => array(
 						'type'   => 'switcher',
-						'title'  => sprintf( esc_html__( '%s shadow inset', 'jet-menu' ), $args['label'] ),
+						'title'  => sprintf( esc_html__( '%s shadow inset', 'ava-menu' ), $args['label'] ),
 						'value'       => $this->get_option(
 							$args['name'] . '-box-shadow-color',
 							isset( $args['defaults']['box-shadow-inset'] ) ? $args['defaults']['box-shadow-inset'] : 'false'
@@ -564,8 +564,8 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 		public function get_fonts_list() {
 
 			if ( empty( $this->fonts ) ) {
-				$this->fonts = jet_menu()->customizer()->get_fonts();
-				$this->fonts = array_merge( array( '0' => esc_html__( 'Select Font...', 'jet-menu' ) ), $this->fonts );
+				$this->fonts = ava_menu()->customizer()->get_fonts();
+				$this->fonts = array_merge( array( '0' => esc_html__( 'Select Font...', 'ava-menu' ) ), $this->fonts );
 			}
 
 			return $this->fonts;
@@ -576,15 +576,15 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 		 */
 		public function add_fonts_styles( $wrapper = '' ) {
 
-			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.jet-menu';
+			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.ava-menu';
 
-			$fonts_options = apply_filters( 'jet-menu/menu-css/fonts', array(
-				'jet-top-menu'       => '.jet-menu-item .top-level-link',
-				'jet-top-menu-desc'  => '.jet-menu-item-desc.top-level-desc',
-				'jet-sub-menu'       => '.jet-menu-item .sub-level-link',
-				'jet-sub-menu-desc'  => '.jet-menu-item-desc.sub-level-desc',
-				'jet-menu-top-badge' => '.jet-menu-item .top-level-link .jet-menu-badge__inner',
-				'jet-menu-sub-badge' => '.jet-menu-item .sub-level-link .jet-menu-badge__inner',
+			$fonts_options = apply_filters( 'ava-menu/menu-css/fonts', array(
+				'ava-top-menu'       => '.ava-menu-item .top-level-link',
+				'ava-top-menu-desc'  => '.ava-menu-item-desc.top-level-desc',
+				'ava-sub-menu'       => '.ava-menu-item .sub-level-link',
+				'ava-sub-menu-desc'  => '.ava-menu-item-desc.sub-level-desc',
+				'ava-menu-top-badge' => '.ava-menu-item .top-level-link .ava-menu-badge__inner',
+				'ava-menu-sub-badge' => '.ava-menu-item .sub-level-link .ava-menu-badge__inner',
 			) );
 
 			foreach ( $fonts_options as $font => $selector ) {
@@ -598,20 +598,20 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 		 */
 		public function add_backgrounds( $wrapper = '' ) {
 
-			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.jet-menu';
+			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.ava-menu';
 
-			$bg_options = apply_filters( 'jet-menu/menu-css/backgrounds', array(
-				'jet-menu-container'        => '',
-				'jet-menu-item'             => '.jet-menu-item .top-level-link',
-				'jet-menu-item-hover'       => '.jet-menu-item:hover > .top-level-link',
-				'jet-menu-item-active'      => '.jet-menu-item.jet-current-menu-item .top-level-link',
-				'jet-menu-top-badge-bg'     => '.jet-menu-item .top-level-link .jet-menu-badge__inner',
-				'jet-menu-sub-badge-bg'     => '.jet-menu-item .sub-level-link .jet-menu-badge__inner',
-				'jet-menu-sub-panel-simple' => 'ul.jet-sub-menu',
-				'jet-menu-sub-panel-mega'   => 'div.jet-sub-mega-menu',
-				'jet-menu-sub'              => 'li.jet-sub-menu-item .sub-level-link',
-				'jet-menu-sub-hover'        => 'li.jet-sub-menu-item:hover > .sub-level-link',
-				'jet-menu-sub-active'       => 'li.jet-sub-menu-item.jet-current-menu-item .sub-level-link',
+			$bg_options = apply_filters( 'ava-menu/menu-css/backgrounds', array(
+				'ava-menu-container'        => '',
+				'ava-menu-item'             => '.ava-menu-item .top-level-link',
+				'ava-menu-item-hover'       => '.ava-menu-item:hover > .top-level-link',
+				'ava-menu-item-active'      => '.ava-menu-item.ava-current-menu-item .top-level-link',
+				'ava-menu-top-badge-bg'     => '.ava-menu-item .top-level-link .ava-menu-badge__inner',
+				'ava-menu-sub-badge-bg'     => '.ava-menu-item .sub-level-link .ava-menu-badge__inner',
+				'ava-menu-sub-panel-simple' => 'ul.ava-sub-menu',
+				'ava-menu-sub-panel-mega'   => 'div.ava-sub-mega-menu',
+				'ava-menu-sub'              => 'li.ava-sub-menu-item .sub-level-link',
+				'ava-menu-sub-hover'        => 'li.ava-sub-menu-item:hover > .sub-level-link',
+				'ava-menu-sub-active'       => 'li.ava-sub-menu-item.ava-current-menu-item .sub-level-link',
 			) );
 
 			foreach ( $bg_options as $option => $selector ) {
@@ -625,44 +625,44 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 		 */
 		public function add_borders( $wrapper = '' ) {
 
-			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.jet-menu';
+			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.ava-menu';
 
-			$options = apply_filters( 'jet-menu/menu-css/borders', array(
-				'jet-menu-container'         => '',
-				'jet-menu-item'              => '.jet-menu-item .top-level-link',
-				'jet-menu-first-item'        => '> .jet-regular-item:first-child .top-level-link',
-				'jet-menu-last-item'         => array(
-					'> .jet-regular-item.jet-has-roll-up:nth-last-child(2) .top-level-link',
-					'> .jet-regular-item.jet-no-roll-up:nth-last-child(1) .top-level-link',
-					'> .jet-responsive-menu-available-items:last-child .top-level-link',
+			$options = apply_filters( 'ava-menu/menu-css/borders', array(
+				'ava-menu-container'         => '',
+				'ava-menu-item'              => '.ava-menu-item .top-level-link',
+				'ava-menu-first-item'        => '> .ava-regular-item:first-child .top-level-link',
+				'ava-menu-last-item'         => array(
+					'> .ava-regular-item.ava-has-roll-up:nth-last-child(2) .top-level-link',
+					'> .ava-regular-item.ava-no-roll-up:nth-last-child(1) .top-level-link',
+					'> .ava-responsive-menu-available-items:last-child .top-level-link',
 				),
-				'jet-menu-item-hover'        => '.jet-menu-item:hover > .top-level-link',
-				'jet-menu-first-item-hover'  => '> .jet-regular-item:first-child:hover > .top-level-link',
-				'jet-menu-last-item-hover'   => array(
-					'> .jet-regular-item.jet-has-roll-up:nth-last-child(2):hover .top-level-link',
-					'> .jet-regular-item.jet-no-roll-up:nth-last-child(1):hover .top-level-link',
-					'> .jet-responsive-menu-available-items:last-child:hover .top-level-link',
+				'ava-menu-item-hover'        => '.ava-menu-item:hover > .top-level-link',
+				'ava-menu-first-item-hover'  => '> .ava-regular-item:first-child:hover > .top-level-link',
+				'ava-menu-last-item-hover'   => array(
+					'> .ava-regular-item.ava-has-roll-up:nth-last-child(2):hover .top-level-link',
+					'> .ava-regular-item.ava-no-roll-up:nth-last-child(1):hover .top-level-link',
+					'> .ava-responsive-menu-available-items:last-child:hover .top-level-link',
 				),
-				'jet-menu-item-active'       => '.jet-menu-item.jet-current-menu-item .top-level-link',
-				'jet-menu-first-item-active' => '> .jet-regular-item:first-child.jet-current-menu-item .top-level-link',
-				'jet-menu-last-item-active'  => array(
-					'> .jet-regular-item.jet-current-menu-item.jet-has-roll-up:nth-last-child(2) .top-level-link',
-					'> .jet-regular-item.jet-current-menu-item.jet-no-roll-up:nth-last-child(1) .top-level-link',
-					'> .jet-responsive-menu-available-items.jet-current-menu-item:last-child .top-level-link',
+				'ava-menu-item-active'       => '.ava-menu-item.ava-current-menu-item .top-level-link',
+				'ava-menu-first-item-active' => '> .ava-regular-item:first-child.ava-current-menu-item .top-level-link',
+				'ava-menu-last-item-active'  => array(
+					'> .ava-regular-item.ava-current-menu-item.ava-has-roll-up:nth-last-child(2) .top-level-link',
+					'> .ava-regular-item.ava-current-menu-item.ava-no-roll-up:nth-last-child(1) .top-level-link',
+					'> .ava-responsive-menu-available-items.ava-current-menu-item:last-child .top-level-link',
 				),
-				'jet-menu-top-badge'         => '.jet-menu-item .top-level-link .jet-menu-badge__inner',
-				'jet-menu-sub-badge'         => '.jet-menu-item .sub-level-link .jet-menu-badge__inner',
-				'jet-menu-sub-panel-simple'  => 'ul.jet-sub-menu',
-				'jet-menu-sub-panel-mega'    => 'div.jet-sub-mega-menu',
-				'jet-menu-sub'               => 'li.jet-sub-menu-item .sub-level-link',
-				'jet-menu-sub-hover'         => 'li.jet-sub-menu-item:hover > .sub-level-link',
-				'jet-menu-sub-active'        => 'li.jet-sub-menu-item.jet-current-menu-item .sub-level-link',
-				'jet-menu-sub-first'         => '.jet-sub-menu > li.jet-sub-menu-item:first-child > .sub-level-link',
-				'jet-menu-sub-first-hover'   => '.jet-sub-menu > li.jet-sub-menu-item:first-child:hover > .sub-level-link',
-				'jet-menu-sub-first-active'  => '.jet-sub-menu > li.jet-sub-menu-item.jet-current-menu-item:first-child > .sub-level-link',
-				'jet-menu-sub-last'          => '.jet-sub-menu > li.jet-sub-menu-item:last-child > .sub-level-link',
-				'jet-menu-sub-last-hover'    => '.jet-sub-menu > li.jet-sub-menu-item:last-child:hover > .sub-level-link',
-				'jet-menu-sub-last-active'   => '.jet-sub-menu > li.jet-sub-menu-item.jet-current-menu-item:last-child > .sub-level-link',
+				'ava-menu-top-badge'         => '.ava-menu-item .top-level-link .ava-menu-badge__inner',
+				'ava-menu-sub-badge'         => '.ava-menu-item .sub-level-link .ava-menu-badge__inner',
+				'ava-menu-sub-panel-simple'  => 'ul.ava-sub-menu',
+				'ava-menu-sub-panel-mega'    => 'div.ava-sub-mega-menu',
+				'ava-menu-sub'               => 'li.ava-sub-menu-item .sub-level-link',
+				'ava-menu-sub-hover'         => 'li.ava-sub-menu-item:hover > .sub-level-link',
+				'ava-menu-sub-active'        => 'li.ava-sub-menu-item.ava-current-menu-item .sub-level-link',
+				'ava-menu-sub-first'         => '.ava-sub-menu > li.ava-sub-menu-item:first-child > .sub-level-link',
+				'ava-menu-sub-first-hover'   => '.ava-sub-menu > li.ava-sub-menu-item:first-child:hover > .sub-level-link',
+				'ava-menu-sub-first-active'  => '.ava-sub-menu > li.ava-sub-menu-item.ava-current-menu-item:first-child > .sub-level-link',
+				'ava-menu-sub-last'          => '.ava-sub-menu > li.ava-sub-menu-item:last-child > .sub-level-link',
+				'ava-menu-sub-last-hover'    => '.ava-sub-menu > li.ava-sub-menu-item:last-child:hover > .sub-level-link',
+				'ava-menu-sub-last-active'   => '.ava-sub-menu > li.ava-sub-menu-item.ava-current-menu-item:last-child > .sub-level-link',
 			) );
 
 			foreach ( $options as $option => $selector ) {
@@ -695,20 +695,20 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 		 */
 		public function add_shadows( $wrapper = '' ) {
 
-			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.jet-menu';
+			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.ava-menu';
 
-			$options = apply_filters( 'jet-menu/menu-css/shadows', array(
-				'jet-menu-container'        => '',
-				'jet-menu-item'             => '.jet-menu-item .top-level-link',
-				'jet-menu-item-hover'       => '.jet-menu-item:hover > .top-level-link',
-				'jet-menu-item-active'      => '.jet-menu-item.jet-current-menu-item .top-level-link',
-				'jet-menu-top-badge'        => '.jet-menu-item .top-level-link .jet-menu-badge__inner',
-				'jet-menu-sub-badge'        => '.jet-menu-item .sub-level-link .jet-menu-badge__inner',
-				'jet-menu-sub-panel-simple' => 'ul.jet-sub-menu',
-				'jet-menu-sub-panel-mega'   => 'div.jet-sub-mega-menu',
-				'jet-menu-sub'              => 'li.jet-sub-menu-item .sub-level-link',
-				'jet-menu-sub-hover'        => 'li.jet-sub-menu-item:hover > .sub-level-link',
-				'jet-menu-sub-active'       => 'li.jet-sub-menu-item.jet-current-menu-item .sub-level-link',
+			$options = apply_filters( 'ava-menu/menu-css/shadows', array(
+				'ava-menu-container'        => '',
+				'ava-menu-item'             => '.ava-menu-item .top-level-link',
+				'ava-menu-item-hover'       => '.ava-menu-item:hover > .top-level-link',
+				'ava-menu-item-active'      => '.ava-menu-item.ava-current-menu-item .top-level-link',
+				'ava-menu-top-badge'        => '.ava-menu-item .top-level-link .ava-menu-badge__inner',
+				'ava-menu-sub-badge'        => '.ava-menu-item .sub-level-link .ava-menu-badge__inner',
+				'ava-menu-sub-panel-simple' => 'ul.ava-sub-menu',
+				'ava-menu-sub-panel-mega'   => 'div.ava-sub-mega-menu',
+				'ava-menu-sub'              => 'li.ava-sub-menu-item .sub-level-link',
+				'ava-menu-sub-hover'        => 'li.ava-sub-menu-item:hover > .sub-level-link',
+				'ava-menu-sub-active'       => 'li.ava-sub-menu-item.ava-current-menu-item .sub-level-link',
 			) );
 
 			foreach ( $options as $option => $selector ) {
@@ -750,7 +750,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					continue;
 				}
 
-				jet_menu()->dynamic_css()->add_style(
+				ava_menu()->dynamic_css()->add_style(
 					$selector,
 					array(
 						$setting => $value . $units,
@@ -800,7 +800,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$value = sprintf( 'url("%s")', esc_url( $value ) );
 				}
 
-				jet_menu()->dynamic_css()->add_style(
+				ava_menu()->dynamic_css()->add_style(
 					$selector,
 					array(
 						'background-' . $setting => $value,
@@ -818,7 +818,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					return;
 				}
 
-				jet_menu()->dynamic_css()->add_style(
+				ava_menu()->dynamic_css()->add_style(
 					$selector,
 					array(
 						'background-image' => sprintf(
@@ -862,14 +862,14 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					$prop = $value[ $position ] . $value['units'] . $important;
 
 					if ( false !== strpos( $rule, 'radius' ) ) {
-						jet_menu()->dynamic_css()->add_style(
+						ava_menu()->dynamic_css()->add_style(
 							$selector,
 							array(
 								sprintf( $rule, $radius_position ) => $prop,
 							)
 						);
 					} else {
-						jet_menu()->dynamic_css()->add_style(
+						ava_menu()->dynamic_css()->add_style(
 							$selector,
 							array(
 								sprintf( $rule, $position ) => $prop,
@@ -914,7 +914,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 
 				if ( 'border-width' === $setting ) {
 
-					jet_menu_dynmic_css()->add_dimensions_css(
+					ava_menu_dynmic_css()->add_dimensions_css(
 						array(
 							'selector' => $selector,
 							'rule'     => 'border-%s-width',
@@ -925,7 +925,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 					continue;
 				}
 
-				jet_menu()->dynamic_css()->add_style(
+				ava_menu()->dynamic_css()->add_style(
 					$selector,
 					array(
 						$setting => $value,
@@ -975,7 +975,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 				$result .= ' inset';
 			}
 
-			jet_menu()->dynamic_css()->add_style(
+			ava_menu()->dynamic_css()->add_style(
 				$selector,
 				array(
 					'box-shadow' => $result,
@@ -989,15 +989,15 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 		 */
 		public function add_positions( $wrapper = '' ) {
 
-			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.jet-menu';
+			$wrapper = ( ! empty( $wrapper ) ) ? $wrapper : '.ava-menu';
 
-			$options = apply_filters( 'jet-menu/menu-css/positions', array(
-				'jet-menu-top-icon-%s-position'  => '.jet-menu-item .top-level-link .jet-menu-icon',
-				'jet-menu-sub-icon-%s-position'  => '.jet-menu-item .sub-level-link .jet-menu-icon',
-				'jet-menu-top-badge-%s-position' => '.jet-menu-item .top-level-link .jet-menu-badge',
-				'jet-menu-sub-badge-%s-position' => '.jet-menu-item .sub-level-link .jet-menu-badge',
-				'jet-menu-top-arrow-%s-position' => '.jet-menu-item .top-level-link .jet-dropdown-arrow',
-				'jet-menu-sub-arrow-%s-position' => '.jet-menu-item .sub-level-link .jet-dropdown-arrow',
+			$options = apply_filters( 'ava-menu/menu-css/positions', array(
+				'ava-menu-top-icon-%s-position'  => '.ava-menu-item .top-level-link .ava-menu-icon',
+				'ava-menu-sub-icon-%s-position'  => '.ava-menu-item .sub-level-link .ava-menu-icon',
+				'ava-menu-top-badge-%s-position' => '.ava-menu-item .top-level-link .ava-menu-badge',
+				'ava-menu-sub-badge-%s-position' => '.ava-menu-item .sub-level-link .ava-menu-badge',
+				'ava-menu-top-arrow-%s-position' => '.ava-menu-item .top-level-link .ava-dropdown-arrow',
+				'ava-menu-sub-arrow-%s-position' => '.ava-menu-item .sub-level-link .ava-dropdown-arrow',
 			) );
 
 			foreach ( $options as $option => $selector ) {
@@ -1066,12 +1066,12 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 
 			}
 
-			if ( 'jet-menu-sub-arrow-%s-position' === $option && 'right' === $h_pos ) {
+			if ( 'ava-menu-sub-arrow-%s-position' === $option && 'right' === $h_pos ) {
 				$styles['margin-left'] = 'auto !important';
 			}
 
 			if ( ! empty( $styles ) ) {
-				jet_menu()->dynamic_css()->add_style( $selector, $styles );
+				ava_menu()->dynamic_css()->add_style( $selector, $styles );
 			}
 
 		}
@@ -1084,7 +1084,7 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 		 * @return [type]           [description]
 		 */
 		public function get_option( $option = '', $default = false ) {
-			return jet_menu_option_page()->get_option( $option, $default );
+			return ava_menu_option_page()->get_option( $option, $default );
 		}
 
 		/**
@@ -1106,10 +1106,10 @@ if ( ! class_exists( 'Jet_Menu_Dynamic_CSS' ) ) {
 }
 
 /**
- * Returns instance of Jet_Menu_Dynamic_CSS
+ * Returns instance of Ava_Menu_Dynamic_CSS
  *
  * @return object
  */
-function jet_menu_dynmic_css() {
-	return Jet_Menu_Dynamic_CSS::get_instance();
+function ava_menu_dynmic_css() {
+	return Ava_Menu_Dynamic_CSS::get_instance();
 }

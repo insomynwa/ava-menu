@@ -7,15 +7,15 @@
 
 	'use strict';
 
-	var jetMenuAdmin = {
+	var avaMenuAdmin = {
 
 		instance: [],
 		savedTimeout: null,
 		menuId: 0,
 		depth: 0,
 
-		saveHandlerId: 'jet_menu_save_options_ajax',
-		resetHandlerId: 'jet_menu_restore_options_ajax',
+		saveHandlerId: 'ava_menu_save_options_ajax',
+		resetHandlerId: 'ava_menu_restore_options_ajax',
 
 		saveOptionsHandlerInstance: null,
 		resetOptionsHandlerInstance: null,
@@ -25,22 +25,22 @@
 			this.initTriggers();
 
 			$( document )
-				.on( 'click.jetMenuAdmin', '.jet-settings-tabs__nav-item ', this.switchTabs )
-				.on( 'click.jetMenuAdmin', '.jet-menu-editor', this.openEditor )
-				.on( 'click.jetMenuAdmin', '.jet-menu-trigger', this.initPopup )
-				.on( 'click.jetMenuAdmin', '.jet-menu-popup__overlay', this.closePopup )
-				.on( 'click.jetMenuAdmin', '.jet-close-frame', this.closeEditor )
-				.on( 'click.jetMenuAdmin', '.jet-save-menu', this.saveMenu )
-				.on( 'click.jetMenuAdmin', '.jet-menu-settins-save', this.saveSettins )
-				.on( 'click.jetMenuAdmin', '.jet-menu-import-btn', this.switchImportControl )
-				.on( 'click.jetMenuAdmin', '.jet-menu-run-import-btn', this.runImport )
-				.on( 'click.jetMenuAdmin', '#jet-menu-reset-options', this.resetOptions )
-				.on( 'click.jetMenuAdmin', '#jet-menu-create-preset', this.createPreset )
-				.on( 'click.jetMenuAdmin', '#jet-menu-update-preset', this.updatePreset )
-				.on( 'click.jetMenuAdmin', '#jet-menu-load-preset', this.loadPreset )
-				.on( 'click.jetMenuAdmin', '#jet-menu-delete-preset', this.deletePreset )
-				.on( 'click.jetMenuAdmin', '.jet-menu-popup__close', this.closePopup )
-				.on( 'focus.jetMenuAdmin', '.jet-preset-name', this.clearPresetError );
+				.on( 'click.avaMenuAdmin', '.ava-settings-tabs__nav-item ', this.switchTabs )
+				.on( 'click.avaMenuAdmin', '.ava-menu-editor', this.openEditor )
+				.on( 'click.avaMenuAdmin', '.ava-menu-trigger', this.initPopup )
+				.on( 'click.avaMenuAdmin', '.ava-menu-popup__overlay', this.closePopup )
+				.on( 'click.avaMenuAdmin', '.ava-close-frame', this.closeEditor )
+				.on( 'click.avaMenuAdmin', '.ava-save-menu', this.saveMenu )
+				.on( 'click.avaMenuAdmin', '.ava-menu-settins-save', this.saveSettins )
+				.on( 'click.avaMenuAdmin', '.ava-menu-import-btn', this.switchImportControl )
+				.on( 'click.avaMenuAdmin', '.ava-menu-run-import-btn', this.runImport )
+				.on( 'click.avaMenuAdmin', '#ava-menu-reset-options', this.resetOptions )
+				.on( 'click.avaMenuAdmin', '#ava-menu-create-preset', this.createPreset )
+				.on( 'click.avaMenuAdmin', '#ava-menu-update-preset', this.updatePreset )
+				.on( 'click.avaMenuAdmin', '#ava-menu-load-preset', this.loadPreset )
+				.on( 'click.avaMenuAdmin', '#ava-menu-delete-preset', this.deletePreset )
+				.on( 'click.avaMenuAdmin', '.ava-menu-popup__close', this.closePopup )
+				.on( 'focus.avaMenuAdmin', '.ava-preset-name', this.clearPresetError );
 
 
 			this.saveOptionsHandlerInstance = new CherryJsCore.CherryAjaxHandler(
@@ -74,19 +74,19 @@
 
 			var $this      = $( this ),
 				$input     = $this.prev( '.cherry-ui-text' ),
-				$msg       = $this.next( '.jet-preset-msg' ),
+				$msg       = $this.next( '.ava-preset-msg' ),
 				presetName = $input.val(),
 				fields     = null,
 				data       = {};
 
 			if ( '' === presetName ) {
-				$msg.addClass( 'jet-menu-error-message' ).text( settings.optionPageMessages.preset.nameError );
+				$msg.addClass( 'ava-menu-error-message' ).text( settings.optionPageMessages.preset.nameError );
 				return;
 			}
 
-			data.action   = 'jet_menu_create_preset';
+			data.action   = 'ava_menu_create_preset';
 			data.name     = presetName;
-			data.settings = CherryJsCore.cherryHandlerUtils.serializeObject( $( '#jet-menu-options-form' ) );
+			data.settings = CherryJsCore.cherryHandlerUtils.serializeObject( $( '#ava-menu-options-form' ) );
 
 			$this.prop( 'disabled', true );
 
@@ -101,7 +101,7 @@
 					window.location = settings.menuPageUrl;
 				} else {
 					$this.prop( 'disabled', false );
-					$msg.addClass( 'jet-menu-error-message' ).text( response.data.message );
+					$msg.addClass( 'ava-menu-error-message' ).text( response.data.message );
 				}
 
 			});
@@ -111,7 +111,7 @@
 
 			var $this   = $( this ),
 				$select = $this.prev( '.cherry-ui-select' ),
-				$msg    = $this.next( '.jet-preset-msg' ),
+				$msg    = $this.next( '.ava-preset-msg' ),
 				preset  = $select.find( ':selected' ).val(),
 				fields  = null,
 				data    = {};
@@ -123,9 +123,9 @@
 
 			if ( confirm( settings.optionPageMessages.preset.confirmUpdate ) ) {
 
-				data.action   = 'jet_menu_update_preset';
+				data.action   = 'ava_menu_update_preset';
 				data.preset   = preset;
-				data.settings = CherryJsCore.cherryHandlerUtils.serializeObject( $( '#jet-menu-options-form' ) );
+				data.settings = CherryJsCore.cherryHandlerUtils.serializeObject( $( '#ava-menu-options-form' ) );
 
 				$this.prop( 'disabled', true );
 
@@ -149,7 +149,7 @@
 
 			var $this   = $( this ),
 				$select = $this.prev( '.cherry-ui-select' ),
-				$msg    = $this.next( '.jet-preset-msg' ),
+				$msg    = $this.next( '.ava-preset-msg' ),
 				preset  = $select.find( ':selected' ).val(),
 				fields  = null,
 				data    = {};
@@ -161,7 +161,7 @@
 
 			if ( confirm( settings.optionPageMessages.preset.confirmLoad ) ) {
 
-				data.action   = 'jet_menu_load_preset';
+				data.action   = 'ava_menu_load_preset';
 				data.preset   = preset;
 
 				$this.prop( 'disabled', true );
@@ -183,7 +183,7 @@
 
 			var $this   = $( this ),
 				$select = $this.prev( '.cherry-ui-select' ),
-				$msg    = $this.next( '.jet-preset-msg' ),
+				$msg    = $this.next( '.ava-preset-msg' ),
 				preset  = $select.find( ':selected' ).val(),
 				fields  = null,
 				data    = {};
@@ -195,7 +195,7 @@
 
 			if ( confirm( settings.optionPageMessages.preset.confirmDelete ) ) {
 
-				data.action   = 'jet_menu_delete_preset';
+				data.action   = 'ava_menu_delete_preset';
 				data.preset   = preset;
 
 				$this.prop( 'disabled', true );
@@ -214,7 +214,7 @@
 		},
 
 		clearPresetError: function() {
-			$( this ).siblings( '.jet-preset-msg' ).removeClass( 'jet-menu-error-message' ).text( '' );
+			$( this ).siblings( '.ava-preset-msg' ).removeClass( 'ava-menu-error-message' ).text( '' );
 		},
 
 		resetOptions: function() {
@@ -226,27 +226,27 @@
 		},
 
 		switchImportControl: function() {
-			$( this ).siblings( '.jet-menu-import' ).toggleClass( 'import-active' );
+			$( this ).siblings( '.ava-menu-import' ).toggleClass( 'import-active' );
 		},
 
 		runImport: function() {
 
 			var $this      = $( this ),
-				$fileInput = $this.siblings( '.jet-menu-import-file' ),
-				$messages  = $this.siblings( '.jet-menu-import-messages' ),
+				$fileInput = $this.siblings( '.ava-menu-import-file' ),
+				$messages  = $this.siblings( '.ava-menu-import-messages' ),
 				file       = $fileInput.val();
 
-			$messages.removeClass( 'jet-menu-error-message jet-menu-success-message' ).html( '' );
+			$messages.removeClass( 'ava-menu-error-message ava-menu-success-message' ).html( '' );
 
 			if ( ! file ) {
-				$messages.addClass( 'jet-menu-error-message' ).html( settings.optionPageMessages.emptyImportFile );
+				$messages.addClass( 'ava-menu-error-message' ).html( settings.optionPageMessages.emptyImportFile );
 				return;
 			}
 
 			var fileExt = file.split('.').pop().toLowerCase();
 
 			if ( 'json' !== fileExt ) {
-				$messages.addClass( 'jet-menu-error-message' ).html( settings.optionPageMessages.incorrectImportFile );
+				$messages.addClass( 'ava-menu-error-message' ).html( settings.optionPageMessages.incorrectImportFile );
 				return;
 			}
 
@@ -264,16 +264,16 @@
 					type: 'post',
 					dataType: 'json',
 					data: {
-						action: 'jet_menu_import_options',
+						action: 'ava_menu_import_options',
 						data: JSON.parse( textFromFileLoaded )
 					},
 				}).done( function( response ) {
 
 					if ( true === response.success ) {
-						$messages.addClass( 'jet-menu-success-message' ).html( response.data.message );
+						$messages.addClass( 'ava-menu-success-message' ).html( response.data.message );
 						window.location.reload();
 					} else {
-						$messages.addClass( 'jet-menu-error-message' ).html( response.data.message );
+						$messages.addClass( 'ava-menu-error-message' ).html( response.data.message );
 					}
 
 					$this.prop( 'disabled', false );
@@ -288,7 +288,7 @@
 
 		openEditor: function() {
 
-			var $popup   = $( this ).closest( '.jet-menu-popup' ),
+			var $popup   = $( this ).closest( '.ava-menu-popup' ),
 				menuItem = $popup.attr( 'data-id' ),
 				url      = settings.editURL.replace( '%id%', menuItem ),
 				frame    = null,
@@ -298,16 +298,16 @@
 			url = url.replace( '%menuid%', settings.currentMenuId );
 
 			$popup
-				.addClass( 'jet-menu-editor-active' )
-				.find( '.jet-menu-editor-wrap' )
-				.addClass( 'jet-editor-active' )
+				.addClass( 'ava-menu-editor-active' )
+				.find( '.ava-menu-editor-wrap' )
+				.addClass( 'ava-editor-active' )
 				.html( editor( { url: url } ) );
 
-			frame  = $popup.find( '.jet-edit-frame' )[0];
+			frame  = $popup.find( '.ava-edit-frame' )[0];
 			loader = $popup.find( '#elementor-loading' );
 
 			$( frame.contentWindow ).load( function() {
-				$popup.find( '.jet-close-frame' ).addClass( 'jet-loaded' );
+				$popup.find( '.ava-close-frame' ).addClass( 'ava-loaded' );
 				loader.fadeOut( 300 );
 			} );
 
@@ -322,7 +322,7 @@
 				wrapper = wp.template( 'popup-wrapper' ),
 				tabs    = wp.template( 'popup-tabs' );
 
-			if ( ! jetMenuAdmin.instance[ id ] ) {
+			if ( ! avaMenuAdmin.instance[ id ] ) {
 
 				content = wrapper( {
 					id: id,
@@ -331,22 +331,22 @@
 				} );
 
 				$( 'body' ).append( content );
-				jetMenuAdmin.instance[ id ] = '#jet-popup-' + id;
+				avaMenuAdmin.instance[ id ] = '#ava-popup-' + id;
 			}
 
-			$( jetMenuAdmin.instance[ id ] ).removeClass( 'jet-hidden' );
+			$( avaMenuAdmin.instance[ id ] ).removeClass( 'ava-hidden' );
 
-			jetMenuAdmin.menuId = id;
-			jetMenuAdmin.depth  = depth;
+			avaMenuAdmin.menuId = id;
+			avaMenuAdmin.depth  = depth;
 
-			jetMenuAdmin.tabs.showActive(
-				$( jetMenuAdmin.instance[ id ] ).find( '.jet-settings-tabs__nav-item:first' )
+			avaMenuAdmin.tabs.showActive(
+				$( avaMenuAdmin.instance[ id ] ).find( '.ava-settings-tabs__nav-item:first' )
 			);
 
 		},
 
 		switchTabs: function() {
-			jetMenuAdmin.tabs.showActive( $( this ) );
+			avaMenuAdmin.tabs.showActive( $( this ) );
 		},
 
 		saveSettins: function() {
@@ -357,18 +357,18 @@
 				data         = [],
 				preparedData = {};
 
-			data = $( '.jet-menu-settings-fields input, .jet-menu-settings-fields select' ).serializeArray();
+			data = $( '.ava-menu-settings-fields input, .ava-menu-settings-fields select' ).serializeArray();
 
 			$.each( data, function( index, field ) {
 				preparedData[ field.name ] = field.value;
 			});
 
-			clearTimeout( jetMenuAdmin.savedTimeout );
+			clearTimeout( avaMenuAdmin.savedTimeout );
 
 			$saved.addClass( 'hidden' );
 			$loader.css( 'visibility', 'visible' );
 
-			preparedData.action       = 'jet_save_settings';
+			preparedData.action       = 'ava_save_settings';
 			preparedData.current_menu = settings.currentMenuId;
 
 			$.ajax({
@@ -382,7 +382,7 @@
 
 				if ( true === response.success ) {
 					$saved.removeClass( 'hidden' );
-					jetMenuAdmin.savedTimeout = setTimeout( function() {
+					avaMenuAdmin.savedTimeout = setTimeout( function() {
 						$saved.addClass( 'hidden' );
 					}, 1000 );
 				}
@@ -398,19 +398,19 @@
 				data         = [],
 				preparedData = {};
 
-			data = $( '.jet-settings-tabs__content input, .jet-settings-tabs__content select' ).serializeArray();
+			data = $( '.ava-settings-tabs__content input, .ava-settings-tabs__content select' ).serializeArray();
 
 			$.each( data, function( index, field ) {
 				preparedData[ field.name ] = field.value;
 			});
 
-			clearTimeout( jetMenuAdmin.savedTimeout );
+			clearTimeout( avaMenuAdmin.savedTimeout );
 
 			$saved.addClass( 'hidden' );
 			$loader.css( 'visibility', 'visible' );
 
-			preparedData.action  = 'jet_save_menu';
-			preparedData.menu_id = jetMenuAdmin.menuId;
+			preparedData.action  = 'ava_save_menu';
+			preparedData.menu_id = avaMenuAdmin.menuId;
 
 			$.ajax({
 				url: ajaxurl,
@@ -423,7 +423,7 @@
 
 				if ( true === response.success ) {
 					$saved.removeClass( 'hidden' );
-					jetMenuAdmin.savedTimeout = setTimeout( function() {
+					avaMenuAdmin.savedTimeout = setTimeout( function() {
 						$saved.addClass( 'hidden' );
 					}, 1000 );
 				}
@@ -437,19 +437,19 @@
 				var tab      = $item.data( 'tab' ),
 					action   = $item.data( 'action' ),
 					template = $item.data( 'template' ),
-					$content = $item.closest( '.jet-settings-tabs' ).find( '.jet-settings-tabs__content-item[data-tab="' + tab + '"]' ),
+					$content = $item.closest( '.ava-settings-tabs' ).find( '.ava-settings-tabs__content-item[data-tab="' + tab + '"]' ),
 					loaded   = parseInt( $content.data( 'loaded' ) );
 
-				if ( $item.hasClass( 'jet-active-tab' ) ) {
+				if ( $item.hasClass( 'ava-active-tab' ) ) {
 					return;
 				}
 
 				if ( 0 === loaded ) {
-					jetMenuAdmin.tabs.loadTabContent( tab, $content, template, action );
+					avaMenuAdmin.tabs.loadTabContent( tab, $content, template, action );
 				}
 
-				$item.addClass( 'jet-active-tab' ).siblings().removeClass( 'jet-active-tab' );
-				$content.removeClass( 'jet-hidden-tab' ).siblings().addClass( 'jet-hidden-tab' );
+				$item.addClass( 'ava-active-tab' ).siblings().removeClass( 'ava-active-tab' );
+				$content.removeClass( 'ava-hidden-tab' ).siblings().addClass( 'ava-hidden-tab' );
 
 			},
 
@@ -460,7 +460,7 @@
 				}
 
 				var renderTemplate = null,
-					$popup         = $content.closest( '.jet-menu-popup' ),
+					$popup         = $content.closest( '.ava-menu-popup' ),
 					id             = $popup.attr( 'data-id' ),
 					data           = {};
 
@@ -515,24 +515,24 @@
 
 			event.preventDefault();
 
-			jetMenuAdmin.menuId = 0;
-			jetMenuAdmin.depth  = 0;
+			avaMenuAdmin.menuId = 0;
+			avaMenuAdmin.depth  = 0;
 
 			$( this )
-				.closest( '.jet-menu-popup' ).addClass( 'jet-hidden' )
-				.removeClass( 'jet-menu-editor-active' )
-				.find( '.jet-menu-editor-wrap.jet-editor-active' ).removeClass( 'jet-editor-active' )
-				.find( '.jet-close-frame' ).removeClass( 'jet-loaded' )
+				.closest( '.ava-menu-popup' ).addClass( 'ava-hidden' )
+				.removeClass( 'ava-menu-editor-active' )
+				.find( '.ava-menu-editor-wrap.ava-editor-active' ).removeClass( 'ava-editor-active' )
+				.find( '.ava-close-frame' ).removeClass( 'ava-loaded' )
 				.siblings( '#elementor-loading' ).fadeIn( 0 );
 		},
 
 		closeEditor: function( event ) {
 
 			var $this    = $( this ),
-				$popup   = $this.closest( '.jet-menu-popup' ),
+				$popup   = $this.closest( '.ava-menu-popup' ),
 				$frame   = $( this ).siblings( 'iframe' ),
 				$loader  = $popup.find( '#elementor-loading' ),
-				$editor  = $frame.closest( '.jet-menu-editor-wrap' ),
+				$editor  = $frame.closest( '.ava-menu-editor-wrap' ),
 				$content = $frame[0].contentWindow,
 				saver    = null,
 				enabled  = true;
@@ -556,9 +556,9 @@
 			}
 
 			$loader.fadeIn(0);
-			$popup.removeClass( 'jet-menu-editor-active' );
-			$this.removeClass( 'jet-loaded' );
-			$editor.removeClass( 'jet-editor-active' );
+			$popup.removeClass( 'ava-menu-editor-active' );
+			$this.removeClass( 'ava-loaded' );
+			$editor.removeClass( 'ava-editor-active' );
 
 		},
 
@@ -583,14 +583,14 @@
 			var trigger = wp.template( 'menu-trigger' );
 
 			$( document ).on( 'menu-item-added', function( event, $menuItem ) {
-				var id = jetMenuAdmin.getItemId( $menuItem );
+				var id = avaMenuAdmin.getItemId( $menuItem );
 				$menuItem.find( '.item-title' ).append( trigger( { id: id, label: settings.strings.triggerLabel } ) );
 			});
 
 			$( '#menu-to-edit .menu-item' ).each( function() {
 				var $this = $( this ),
-					depth = jetMenuAdmin.getItemDepth( $this ),
-					id    = jetMenuAdmin.getItemId( $this );
+					depth = avaMenuAdmin.getItemDepth( $this ),
+					id    = avaMenuAdmin.getItemId( $this );
 
 				$this.find( '.item-title' ).append( trigger( {
 					id: id,
@@ -603,13 +603,13 @@
 
 		addOptionPageEvents: function() {
 			$( 'body' )
-				.on( 'click', '#jet-menu-save-options', this.saveOptionsHandler.bind( this ) )
-				.on( 'click', '#jet-menu-restore-options', this.resetOptionsHandler.bind( this ) );
+				.on( 'click', '#ava-menu-save-options', this.saveOptionsHandler.bind( this ) )
+				.on( 'click', '#ava-menu-restore-options', this.resetOptionsHandler.bind( this ) );
 		},
 
 		saveOptionsHandler: function( event ) {
 			this.disableFormButton( event.target );
-			this.saveOptionsHandlerInstance.sendFormData( '#jet-menu-options-form' );
+			this.saveOptionsHandlerInstance.sendFormData( '#ava-menu-options-form' );
 		},
 
 		resetOptionsHandler: function( event ) {
@@ -618,16 +618,16 @@
 		},
 
 		saveSuccessCallback: function() {
-			this.enableFormButton( '#jet-menu-save-options' );
-			CherryJsCore.cherryHandlerUtils.noticeCreate( 'success-notice', window.jetMenuAdminSettings.optionPageMessages.saveMessage );
+			this.enableFormButton( '#ava-menu-save-options' );
+			CherryJsCore.cherryHandlerUtils.noticeCreate( 'success-notice', window.avaMenuAdminSettings.optionPageMessages.saveMessage );
 		},
 
 		restoreSuccessCallback: function() {
-			this.enableFormButton( '#jet-menu-restore-options' );
-			CherryJsCore.cherryHandlerUtils.noticeCreate( 'success-notice', window.jetMenuAdminSettings.optionPageMessages.restoreMessage );
+			this.enableFormButton( '#ava-menu-restore-options' );
+			CherryJsCore.cherryHandlerUtils.noticeCreate( 'success-notice', window.avaMenuAdminSettings.optionPageMessages.restoreMessage );
 
 			setTimeout( function() {
-				window.location.href = window.jetMenuAdminSettings.optionPageMessages.redirectUrl;
+				window.location.href = window.avaMenuAdminSettings.optionPageMessages.redirectUrl;
 			}, 500 );
 		},
 
@@ -654,6 +654,6 @@
 
 	};
 
-	jetMenuAdmin.init();
+	avaMenuAdmin.init();
 
-}( jQuery, window.jetMenuAdminSettings ) );
+}( jQuery, window.avaMenuAdminSettings ) );

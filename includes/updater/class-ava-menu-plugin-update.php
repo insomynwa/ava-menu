@@ -8,14 +8,14 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-require jet_menu()->plugin_path( 'includes/updater/class-jet-menu-base-update.php' );
+require ava_menu()->plugin_path( 'includes/updater/class-ava-menu-base-update.php' );
 
 /**
  * Define plugin updater class.
  *
  * @since 1.0.0
  */
-class Jet_Menu_Plugin_Update extends Jet_Menu_Base_Update {
+class Ava_Menu_Plugin_Update extends Ava_Menu_Base_Update {
 
 	/**
 	 * Init class parameters.
@@ -66,8 +66,8 @@ class Jet_Menu_Plugin_Update extends Jet_Menu_Base_Update {
 
 }
 
-if ( ! function_exists( 'jet_menu_updater' ) ) {
-	function jet_menu_updater() {
-		return new Jet_Menu_Plugin_Update();
+if ( ! function_exists( 'ava_menu_updater' ) ) {
+	function ava_menu_updater() {
+		return new Ava_Menu_Plugin_Update();
 	}
 }

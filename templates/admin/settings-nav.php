@@ -1,4 +1,4 @@
-<div class="jet-menu-settings-fields">
+<div class="ava-menu-settings-fields">
 <?php
 
 if ( count( $tagged_menu_locations ) == 1 ) {
@@ -12,7 +12,7 @@ if ( count( $tagged_menu_locations ) == 1 ) {
 
 } else {
 
-	echo '<div class="jet-menu-settings-locations">';
+	echo '<div class="ava-menu-settings-locations">';
 
 		foreach ( $theme_locations as $location => $name ) {
 
@@ -33,5 +33,5 @@ if ( count( $tagged_menu_locations ) == 1 ) {
 ?>
 </div>
 
-<?php submit_button( __( 'Save', 'jet-menu' ), 'jet-menu-settins-save button-primary alignright' ); ?>
+<?php submit_button( __( 'Save', 'ava-menu' ), 'ava-menu-settins-save button-primary alignright' ); ?>
 <span class='spinner'></span>

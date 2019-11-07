@@ -1,7 +1,7 @@
 ( function( $ ) {
 	'use strict';
 
-	var JetMenu = function( element, options ) {
+	var AvaMenu = function( element, options ) {
 
 		this.defaultSettings = {
 			enabled: false,
@@ -10,11 +10,11 @@
 			openSubType: 'click', // hover, click
 			megaWidthType: 'container',
 			megaWidthSelector: '',
-			mainMenuSelector: '.jet-menu',
-			menuItemSelector: '.jet-menu-item',
+			mainMenuSelector: '.ava-menu',
+			menuItemSelector: '.ava-menu-item',
 			moreMenuContent:  '&middot;&middot;&middot;',
 			templates: {
-				mobileMenuToogleButton: '<button class="jet-mobile-menu-toggle-button"><i class="jet-menu-toggle__icon"></i></button>',
+				mobileMenuToogleButton: '<button class="ava-mobile-menu-toggle-button"><i class="ava-menu-toggle__icon"></i></button>',
 			}
 		}
 
@@ -26,9 +26,9 @@
 
 		this.$element = $( element );
 
-		this.$instance = $( this.settings.mainMenuSelector, this.$element ).addClass( 'jet-responsive-menu' );
+		this.$instance = $( this.settings.mainMenuSelector, this.$element ).addClass( 'ava-responsive-menu' );
 
-		this.$menuItems = $( '>' + this.settings.menuItemSelector, this.$instance ).addClass( 'jet-responsive-menu-item' );
+		this.$menuItems = $( '>' + this.settings.menuItemSelector, this.$instance ).addClass( 'ava-responsive-menu-item' );
 
 		this.$moreItemsInstance = null;
 
@@ -38,11 +38,11 @@
 
 		this.createMenuInstance();
 
-		this.$instance.trigger( 'jetMenuCreated' );
+		this.$instance.trigger( 'avaMenuCreated' );
 	}
 
-	JetMenu.prototype = {
-		constructor: JetMenu,
+	AvaMenu.prototype = {
+		constructor: AvaMenu,
 
 		createMenuInstance: function() {
 			var self = this,
@@ -53,27 +53,27 @@
 			this.subMegaMenuRebuild();
 
 			// Add mobile menu cover
-			$( 'body' ).append( '<div class="jet-mobile-menu-cover"></div>' );
-			this.$mobileStateCover = $( '.jet-mobile-menu-cover' );
+			$( 'body' ).append( '<div class="ava-mobile-menu-cover"></div>' );
+			this.$mobileStateCover = $( '.ava-mobile-menu-cover' );
 
 			// Add available items list
 			if ( ! tools.isEmpty( this.settings.moreMenuContent ) && self.settings.enabled ) {
-				self.$instance.append( '<li class="jet-menu-item jet-menu-item-has-children jet-simple-menu-item jet-responsive-menu-available-items" hidden><a href="#" class="top-level-link"><div class="jet-menu-item-wrapper">' + this.settings.moreMenuContent + '</div></a><ul class="jet-sub-menu"></ul></li>' );
-				self.$moreItemsInstance = $( '> .jet-responsive-menu-available-items', this.$instance );
+				self.$instance.append( '<li class="ava-menu-item ava-menu-item-has-children ava-simple-menu-item ava-responsive-menu-available-items" hidden><a href="#" class="top-level-link"><div class="ava-menu-item-wrapper">' + this.settings.moreMenuContent + '</div></a><ul class="ava-sub-menu"></ul></li>' );
+				self.$moreItemsInstance = $( '> .ava-responsive-menu-available-items', this.$instance );
 				self.$moreItemsInstance.attr( { 'hidden': 'hidden' } );
 			}
 
 			// Add mobile menu toogle button
 			if ( ! tools.isEmpty( this.settings.templates.mobileMenuToogleButton ) ) {
 				this.$element.prepend( this.settings.templates.mobileMenuToogleButton );
-				this.$mobileToogleButton = $( '.jet-mobile-menu-toggle-button', this.$element );
+				this.$mobileToogleButton = $( '.ava-mobile-menu-toggle-button', this.$element );
 			}
 
 			if ( this.isThreshold() ) {
-				this.$element.addClass( 'jet-mobile-menu' );
-				$( 'body' ).addClass( 'jet-mobile-menu-active' );
+				this.$element.addClass( 'ava-mobile-menu' );
+				$( 'body' ).addClass( 'ava-mobile-menu-active' );
 			} else {
-				$( 'body' ).addClass( 'jet-desktop-menu-active' );
+				$( 'body' ).addClass( 'ava-desktop-menu-active' );
 				this.rebuildItems();
 				this.$instance.trigger( 'rebuildItems' ); // subMenu position rebuild
 			}
@@ -99,29 +99,29 @@
 				timer;
 
 			if ( self.mobileAndTabletcheck() ) {
-				this.$instance.on( 'touchstart', '.jet-menu-item > a, .jet-menu-item > a .jet-dropdown-arrow', touchStartItem );
-				this.$instance.on( 'touchend', '.jet-menu-item > a, .jet-menu-item > a .jet-dropdown-arrow', touchEndItem );
+				this.$instance.on( 'touchstart', '.ava-menu-item > a, .ava-menu-item > a .ava-dropdown-arrow', touchStartItem );
+				this.$instance.on( 'touchend', '.ava-menu-item > a, .ava-menu-item > a .ava-dropdown-arrow', touchEndItem );
 			} else {
 
 				switch ( this.settings.openSubType ) {
 					case 'hover':
-							this.$instance.on( 'mouseenter', '.jet-menu-item > a', mouseEnterHandler );
-							this.$instance.on( 'mouseleave', '.jet-menu-item > a', mouseLeaveHandler );
+							this.$instance.on( 'mouseenter', '.ava-menu-item > a', mouseEnterHandler );
+							this.$instance.on( 'mouseleave', '.ava-menu-item > a', mouseLeaveHandler );
 
 						break;
 					case 'click':
-							this.$instance.on( 'click', '.jet-menu-item > a', clickHandler );
+							this.$instance.on( 'click', '.ava-menu-item > a', clickHandler );
 						break;
 				}
 
-				this.$instance.on( 'mouseenter', '.jet-sub-menu, .jet-sub-mega-menu', mouseEnterSubMenuHandler );
+				this.$instance.on( 'mouseenter', '.ava-sub-menu, .ava-sub-mega-menu', mouseEnterSubMenuHandler );
 				this.$instance.on( 'mouseenter', mouseEnterInstanceHandler );
 				this.$instance.on( 'mouseleave', mouseLeaveInstanceHandler );
 			}
 
 			function touchStartItem( event ) {
 				var $currentTarget = $( event.currentTarget ),
-					$this = $currentTarget.closest('.jet-menu-item');
+					$this = $currentTarget.closest('.ava-menu-item');
 
 				$this.data( 'offset', $this.offset().top );
 			}
@@ -139,32 +139,32 @@
 				event.stopPropagation();
 
 				$currentTarget = $( event.currentTarget );
-				$this          = $currentTarget.closest('.jet-menu-item');
-				$siblingsItems = $this.siblings( '.jet-menu-item.jet-menu-item-has-children' );
+				$this          = $currentTarget.closest('.ava-menu-item');
+				$siblingsItems = $this.siblings( '.ava-menu-item.ava-menu-item-has-children' );
 				$link          = $( '> a', $this );
 				linkHref       = $link.attr( 'href' );
-				subMenu        = $( '.jet-sub-menu:first, .jet-sub-mega-menu', $this );
+				subMenu        = $( '.ava-sub-menu:first, .ava-sub-mega-menu', $this );
 				offset         = $this.data( 'offset' );
 
 				if ( offset !== $this.offset().top ) {
 					return false;
 				}
 
-				if ( $currentTarget.hasClass( 'jet-dropdown-arrow' ) ) {
+				if ( $currentTarget.hasClass( 'ava-dropdown-arrow' ) ) {
 
 					if ( !subMenu[0] ) {
 						return false;
 					}
 
-					if ( ! $this.hasClass( 'jet-menu-hover' ) ) {
-						$this.addClass( 'jet-menu-hover' );
+					if ( ! $this.hasClass( 'ava-menu-hover' ) ) {
+						$this.addClass( 'ava-menu-hover' );
 
-						$siblingsItems.removeClass( 'jet-menu-hover' );
-						$( '.jet-menu-item-has-children', $siblingsItems ).removeClass( 'jet-menu-hover' );
+						$siblingsItems.removeClass( 'ava-menu-hover' );
+						$( '.ava-menu-item-has-children', $siblingsItems ).removeClass( 'ava-menu-hover' );
 					} else {
-						$this.removeClass( 'jet-menu-hover' );
+						$this.removeClass( 'ava-menu-hover' );
 
-						$( '.jet-menu-item-has-children', $this ).removeClass( 'jet-menu-hover' );
+						$( '.ava-menu-item-has-children', $this ).removeClass( 'ava-menu-hover' );
 					}
 				}
 
@@ -172,23 +172,23 @@
 
 					if ( '#' === linkHref ) {
 
-						if ( ! $this.hasClass( 'jet-menu-hover' ) ) {
-							$this.addClass( 'jet-menu-hover' );
+						if ( ! $this.hasClass( 'ava-menu-hover' ) ) {
+							$this.addClass( 'ava-menu-hover' );
 
-							$siblingsItems.removeClass( 'jet-menu-hover' );
-							$( '.jet-menu-item-has-children', $siblingsItems ).removeClass( 'jet-menu-hover' );
+							$siblingsItems.removeClass( 'ava-menu-hover' );
+							$( '.ava-menu-item-has-children', $siblingsItems ).removeClass( 'ava-menu-hover' );
 						} else {
-							$this.removeClass( 'jet-menu-hover' );
+							$this.removeClass( 'ava-menu-hover' );
 
-							$( '.jet-menu-item-has-children', $this ).removeClass( 'jet-menu-hover' );
+							$( '.ava-menu-item-has-children', $this ).removeClass( 'ava-menu-hover' );
 						}
 
 						return false;
 					} else {
 						window.location = linkHref;
 
-						$( 'body' ).removeClass( 'jet-mobile-menu-visible' );
-						self.$element.removeClass( 'jet-mobile-menu-active-state' );
+						$( 'body' ).removeClass( 'ava-mobile-menu-visible' );
+						self.$element.removeClass( 'ava-mobile-menu-active-state' );
 
 						return false;
 					}
@@ -206,40 +206,40 @@
 				event.stopPropagation();
 
 				$currentTarget = $( event.currentTarget );
-				$this          = $currentTarget.closest('.jet-menu-item');
-				$siblingsItems = $this.siblings( '.jet-menu-item.jet-menu-item-has-children' );
+				$this          = $currentTarget.closest('.ava-menu-item');
+				$siblingsItems = $this.siblings( '.ava-menu-item.ava-menu-item-has-children' );
 				$link          = $( '> a', $this );
-				subMenu        = $( '.jet-sub-menu:first, .jet-sub-mega-menu', $this );
+				subMenu        = $( '.ava-sub-menu:first, .ava-sub-mega-menu', $this );
 
 				if ( $siblingsItems[0] ) {
-					$siblingsItems.removeClass( 'jet-menu-hover' );
-					$( 'jet-menu-item-has-children', $siblingsItems ).removeClass( 'jet-menu-hover' );
+					$siblingsItems.removeClass( 'ava-menu-hover' );
+					$( 'ava-menu-item-has-children', $siblingsItems ).removeClass( 'ava-menu-hover' );
 				}
 
-				if ( ! $( '.jet-sub-menu, .jet-sub-mega-menu', $this )[0] || $this.hasClass('jet-menu-hover') ) {
+				if ( ! $( '.ava-sub-menu, .ava-sub-mega-menu', $this )[0] || $this.hasClass('ava-menu-hover') ) {
 					window.location = $link.attr( 'href' );
 
-					$( 'body' ).removeClass( 'jet-mobile-menu-visible' );
-					self.$element.removeClass( 'jet-mobile-menu-active-state' );
+					$( 'body' ).removeClass( 'ava-mobile-menu-visible' );
+					self.$element.removeClass( 'ava-mobile-menu-active-state' );
 
 					return false;
 				}
 
 				if ( subMenu[0] ) {
-					$this.addClass( 'jet-menu-hover' );
+					$this.addClass( 'ava-menu-hover' );
 				}
 			}
 
 			function mouseEnterHandler( event ) {
 				var subMenu;
 
-				menuItem = $( event.target ).parents( '.jet-menu-item' );
-				subMenu = menuItem.children( '.jet-sub-menu, .jet-sub-mega-menu' ).first();
+				menuItem = $( event.target ).parents( '.ava-menu-item' );
+				subMenu = menuItem.children( '.ava-sub-menu, .ava-sub-mega-menu' ).first();
 
-				$( '.jet-menu-hover', this.$instance ).removeClass( 'jet-menu-hover' );
+				$( '.ava-menu-hover', this.$instance ).removeClass( 'ava-menu-hover' );
 
 				if ( subMenu[0] ) {
-					menuItem.addClass( 'jet-menu-hover' );
+					menuItem.addClass( 'ava-menu-hover' );
 				}
 			}
 
@@ -257,14 +257,14 @@
 
 			function mouseLeaveInstanceHandler( event ) {
 				timer = setTimeout( function() {
-					$( '.jet-menu-hover', this.$instance ).removeClass( 'jet-menu-hover' );
+					$( '.ava-menu-hover', this.$instance ).removeClass( 'ava-menu-hover' );
 				}, self.settings.mouseLeaveDelay );
 			}
 
 			var windowWidth = $( window ).width();
 
 			self.$window.on( 'orientationchange resize', function( event ) {
-				if ( $( 'body' ).hasClass( 'jet-mobile-menu-active' ) ) {
+				if ( $( 'body' ).hasClass( 'ava-mobile-menu-active' ) ) {
 					return;
 				}
 
@@ -275,19 +275,19 @@
 
 				windowWidth = $( window ).width();
 
-				self.$instance.find( '.jet-menu-item' ).removeClass( 'jet-menu-hover' );
+				self.$instance.find( '.ava-menu-item' ).removeClass( 'ava-menu-hover' );
 			} );
 
 			self.$document.on( 'touchend', function( event ) {
-				if ( $( 'body' ).hasClass( 'jet-mobile-menu-active' ) ) {
+				if ( $( 'body' ).hasClass( 'ava-mobile-menu-active' ) ) {
 					return;
 				}
 
-				if ( $( event.target ).closest( '.jet-menu-item' ).length ) {
+				if ( $( event.target ).closest( '.ava-menu-item' ).length ) {
 					return;
 				}
 
-				self.$instance.find( '.jet-menu-item' ).removeClass( 'jet-menu-hover' );
+				self.$instance.find( '.ava-menu-item' ).removeClass( 'ava-menu-hover' );
 			} );
 
 		},
@@ -310,8 +310,8 @@
 			this.$mobileToogleButton.on( toogleEndEvent, function( event ) {
 				event.preventDefault();
 
-				$( 'body' ).toggleClass( 'jet-mobile-menu-visible' );
-				self.$element.toggleClass( 'jet-mobile-menu-active-state' );
+				$( 'body' ).toggleClass( 'ava-mobile-menu-visible' );
+				self.$element.toggleClass( 'ava-mobile-menu-active-state' );
 			} );
 
 			this.$document.on( toogleEndEvent, function( event ) {
@@ -320,12 +320,12 @@
 					return;
 				}
 
-				if ( ! self.$element.hasClass( 'jet-mobile-menu' ) || ! self.$element.hasClass( 'jet-mobile-menu-active-state' ) ) {
+				if ( ! self.$element.hasClass( 'ava-mobile-menu' ) || ! self.$element.hasClass( 'ava-mobile-menu-active-state' ) ) {
 					return;
 				}
 
-				$( 'body' ).removeClass( 'jet-mobile-menu-visible' );
-				self.$element.removeClass( 'jet-mobile-menu-active-state' );
+				$( 'body' ).removeClass( 'ava-mobile-menu-visible' );
+				self.$element.removeClass( 'ava-mobile-menu-active-state' );
 
 			} );
 		},
@@ -339,7 +339,7 @@
 		watch: function( delay ) {
 			var delay = delay || 10;
 
-			$( window ).on( 'resize.jetResponsiveMenu orientationchange.jetResponsiveMenu', this.debounce( delay, this.watcher.bind( this ) ) );
+			$( window ).on( 'resize.avaResponsiveMenu orientationchange.avaResponsiveMenu', this.debounce( delay, this.watcher.bind( this ) ) );
 			this.$instance.trigger( 'containerResize' );
 		},
 
@@ -352,14 +352,14 @@
 		watcher: function( event ) {
 
 			if ( this.isThreshold() ) {
-				this.$element.addClass( 'jet-mobile-menu' );
-				$( 'body' ).addClass( 'jet-mobile-menu-active' );
-				$( 'body' ).removeClass( 'jet-desktop-menu-active' );
+				this.$element.addClass( 'ava-mobile-menu' );
+				$( 'body' ).addClass( 'ava-mobile-menu-active' );
+				$( 'body' ).removeClass( 'ava-desktop-menu-active' );
 				this.$menuItems.removeAttr( 'hidden' );
 
 				// More-items listing not empty checking
 				if ( 0 !== this.hiddenItemsArray.length ) {
-					$( '> .jet-sub-menu', this.$moreItemsInstance ).empty();
+					$( '> .ava-sub-menu', this.$moreItemsInstance ).empty();
 				}
 
 				if ( this.settings.enabled ) {
@@ -367,10 +367,10 @@
 				}
 
 			} else {
-				this.$element.removeClass( 'jet-mobile-menu' );
-				$( 'body' ).removeClass( 'jet-mobile-menu-active' );
-				$( 'body' ).addClass( 'jet-desktop-menu-active' );
-				$( 'body' ).removeClass( 'jet-mobile-menu-visible' );
+				this.$element.removeClass( 'ava-mobile-menu' );
+				$( 'body' ).removeClass( 'ava-mobile-menu-active' );
+				$( 'body' ).addClass( 'ava-desktop-menu-active' );
+				$( 'body' ).removeClass( 'ava-mobile-menu-visible' );
 
 				this.rebuildItems();
 				this.$instance.trigger( 'rebuildItems' ); // subMenu position rebuild
@@ -423,29 +423,29 @@
 				$item.removeAttr( 'hidden' );
 			} );
 
-			$( '> .jet-sub-menu', self.$moreItemsInstance ).empty();
+			$( '> .ava-sub-menu', self.$moreItemsInstance ).empty();
 
 			hiddenItemsArray.forEach( function( item ) {
 				var $clone = $( item ).clone();
 
 				// Remove sub-mega-menu content
-				$( '.jet-sub-mega-menu', $clone ).remove();
+				$( '.ava-sub-mega-menu', $clone ).remove();
 
-				$clone.addClass( 'jet-sub-menu-item' );
+				$clone.addClass( 'ava-sub-menu-item' );
 
 				$clone.removeAttr( 'hidden' );
 
 				$( '> .top-level-link', $clone ).toggleClass( 'top-level-link sub-level-link' );
 
-				$( '> .jet-sub-menu', self.$moreItemsInstance ).append( $clone );
+				$( '> .ava-sub-menu', self.$moreItemsInstance ).append( $clone );
 			} );
 
 			if ( 0 == hiddenItemsArray.length ) {
 				self.$moreItemsInstance.attr( { 'hidden': 'hidden' } );
-				self.$moreItemsInstance.addClass( 'jet-empty' );
+				self.$moreItemsInstance.addClass( 'ava-empty' );
 			} else {
 				self.$moreItemsInstance.removeAttr( 'hidden' );
-				self.$moreItemsInstance.removeClass( 'jet-empty' );
+				self.$moreItemsInstance.removeClass( 'ava-empty' );
 			}
 
 			self.hiddenItemsArray = hiddenItemsArray;
@@ -463,7 +463,7 @@
 				initSubMenuPosition = false;
 
 			this.$instance.on( 'rebuildItems', function() {
-				var $subMenuList = $( '.jet-sub-menu', self.$instance ),
+				var $subMenuList = $( '.ava-sub-menu', self.$instance ),
 					maxWidth     = self.$window.outerWidth( true ),
 					isRTL        = $( 'body' ).hasClass( 'rtl' );
 
@@ -484,22 +484,22 @@
 					if ( ! isRTL ) {
 						if ( subMenuPos >= maxWidth ) {
 							$this.addClass( 'inverse-side' );
-							$this.find( '.jet-sub-menu' ).addClass( 'inverse-side' );
+							$this.find( '.ava-sub-menu' ).addClass( 'inverse-side' );
 
 							initSubMenuPosition = true;
 						} else if ( subMenuOffset < 0 ) {
 							$this.removeClass( 'inverse-side' );
-							$this.find( '.jet-sub-menu' ).removeClass( 'inverse-side' );
+							$this.find( '.ava-sub-menu' ).removeClass( 'inverse-side' );
 						}
 					} else {
 						if ( subMenuOffset < 0 ) {
 							$this.addClass( 'inverse-side' );
-							$this.find( '.jet-sub-menu' ).addClass( 'inverse-side' );
+							$this.find( '.ava-sub-menu' ).addClass( 'inverse-side' );
 
 							initSubMenuPosition = true;
 						} else if ( subMenuPos >= maxWidth ) {
 							$this.removeClass( 'inverse-side' );
-							$this.find( '.jet-sub-menu' ).removeClass( 'inverse-side' );
+							$this.find( '.ava-sub-menu' ).removeClass( 'inverse-side' );
 						}
 					}
 
@@ -516,13 +516,13 @@
 			var self = this;
 
 			this.$instance.on( 'containerResize', function() {
-				var $megaMenuList = $( '.jet-sub-mega-menu', self.$instance ),
+				var $megaMenuList = $( '.ava-sub-mega-menu', self.$instance ),
 					maxWidth      = $( 'body' ).outerWidth( true );
 
 					switch( self.settings.megaWidthType ) {
 						case 'items':
 							var visibleItemsWidth = self.getVisibleItemsWidth(),
-								firstOffset = $( '> .jet-menu-item:first', self.$instance ).position().left;
+								firstOffset = $( '> .ava-menu-item:first', self.$instance ).position().left;
 
 							$megaMenuList.css( {
 								'width': visibleItemsWidth + 'px',
@@ -667,15 +667,15 @@
 	};
 
 	// jQuery plugin
-	$.fn.JetMenu = function( options ) {
+	$.fn.AvaMenu = function( options ) {
 		return this.each( function() {
 			var $this         = $( this ),
 				pluginOptions = ( 'object' === typeof options ) ? options : {};
 
-			if ( ! $this.data( 'JetMenu' ) ) {
+			if ( ! $this.data( 'AvaMenu' ) ) {
 
 				// create plugin instance (only if not exists) and expose the entire instance API
-				$this.data( 'JetMenu', new JetMenu( this, pluginOptions ) );
+				$this.data( 'AvaMenu', new AvaMenu( this, pluginOptions ) );
 			}
 		} );
 	};

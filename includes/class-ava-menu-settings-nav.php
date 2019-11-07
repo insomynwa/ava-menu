@@ -12,12 +12,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
+if ( ! class_exists( 'Ava_Menu_Settings_Nav' ) ) {
 
 	/**
-	 * Define Jet_Menu_Settings_Nav class
+	 * Define Ava_Menu_Settings_Nav class
 	 */
-	class Jet_Menu_Settings_Nav {
+	class Ava_Menu_Settings_Nav {
 
 		/**
 		 * A reference to an instance of this class.
@@ -34,19 +34,19 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 		protected $current_menu_id = null;
 
 		/**
-		 * Jet Menu settings page
+		 * Ava Menu settings page
 		 *
 		 * @var string
 		 */
-		protected $meta_key = 'jet_menu_settings';
+		protected $meta_key = 'ava_menu_settings';
 
 		/**
 		 * Constructor for the class
 		 */
 		public function init() {
 			add_action( 'admin_head-nav-menus.php', array( $this, 'register_nav_meta_box' ), 9 );
-			add_filter( 'jet-menu/assets/admin/localize', array( $this, 'add_current_menu_id_to_localize' ) );
-			add_action( 'wp_ajax_jet_save_settings', array( $this, 'save_menu_settings' ) );
+			add_filter( 'ava-menu/assets/admin/localize', array( $this, 'add_current_menu_id_to_localize' ) );
+			add_action( 'wp_ajax_ava_save_settings', array( $this, 'save_menu_settings' ) );
 			add_filter( 'get_user_option_metaboxhidden_nav-menus', array( $this, 'force_metabox_visibile' ), 10 );
 		}
 
@@ -59,7 +59,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 
 			if ( ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'You are not allowed to do this', 'jet-menu' ),
+					'message' => esc_html__( 'You are not allowed to do this', 'ava-menu' ),
 				) );
 			}
 
@@ -67,7 +67,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 
 			if ( ! $menu_id ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'Incorrect input data', 'jet-menu' ),
+					'message' => esc_html__( 'Incorrect input data', 'ava-menu' ),
 				) );
 			}
 
@@ -87,7 +87,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 			$this->update_settings( $menu_id, $new_settings );
 
 			wp_send_json_success( array(
-				'message' => esc_html__( 'Success!', 'jet-menu' ),
+				'message' => esc_html__( 'Success!', 'ava-menu' ),
 			) );
 		}
 
@@ -125,8 +125,8 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 			}
 
 			add_meta_box(
-				'jet-menu-settings',
-				esc_html__( 'JetMenu Settings', 'jet-menu' ),
+				'ava-menu-settings',
+				esc_html__( 'AvaMenu Settings', 'ava-menu' ),
 				array( $this, 'render_metabox' ),
 				'nav-menus',
 				'side',
@@ -136,7 +136,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 		}
 
 		/**
-		 * Force nav menu metabox with JetMenu settings to be allways visible.
+		 * Force nav menu metabox with AvaMenu settings to be allways visible.
 		 *
 		 * @param  array $result
 		 * @return array
@@ -147,8 +147,8 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 				return $result;
 			}
 
-			if ( in_array( 'jet-menu-settings', $result ) ) {
-				$result = array_diff( $result, array( 'jet-menu-settings' ) );
+			if ( in_array( 'ava-menu-settings', $result ) ) {
+				$result = array_diff( $result, array( 'ava-menu-settings' ) );
 			}
 			return $result;
 		}
@@ -181,8 +181,8 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 			} else if ( ! count ( $tagged_menu_locations ) ) {
 				$this->empty_location_message();
 			} else {
-				$wrapper        = jet_menu()->get_template( 'admin/settings-nav.php' );
-				$settings_list  = jet_menu()->get_template( 'admin/settings-nav-list.php' );
+				$wrapper        = ava_menu()->get_template( 'admin/settings-nav.php' );
+				$settings_list  = ava_menu()->get_template( 'admin/settings-nav-list.php' );
 				$settings_stack = $this->get_registered_nav_settings();
 				include $wrapper;
 			}
@@ -196,18 +196,18 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 		 */
 		public function get_registered_nav_settings() {
 
-			return apply_filters( 'jet-menu/nav-settings/registered', array(
+			return apply_filters( 'ava-menu/nav-settings/registered', array(
 				'enabled' => array(
 					'type'   => 'switcher',
-					'id'     => 'jet-enabled',
+					'id'     => 'ava-enabled',
 					'name'   => 'enabled',
 					'value'  => '',
 					'style'  => 'small',
 					'toggle' => array(
-						'true_toggle'  => esc_html__( 'Yes', 'jet-menu' ),
-						'false_toggle' => esc_html__( 'No', 'jet-menu' ),
+						'true_toggle'  => esc_html__( 'Yes', 'ava-menu' ),
+						'false_toggle' => esc_html__( 'No', 'ava-menu' ),
 					),
-					'label'  => esc_html__( 'Enable JetMenu for current location', 'jet-menu' ),
+					'label'  => esc_html__( 'Enable AvaMenu for current location', 'ava-menu' ),
 				),
 			) );
 
@@ -219,8 +219,8 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 		 * @return void
 		 */
 		public function no_locations_message() {
-			printf( '<p>%s</p>', esc_html__( 'This theme does not register any menu locations.', 'jet-menu' ) );
-			printf( '<p>%s</p>', esc_html__( 'You will need to create a new menu location to use the JetMenu on your site.', 'jet-menu' ) );
+			printf( '<p>%s</p>', esc_html__( 'This theme does not register any menu locations.', 'ava-menu' ) );
+			printf( '<p>%s</p>', esc_html__( 'You will need to create a new menu location to use the AvaMenu on your site.', 'ava-menu' ) );
 		}
 
 		/**
@@ -229,8 +229,8 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 		 * @return void
 		 */
 		public function empty_location_message() {
-			printf( '<p>%s</p>', esc_html__( 'Please assign this menu to a theme location to enable the JetMenu settings.', 'jet-menu' ) );
-			printf( '<p>%s</p>', esc_html__( 'To assign this menu to a theme location, scroll to the bottom of this page and tag the menu to a \'Display location\'.', 'jet-menu' ) );
+			printf( '<p>%s</p>', esc_html__( 'Please assign this menu to a theme location to enable the AvaMenu settings.', 'ava-menu' ) );
+			printf( '<p>%s</p>', esc_html__( 'To assign this menu to a theme location, scroll to the bottom of this page and tag the menu to a \'Display location\'.', 'ava-menu' ) );
 		}
 
 		/**
@@ -324,10 +324,10 @@ if ( ! class_exists( 'Jet_Menu_Settings_Nav' ) ) {
 }
 
 /**
- * Returns instance of Jet_Menu_Settings_Nav
+ * Returns instance of Ava_Menu_Settings_Nav
  *
  * @return object
  */
-function jet_menu_settings_nav() {
-	return Jet_Menu_Settings_Nav::get_instance();
+function ava_menu_settings_nav() {
+	return Ava_Menu_Settings_Nav::get_instance();
 }

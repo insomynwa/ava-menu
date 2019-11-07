@@ -13,7 +13,7 @@ if ( ! defined( 'WPINC' ) ) {
  *
  * @since 1.0.0
  */
-class Jet_Menu_Plugin_Changelog {
+class Ava_Menu_Plugin_Changelog {
 
 	private $transient_key = null;
 
@@ -26,7 +26,7 @@ class Jet_Menu_Plugin_Changelog {
 		'requires' => '4.7',
 		'tested'   => '',
 		'banners'  => array(),
-		'api_url'  => 'https://crocoblock.com/wp-content/uploads/jet-changelog/%s.json',
+		'api_url'  => 'https://crocoblock.com/wp-content/uploads/ava-changelog/%s.json',
 	);
 
 	/**
@@ -124,9 +124,9 @@ class Jet_Menu_Plugin_Changelog {
 
 			$plugin_meta['view-details'] = sprintf( '<a href="%s" class="thickbox open-plugin-details-modal" aria-label="%s" data-title="%s">%s</a>',
 				esc_url( network_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . $this->api['slug'] . '&TB_iframe=true&width=600&height=550' ) ),
-				esc_attr( sprintf( __( 'More information about %s', 'jet-menu' ), $this->api['name'] ) ),
+				esc_attr( sprintf( __( 'More information about %s', 'ava-menu' ), $this->api['name'] ) ),
 				esc_attr( $this->api['name'] ),
-				esc_html__( 'View details', 'jet-menu' )
+				esc_html__( 'View details', 'ava-menu' )
 			);
 
 		}
@@ -136,8 +136,8 @@ class Jet_Menu_Plugin_Changelog {
 
 }
 
-if ( ! function_exists( 'jet_menu_plugin_changelog' ) ) {
-	function jet_menu_plugin_changelog() {
-		return new Jet_Menu_Plugin_Changelog();
+if ( ! function_exists( 'ava_menu_plugin_changelog' ) ) {
+	function ava_menu_plugin_changelog() {
+		return new Ava_Menu_Plugin_Changelog();
 	}
 }

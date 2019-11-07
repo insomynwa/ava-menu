@@ -12,12 +12,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Jet_Menu_Tools' ) ) {
+if ( ! class_exists( 'Ava_Menu_Tools' ) ) {
 
 	/**
-	 * Define Jet_Menu_Tools class
+	 * Define Ava_Menu_Tools class
 	 */
-	class Jet_Menu_Tools {
+	class Ava_Menu_Tools {
 
 		/**
 		 * A reference to an instance of this class.
@@ -34,7 +34,7 @@ if ( ! class_exists( 'Jet_Menu_Tools' ) ) {
 		 * @return string
 		 */
 		public function get_icon_html( $icon = '' ) {
-			$format = apply_filters( 'jet-menu/tools/icon-format', '<i class="jet-menu-icon fa %s"></i>', $icon );
+			$format = apply_filters( 'ava-menu/tools/icon-format', '<i class="ava-menu-icon fa %s"></i>', $icon );
 			return sprintf( $format, esc_attr( $icon ) );
 		}
 
@@ -47,8 +47,8 @@ if ( ! class_exists( 'Jet_Menu_Tools' ) ) {
 		 */
 		public function get_dropdown_arrow_html( $icon = '', $icon_base = 'fa' ) {
 			$format = apply_filters(
-				'jet-menu/tools/dropdown-arrow-format',
-				'<i class="jet-dropdown-arrow %2$s %1$s"></i>',
+				'ava-menu/tools/dropdown-arrow-format',
+				'<i class="ava-dropdown-arrow %2$s %1$s"></i>',
 				$icon,
 				$icon_base
 			);
@@ -64,16 +64,16 @@ if ( ! class_exists( 'Jet_Menu_Tools' ) ) {
 		public function get_badge_html( $badge = '', $depth = 0 ) {
 
 			if ( 0 < $depth ) {
-				$is_hidden = jet_menu_option_page()->get_option( 'jet-menu-sub-badge-hide', 'false' );
+				$is_hidden = ava_menu_option_page()->get_option( 'ava-menu-sub-badge-hide', 'false' );
 			} else {
-				$is_hidden = jet_menu_option_page()->get_option( 'jet-menu-top-badge-hide', 'false' );
+				$is_hidden = ava_menu_option_page()->get_option( 'ava-menu-top-badge-hide', 'false' );
 			}
 
-			$hide_on_mobile = ( 'true' === $is_hidden ) ? ' jet-hide-mobile' : '';
+			$hide_on_mobile = ( 'true' === $is_hidden ) ? ' ava-hide-mobile' : '';
 
 			$format = apply_filters(
-				'jet-menu/tools/badge-format',
-				'<small class="jet-menu-badge%2$s"><span class="jet-menu-badge__inner">%1$s</span></small>',
+				'ava-menu/tools/badge-format',
+				'<small class="ava-menu-badge%2$s"><span class="ava-menu-badge__inner">%1$s</span></small>',
 				$badge,
 				$depth
 			);
@@ -88,20 +88,20 @@ if ( ! class_exists( 'Jet_Menu_Tools' ) ) {
 		 */
 		public function add_menu_css( $item_id = 0, $wrapper = '' ) {
 
-			$settings   = jet_menu_settings_item()->get_settings( $item_id );
-			$css_scheme = apply_filters( 'jet-menu/item-css/sheme', array(
+			$settings   = ava_menu_settings_item()->get_settings( $item_id );
+			$css_scheme = apply_filters( 'ava-menu/item-css/sheme', array(
 				'icon_color' => array(
-					'selector' => '> a .jet-menu-icon:before',
+					'selector' => '> a .ava-menu-icon:before',
 					'rule'     => 'color',
 					'value'    => '%1$s !important;',
 				),
 				'badge_color' => array(
-					'selector' => '> a .jet-menu-badge .jet-menu-badge__inner',
+					'selector' => '> a .ava-menu-badge .ava-menu-badge__inner',
 					'rule'     => 'color',
 					'value'    => '%1$s !important;',
 				),
 				'badge_bg_color' => array(
-					'selector' => '> a .jet-menu-badge .jet-menu-badge__inner',
+					'selector' => '> a .ava-menu-badge .ava-menu-badge__inner',
 					'rule'     => 'background-color',
 					'value'    => '%1$s !important;',
 				),
@@ -112,13 +112,13 @@ if ( ! class_exists( 'Jet_Menu_Tools' ) ) {
 					'desktop'  => true,
 				),
 				'custom_mega_menu_width' => array(
-					'selector' => '> .jet-sub-mega-menu',
+					'selector' => '> .ava-sub-mega-menu',
 					'rule'     => 'width',
 					'value'    => '%1$spx !important;',
 				),
 				// for Vertical Mega Menu
 				'mega_menu_width' => array(
-					'selector' => '> .jet-custom-nav__mega-sub',
+					'selector' => '> .ava-custom-nav__mega-sub',
 					'rule'     => 'width',
 					'value'    => '%1$spx !important;',
 				),
@@ -133,12 +133,12 @@ if ( ! class_exists( 'Jet_Menu_Tools' ) ) {
 				$_wrapper = $wrapper;
 
 				if ( isset( $data['desktop'] ) && true === $data['desktop'] ) {
-					$_wrapper = 'body:not(.jet-mobile-menu-active) ' . $wrapper;
+					$_wrapper = 'body:not(.ava-mobile-menu-active) ' . $wrapper;
 				}
 
 				if ( is_array( $settings[ $setting ] ) && isset( $settings[ $setting ]['units'] ) ) {
 
-					jet_menu_dynmic_css()->add_dimensions_css(
+					ava_menu_dynmic_css()->add_dimensions_css(
 						array(
 							'selector'  => sprintf( '%1$s %2$s', $_wrapper, $data['selector'] ),
 							'rule'      => $data['rule'],
@@ -149,7 +149,7 @@ if ( ! class_exists( 'Jet_Menu_Tools' ) ) {
 
 				} else {
 
-					jet_menu()->dynamic_css()->add_style(
+					ava_menu()->dynamic_css()->add_style(
 						sprintf( '%1$s %2$s', $_wrapper, $data['selector'] ),
 						array(
 							$data['rule'] => sprintf( $data['value'], esc_attr( $settings[ $setting ] ) ),
@@ -181,10 +181,10 @@ if ( ! class_exists( 'Jet_Menu_Tools' ) ) {
 }
 
 /**
- * Returns instance of Jet_Menu_Tools
+ * Returns instance of Ava_Menu_Tools
  *
  * @return object
  */
-function jet_menu_tools() {
-	return Jet_Menu_Tools::get_instance();
+function ava_menu_tools() {
+	return Ava_Menu_Tools::get_instance();
 }

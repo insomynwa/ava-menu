@@ -1,4 +1,4 @@
-.fusion-main-menu .jet-menu-container li {
+.fusion-main-menu .ava-menu-container li {
 	float: none;
 }
 
@@ -10,16 +10,16 @@
 	align-self: center;
 }
 
-.jet-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v1 .fusion-main-menu,
-.jet-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v2 .fusion-main-menu,
-.jet-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v3 .fusion-main-menu,
-.jet-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v4 .fusion-main-menu,
-.jet-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v5 .fusion-main-menu,
-.jet-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v7 .fusion-main-menu > ul > li {
+.ava-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v1 .fusion-main-menu,
+.ava-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v2 .fusion-main-menu,
+.ava-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v3 .fusion-main-menu,
+.ava-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v4 .fusion-main-menu,
+.ava-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v5 .fusion-main-menu,
+.ava-mobile-menu-active .fusion-mobile-menu-design-modern.fusion-header-v7 .fusion-main-menu > ul > li {
 	display: block !important;
 }
 
-.jet-mobile-menu-active .fusion-mobile-menu-icons .fusion-icon {
+.ava-mobile-menu-active .fusion-mobile-menu-icons .fusion-icon {
 	display: none;
 }
 
@@ -27,9 +27,9 @@ div.fusion-middle-logo-menu-logo {
 	display: none !important;
 }
 
-.jet-mobile-menu-active div.fusion-middle-logo-menu-logo {
+.ava-mobile-menu-active div.fusion-middle-logo-menu-logo {
 	display: block !important;
 }
-.jet-mobile-menu-active li.fusion-middle-logo-menu-logo {
+.ava-mobile-menu-active li.fusion-middle-logo-menu-logo {
 	display: none !important;
 }

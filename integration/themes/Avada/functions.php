@@ -4,17 +4,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // disable direct access
 }
 
-add_action( 'wp_enqueue_scripts', 'jet_menu_avada_styles', 0 );
-add_filter( 'wp_nav_menu_items', 'jet_menu_avada_fix_header_search', 999, 2 );
-add_filter( 'jet-menu/main-walker/end-el', 'jet_menu_avada_middle_logo', 10, 5 );
-add_filter( 'jet-menu/set-menu-args/', 'jet_menu_avada_mobile_middle_logo' );
+add_action( 'wp_enqueue_scripts', 'ava_menu_avada_styles', 0 );
+add_filter( 'wp_nav_menu_items', 'ava_menu_avada_fix_header_search', 999, 2 );
+add_filter( 'ava-menu/main-walker/end-el', 'ava_menu_avada_middle_logo', 10, 5 );
+add_filter( 'ava-menu/set-menu-args/', 'ava_menu_avada_mobile_middle_logo' );
 
 /**
- * Make header search in avada theme compatible with JetMenu
+ * Make header search in avada theme compatible with AvaMenu
  * @return [type] [description]
  */
-function jet_menu_avada_fix_header_search( $items, $args ) {
-	if ( ! isset( $args->menu_class ) || 'jet-menu' !== $args->menu_class ) {
+function ava_menu_avada_fix_header_search( $items, $args ) {
+	if ( ! isset( $args->menu_class ) || 'ava-menu' !== $args->menu_class ) {
 		return $items;
 	}
 
@@ -24,7 +24,7 @@ function jet_menu_avada_fix_header_search( $items, $args ) {
 			'fusion-main-menu-icon',
 		),
 		array(
-			'fusion-custom-menu-item fusion-main-menu-search jet-menu-item jet-simple-menu-item jet-regular-item jet-responsive-menu-item',
+			'fusion-custom-menu-item fusion-main-menu-search ava-menu-item ava-simple-menu-item ava-regular-item ava-responsive-menu-item',
 			'fusion-main-menu-icon top-level-link',
 		),
 		$items
@@ -39,12 +39,12 @@ function jet_menu_avada_fix_header_search( $items, $args ) {
  *
  * @return void
  */
-function jet_menu_avada_styles() {
+function ava_menu_avada_styles() {
 	wp_enqueue_style(
-		'jet-menu-avada',
-		jet_menu()->get_theme_url( 'assets/css/style.css' ),
+		'ava-menu-avada',
+		ava_menu()->get_theme_url( 'assets/css/style.css' ),
 		array(),
-		jet_menu()->get_version()
+		ava_menu()->get_version()
 	);
 }
 
@@ -53,7 +53,7 @@ function jet_menu_avada_styles() {
  *
  * @return string
  */
-function jet_menu_avada_middle_logo( $output, $item, $walker, $depth, $args ) {
+function ava_menu_avada_middle_logo( $output, $item, $walker, $depth, $args ) {
 
 	if ( '0' !== $item->menu_item_parent ) {
 		return $output;
@@ -100,7 +100,7 @@ function jet_menu_avada_middle_logo( $output, $item, $walker, $depth, $args ) {
  * @param  [type] $args [description]
  * @return [type]       [description]
  */
-function jet_menu_avada_mobile_middle_logo( $args ) {
+function ava_menu_avada_mobile_middle_logo( $args ) {
 
 	$avada = Avada()->settings;
 

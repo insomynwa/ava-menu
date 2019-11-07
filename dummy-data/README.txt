@@ -1,4 +1,4 @@
-Here is the list of the dummy-data files that can be applied to menu items to make them look as on JetMenu live demo:
+Here is the list of the dummy-data files that can be applied to menu items to make them look as on AvaMenu live demo:
 
 - content-blog.json;
 - content-contacts.json;
@@ -33,7 +33,7 @@ BLOG (content-blog.json)
 __________________________
 
 
-- JetElements plugin.
+- AvaElements plugin.
 
 __________________________
 
@@ -42,10 +42,10 @@ __________________________
 
 
 - WooCommerce plugin;
-- JetElements plugin;
+- AvaElements plugin;
 - create products with WooCommerce.
 
-Keep in mind, that the style of the modules containing WooCommerce products is dependent on the theme’s style settings.
+Keep in mind, that the style of the modules containing WooCommerce products is dependent on the themeï¿½s style settings.
  
 __________________________
  
@@ -54,8 +54,8 @@ __________________________
 
 
 - Contact Form 7 plugin;
-- JetElements plugin;
+- AvaElements plugin;
 - create a contact form using Contact Form 7 plugin and select it in Contact Form 7 > Content module block.
 
-In the case there is no map in the Advanced Map module block, please, navigate to Elementor > JetElements Settings tab on the left of the Dashboard and insert the API key in the corresponding field.
+In the case there is no map in the Advanced Map module block, please, navigate to Elementor > AvaElements Settings tab on the left of the Dashboard and insert the API key in the corresponding field.
  

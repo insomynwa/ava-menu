@@ -7,7 +7,7 @@ $text_color:          #96989a;
 $actions_color:       #495157;
 $actions_height:      40px;
 
-.jet-menu-trigger {
+.ava-menu-trigger {
 	cursor: pointer;
 	display: inline-block;
 	padding: 3px 5px;
@@ -36,7 +36,7 @@ $actions_height:      40px;
 	}
 }
 
-.jet-menu-popup {
+.ava-menu-popup {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -51,12 +51,12 @@ $actions_height:      40px;
 	opacity: 1;
 	color: $text_color;
 
-	&.jet-hidden {
+	&.ava-hidden {
 		top: auto;
 		height: 0;
 		opacity: 0;
 		transition: opacity 150ms linear;
-		.jet-menu-popup__content {
+		.ava-menu-popup__content {
 			opacity: 0;
 			transform: translateY(30px);
 		}
@@ -83,7 +83,7 @@ $actions_height:      40px;
 		height: 400px;
 		max-width: 90vw;
 		overflow: auto;
-		.jet-menu-editor-active & {
+		.ava-menu-editor-active & {
 			transition: all 300ms cubic-bezier(.31,.91,.51,1);
 			width: 90vw;
 			height: 90vh;
@@ -151,7 +151,7 @@ $actions_height:      40px;
 	}
 }
 
-.jet-settings-tabs {
+.ava-settings-tabs {
 	display: flex;
 	align-items: stretch;
 	height: 100%;
@@ -181,7 +181,7 @@ $actions_height:      40px;
 				background: $primary_color;
 			}
 			&:hover,
-			&.jet-active-tab {
+			&.ava-active-tab {
 				color: $primary_color;
 				&:after {
 					width: 3px;
@@ -216,7 +216,7 @@ $actions_height:      40px;
 				justify-content: center;
 				align-items: center;
 			}
-			.jet-content-tab-wrap {
+			.ava-content-tab-wrap {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -243,13 +243,13 @@ $actions_height:      40px;
 	}
 }
 
-.jet-hidden-tab {
+.ava-hidden-tab {
 	display: none;
 }
 
-.jet-menu-editor-wrap {
+.ava-menu-editor-wrap {
 	display: none;
-	&.jet-editor-active {
+	&.ava-editor-active {
 		display: block;
 		position: absolute;
 		left: 0;
@@ -258,7 +258,7 @@ $actions_height:      40px;
 		bottom: 0;
 		overflow: hidden;
 
-		.jet-editor-frame {
+		.ava-editor-frame {
 			width: 100%;
 			height: 100%;
 			min-height: 100%;
@@ -272,9 +272,9 @@ $actions_height:      40px;
 	}
 }
 
-.jet-close-frame {
+.ava-close-frame {
 	display: none;
-	&.jet-loaded {
+	&.ava-loaded {
 		display: block;
 	}
 	.back-arrow-top {
@@ -350,7 +350,7 @@ $actions_height:      40px;
 
 }
 
-.jet-menu-settings-fields + p.submit {
+.ava-menu-settings-fields + p.submit {
 	margin: 0;
 	padding: 0;
 }
@@ -377,7 +377,7 @@ $actions_height:      40px;
 	animation: loader 1.1s infinite linear;
 }
 
-.jet_menu_options_section {
+.ava_menu_options_section {
 	.cherry-component.cherry-tab .cherry-tab__tabs .cherry-component__button {
 		padding-right: 20px;
 	}

@@ -17,14 +17,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<body <?php body_class(); ?>>
 		<?php
 
-		do_action( 'jet-menu/blank-page/before-content' );
+		do_action( 'ava-menu/blank-page/before-content' );
 
 		while ( have_posts() ) :
 			the_post();
 			the_content();
 		endwhile;
 
-		do_action( 'jet-menu/blank-page/after-content' );
+		do_action( 'ava-menu/blank-page/after-content' );
 
 		wp_footer();
 		?>

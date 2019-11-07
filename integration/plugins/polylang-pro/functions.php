@@ -1,9 +1,9 @@
 <?php
 /**
- * Jet Menu Polylang Pro compatibility
+ * Ava Menu Polylang Pro compatibility
  */
 
-add_filter( 'jet-menu/public-manager/menu-location', 'jet_menu_polylang_pro_fix_location' );
+add_filter( 'ava-menu/public-manager/menu-location', 'ava_menu_polylang_pro_fix_location' );
 
 /**
  * Fix menu location for Polylang Pro plugin
@@ -11,7 +11,7 @@ add_filter( 'jet-menu/public-manager/menu-location', 'jet_menu_polylang_pro_fix_
  * @param  string $location Default location
  * @return string
  */
-function jet_menu_polylang_pro_fix_location( $location ) {
+function ava_menu_polylang_pro_fix_location( $location ) {
 
 	// Ensure Polylang is active.
 	if ( ! function_exists( 'PLL' ) || ! PLL() instanceof PLL_Frontend ) {

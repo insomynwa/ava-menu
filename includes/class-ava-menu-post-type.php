@@ -12,12 +12,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Jet_Menu_Post_Type' ) ) {
+if ( ! class_exists( 'Ava_Menu_Post_Type' ) ) {
 
 	/**
-	 * Define Jet_Menu_Post_Type class
+	 * Define Ava_Menu_Post_Type class
 	 */
-	class Jet_Menu_Post_Type {
+	class Ava_Menu_Post_Type {
 
 		/**
 		 * A reference to an instance of this class.
@@ -27,8 +27,8 @@ if ( ! class_exists( 'Jet_Menu_Post_Type' ) ) {
 		 */
 		private static $instance = null;
 
-		protected $post_type = 'jet-menu';
-		protected $meta_key  = 'jet-menu-item';
+		protected $post_type = 'ava-menu';
+		protected $meta_key  = 'ava-menu-item';
 
 		/**
 		 * Constructor for the class
@@ -41,7 +41,7 @@ if ( ! class_exists( 'Jet_Menu_Post_Type' ) ) {
 			add_filter( 'option_elementor_cpt_support', array( $this, 'set_option_support' ) );
 			add_filter( 'default_option_elementor_cpt_support', array( $this, 'set_option_support' ) );
 
-			add_filter( 'jet-menu/assets/admin/localize', array( $this, 'localize_edit_url' ) );
+			add_filter( 'ava-menu/assets/admin/localize', array( $this, 'localize_edit_url' ) );
 
 			add_action( 'template_include', array( $this, 'set_post_type_template' ), 9999 );
 		}
@@ -85,7 +85,7 @@ if ( ! class_exists( 'Jet_Menu_Post_Type' ) ) {
 		public function localize_edit_url( $settings ) {
 			$settings['editURL'] = add_query_arg(
 				array(
-					'jet-open-editor' => 1,
+					'ava-open-editor' => 1,
 					'item'            => '%id%',
 					'menu'            => '%menuid%',
 				),
@@ -103,12 +103,12 @@ if ( ! class_exists( 'Jet_Menu_Post_Type' ) ) {
 		public function register_post_type() {
 
 			$labels = array(
-				'name'          => esc_html__( 'Mega Menu Items', 'jet-menu' ),
-				'singular_name' => esc_html__( 'Mega Menu Item', 'jet-menu' ),
-				'add_new'       => esc_html__( 'Add New Mega Menu Item', 'jet-menu' ),
-				'add_new_item'  => esc_html__( 'Add New Mega Menu Item', 'jet-menu' ),
-				'edit_item'     => esc_html__( 'Edit Mega Menu Item', 'jet-menu' ),
-				'menu_name'     => esc_html__( 'Mega Menu Items', 'jet-menu' ),
+				'name'          => esc_html__( 'Mega Menu Items', 'ava-menu' ),
+				'singular_name' => esc_html__( 'Mega Menu Item', 'ava-menu' ),
+				'add_new'       => esc_html__( 'Add New Mega Menu Item', 'ava-menu' ),
+				'add_new_item'  => esc_html__( 'Add New Mega Menu Item', 'ava-menu' ),
+				'edit_item'     => esc_html__( 'Edit Mega Menu Item', 'ava-menu' ),
+				'menu_name'     => esc_html__( 'Mega Menu Items', 'ava-menu' ),
 			);
 
 			$args = array(
@@ -148,7 +148,7 @@ if ( ! class_exists( 'Jet_Menu_Post_Type' ) ) {
 				return;
 			}
 
-			if ( empty( $_REQUEST['jet-open-editor'] ) ) {
+			if ( empty( $_REQUEST['ava-open-editor'] ) ) {
 				return;
 			}
 
@@ -180,7 +180,7 @@ if ( ! class_exists( 'Jet_Menu_Post_Type' ) ) {
 				array(
 					'post'        => $mega_menu_id,
 					'action'      => 'elementor',
-					'context'     => 'jet-menu',
+					'context'     => 'ava-menu',
 					'parent_menu' => $menu_id,
 				),
 				admin_url( 'post.php' )
@@ -210,11 +210,11 @@ if ( ! class_exists( 'Jet_Menu_Post_Type' ) ) {
 
 			if ( is_singular( $this->slug() ) ) {
 				$found    = true;
-				$template = jet_menu()->plugin_path( 'templates/blank.php' );
+				$template = ava_menu()->plugin_path( 'templates/blank.php' );
 			}
 
 			if ( $found ) {
-				do_action( 'jet-menu/template-include/found' );
+				do_action( 'ava-menu/template-include/found' );
 			}
 
 			return $template;
@@ -240,10 +240,10 @@ if ( ! class_exists( 'Jet_Menu_Post_Type' ) ) {
 }
 
 /**
- * Returns instance of Jet_Menu_Post_Type
+ * Returns instance of Ava_Menu_Post_Type
  *
  * @return object
  */
-function jet_menu_post_type() {
-	return Jet_Menu_Post_Type::get_instance();
+function ava_menu_post_type() {
+	return Ava_Menu_Post_Type::get_instance();
 }

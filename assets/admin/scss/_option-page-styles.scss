@@ -1,6 +1,6 @@
 $padding: 10px;
 
-.jet_menu_options_section {
+.ava_menu_options_section {
 		max-width: 1200px;
 }
 
@@ -12,14 +12,14 @@ $padding: 10px;
 	}
 }
 
-.jet-preset-msg {
+.ava-preset-msg {
 	color: #49c66a;
 }
-.jet-menu-success-message {
+.ava-menu-success-message {
 	padding-top: 5px;
 	color: #49c66a;
 }
-.jet-menu-error-message {
+.ava-menu-error-message {
 	padding-top: 5px;
 	color: #f00;
 }
@@ -32,7 +32,7 @@ $padding: 10px;
 		align-items: flex-start;
 	}
 
-	.cherry-ui-kit.jet-menu-import-export {
+	.cherry-ui-kit.ava-menu-import-export {
 		flex: 1;
 		br {
 			width: 100%;
@@ -42,7 +42,7 @@ $padding: 10px;
 		}
 	}
 
-	.jet-menu-import {
+	.ava-menu-import {
 
 		height: 0;
 		overflow: hidden;
@@ -58,7 +58,7 @@ $padding: 10px;
 
 		&.import-active {
 			height: auto;
-			.jet-menu-import__inner {
+			.ava-menu-import__inner {
 				height: auto;
 				border: 1px solid rgba(0,0,0,0.1);
 				margin-top: 20px;
@@ -146,7 +146,7 @@ button.cherry5-ui-button {
 	}
 }
 
-.jet-delete-preset-wrap {
+.ava-delete-preset-wrap {
 	color: #a00;
 	.cherry-ui-kit__description {
 		color: #a00;

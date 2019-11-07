@@ -8,12 +8,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
+if ( ! class_exists( 'Ava_Menu_CSS_File' ) ) {
 
 	/**
-	 * Define Jet_Menu_CSS_File class
+	 * Define Ava_Menu_CSS_File class
 	 */
-	class Jet_Menu_CSS_File {
+	class Ava_Menu_CSS_File {
 
 		/**
 		 * A reference to an instance of this class.
@@ -33,7 +33,7 @@ if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
 		 */
 		public function init() {
 
-			$enbaled = jet_menu_option_page()->get_option( 'jet-menu-cache-css', 'true' );
+			$enbaled = ava_menu_option_page()->get_option( 'ava-menu-cache-css', 'true' );
 
 			if ( 'true' !== $enbaled ) {
 				return;
@@ -41,12 +41,12 @@ if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_menu_css' ) );
 
-			add_action( 'jet-menu/options-page/save',  array( $this, 'remove_css_file' ) );
-			add_action( 'jet-menu/presets/created',    array( $this, 'remove_css_file' ) );
-			add_action( 'jet-menu/presets/updated',    array( $this, 'remove_css_file' ) );
-			add_action( 'jet-menu/presets/loaded',     array( $this, 'remove_css_file' ) );
-			add_action( 'jet-menu/presets/deleted',    array( $this, 'remove_css_file' ) );
-			add_action( 'jet-menu/item-settings/save', array( $this, 'remove_css_file' ) );
+			add_action( 'ava-menu/options-page/save',  array( $this, 'remove_css_file' ) );
+			add_action( 'ava-menu/presets/created',    array( $this, 'remove_css_file' ) );
+			add_action( 'ava-menu/presets/updated',    array( $this, 'remove_css_file' ) );
+			add_action( 'ava-menu/presets/loaded',     array( $this, 'remove_css_file' ) );
+			add_action( 'ava-menu/presets/deleted',    array( $this, 'remove_css_file' ) );
+			add_action( 'ava-menu/item-settings/save', array( $this, 'remove_css_file' ) );
 
 			add_filter( 'cherry_dynamic_css_collector_localize_object', array( $this, 'maybe_create_css_file' ) );
 		}
@@ -93,7 +93,7 @@ if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
 			foreach ( glob( $this->menu_dir() . '*.css' ) as $file ) {
 
 				$slug   = basename( $file, '.css' );
-				$preset = str_replace( 'jet-menu-', '', $slug );
+				$preset = str_replace( 'ava-menu-', '', $slug );
 
 				if ( $this->menu_css_exists( $preset ) ) {
 					unlink( $this->menu_css_path( $preset ) );
@@ -116,7 +116,7 @@ if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
 			foreach ( glob( $this->menu_dir() . '*.css' ) as $file ) {
 
 				$slug   = basename( $file, '.css' );
-				$preset = str_replace( 'jet-menu-', '', $slug );
+				$preset = str_replace( 'ava-menu-', '', $slug );
 
 				if ( $this->menu_css_exists( $preset ) ) {
 
@@ -149,7 +149,7 @@ if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
 		 * @return [type] [description]
 		 */
 		public function menu_css_path( $preset = 'general' ) {
-			return $this->menu_dir() . 'jet-menu-' . $preset . '.css';
+			return $this->menu_dir() . 'ava-menu-' . $preset . '.css';
 		}
 
 		/**
@@ -158,7 +158,7 @@ if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
 		 * @return [type] [description]
 		 */
 		public function menu_css_url( $preset = 'general' ) {
-			return $this->menu_url() . 'jet-menu-' . $preset . '.css';
+			return $this->menu_url() . 'ava-menu-' . $preset . '.css';
 		}
 
 		/**
@@ -189,7 +189,7 @@ if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
 
 			$upload_dir      = wp_upload_dir();
 			$upload_base_dir = $upload_dir['baseurl'];
-			$this->menu_url  = trailingslashit( $upload_base_dir ) . 'jet-menu/';
+			$this->menu_url  = trailingslashit( $upload_base_dir ) . 'ava-menu/';
 
 			if ( is_ssl() ) {
 				$this->menu_url = set_url_scheme( $this->menu_url );
@@ -212,7 +212,7 @@ if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
 
 			$upload_dir      = wp_upload_dir();
 			$upload_base_dir = $upload_dir['basedir'];
-			$this->menu_dir  = trailingslashit( $upload_base_dir ) . 'jet-menu/';
+			$this->menu_dir  = trailingslashit( $upload_base_dir ) . 'ava-menu/';
 
 			return $this->menu_dir;
 
@@ -252,10 +252,10 @@ if ( ! class_exists( 'Jet_Menu_CSS_File' ) ) {
 }
 
 /**
- * Returns instance of Jet_Menu_CSS_File
+ * Returns instance of Ava_Menu_CSS_File
  *
  * @return object
  */
-function jet_menu_css_file() {
-	return Jet_Menu_CSS_File::get_instance();
+function ava_menu_css_file() {
+	return Ava_Menu_CSS_File::get_instance();
 }

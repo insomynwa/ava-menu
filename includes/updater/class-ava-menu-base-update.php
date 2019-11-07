@@ -13,7 +13,7 @@ if ( ! defined( 'WPINC' ) ) {
  *
  * @since 1.0.0
  */
-class Jet_Menu_Base_Update {
+class Ava_Menu_Base_Update {
 
 	/**
 	 * Api parameters.
@@ -25,7 +25,7 @@ class Jet_Menu_Base_Update {
 	protected $api = array(
 		'version' => '',
 		'slug'    => '',
-		'api_url' => 'http://jetelements.zemez.io/updates/%s.json',
+		'api_url' => 'http://avaelements.zemez.io/updates/%s.json',
 	);
 
 	/**

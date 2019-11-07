@@ -1,0 +1,309 @@
+@font-face {
+  font-family: 'avamenu';
+  src:  url('../fonts/avamenu.eot?nc756v');
+  src:  url('../fonts/avamenu.eot?nc756v#iefix') format('embedded-opentype'),
+    url('../fonts/avamenu.ttf?nc756v') format('truetype'),
+    url('../fonts/avamenu.woff?nc756v') format('woff'),
+    url('../fonts/avamenu.svg?nc756v#avamenu') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="avamenu-icon-"], [class*=" avamenu-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'avamenu' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  height: 38px;
+  display: block;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="avamenu-icon-"]:before, [class*=" avamenu-icon-"]:before {
+  font-size: 58px;
+  display: block;
+  margin-top: -10px;
+}
+
+.avamenu-icon-01:before {
+  content: "\e900";
+}
+.avamenu-icon-02:before {
+  content: "\e901";
+}
+.avamenu-icon-03:before {
+  content: "\e902";
+}
+.avamenu-icon-04:before {
+  content: "\e903";
+}
+.avamenu-icon-05:before {
+  content: "\e904";
+}
+.avamenu-icon-06:before {
+  content: "\e905";
+}
+.avamenu-icon-07:before {
+  content: "\e906";
+}
+.avamenu-icon-08:before {
+  content: "\e907";
+}
+.avamenu-icon-09:before {
+  content: "\e908";
+}
+.avamenu-icon-10:before {
+  content: "\e909";
+}
+.avamenu-icon-11:before {
+  content: "\e90a";
+}
+.avamenu-icon-12:before {
+  content: "\e90b";
+}
+.avamenu-icon-13:before {
+  content: "\e90c";
+}
+.avamenu-icon-14:before {
+  content: "\e90d";
+}
+.avamenu-icon-15:before {
+  content: "\e90e";
+}
+.avamenu-icon-16:before {
+  content: "\e90f";
+}
+.avamenu-icon-17:before {
+  content: "\e910";
+}
+.avamenu-icon-18:before {
+  content: "\e911";
+}
+.avamenu-icon-19:before {
+  content: "\e912";
+}
+.avamenu-icon-20:before {
+  content: "\e913";
+}
+.avamenu-icon-21:before {
+  content: "\e914";
+}
+.avamenu-icon-22:before {
+  content: "\e915";
+}
+.avamenu-icon-23:before {
+  content: "\e916";
+}
+.avamenu-icon-24:before {
+  content: "\e917";
+}
+.avamenu-icon-25:before {
+  content: "\e918";
+}
+.avamenu-icon-26:before {
+  content: "\e919";
+}
+.avamenu-icon-27:before {
+  content: "\e91a";
+}
+.avamenu-icon-28:before {
+  content: "\e91b";
+}
+.avamenu-icon-29:before {
+  content: "\e91c";
+}
+.avamenu-icon-30:before {
+  content: "\e91d";
+}
+.avamenu-icon-31:before {
+  content: "\e91e";
+}
+.avamenu-icon-32:before {
+  content: "\e91f";
+}
+.avamenu-icon-33:before {
+  content: "\e920";
+}
+.avamenu-icon-34:before {
+  content: "\e921";
+}
+.avamenu-icon-35:before {
+  content: "\e922";
+}
+.avamenu-icon-36:before {
+  content: "\e923";
+}
+.avamenu-icon-37:before {
+  content: "\e924";
+}
+.avamenu-icon-38:before {
+  content: "\e925";
+}
+.avamenu-icon-39:before {
+  content: "\e926";
+}
+.avamenu-icon-40:before {
+  content: "\e927";
+}
+.avamenu-icon-41:before {
+  content: "\e928";
+}
+.avamenu-icon-42:before {
+  content: "\e929";
+}
+.avamenu-icon-43:before {
+  content: "\e92a";
+}
+.avamenu-icon-44:before {
+  content: "\e92b";
+}
+.avamenu-icon-45:before {
+  content: "\e92c";
+}
+.avamenu-icon-46:before {
+  content: "\e92d";
+}
+.avamenu-icon-47:before {
+  content: "\e92e";
+}
+.avamenu-icon-48:before {
+  content: "\e92f";
+}
+.avamenu-icon-49:before {
+  content: "\e930";
+}
+.avamenu-icon-50:before {
+  content: "\e931";
+}
+.avamenu-icon-51:before {
+  content: "\e932";
+}
+.avamenu-icon-52:before {
+  content: "\e933";
+}
+.avamenu-icon-53:before {
+  content: "\e934";
+}
+.avamenu-icon-54:before {
+  content: "\e935";
+}
+.avamenu-icon-55:before {
+  content: "\e936";
+}
+.avamenu-icon-56:before {
+  content: "\e937";
+}
+.avamenu-icon-57:before {
+  content: "\e938";
+}
+.avamenu-icon-58:before {
+  content: "\e939";
+}
+.avamenu-icon-59:before {
+  content: "\e93a";
+}
+.avamenu-icon-60:before {
+  content: "\e93b";
+}
+.avamenu-icon-61:before {
+  content: "\e93c";
+}
+.avamenu-icon-62:before {
+  content: "\e93d";
+}
+.avamenu-icon-63:before {
+  content: "\e93e";
+}
+.avamenu-icon-64:before {
+  content: "\e93f";
+}
+.avamenu-icon-65:before {
+  content: "\e940";
+}
+.avamenu-icon-66:before {
+  content: "\e941";
+}
+.avamenu-icon-67:before {
+  content: "\e942";
+}
+.avamenu-icon-68:before {
+  content: "\e943";
+}
+.avamenu-icon-69:before {
+  content: "\e944";
+}
+.avamenu-icon-70:before {
+  content: "\e945";
+}
+.avamenu-icon-71:before {
+  content: "\e946";
+}
+.avamenu-icon-73:before {
+  content: "\e94f";
+}
+.avamenu-icon-72:before {
+  content: "\e947";
+}
+.avamenu-icon-662:before {
+  content: "\e948";
+}
+.avamenu-icon-672:before {
+  content: "\e949";
+}
+.avamenu-icon-682:before {
+  content: "\e94a";
+}
+.avamenu-icon-692:before {
+  content: "\e94b";
+}
+.avamenu-icon-702:before {
+  content: "\e94c";
+}
+.avamenu-icon-712:before {
+  content: "\e94d";
+}
+.avamenu-icon-722:before {
+  content: "\e94e";
+}
+.avamenu-icon-81:before {
+  content: "\e950";
+}
+.avamenu-icon-82:before {
+  content: "\e951";
+}
+.avamenu-icon-86:before {
+  content: "\e952";
+}
+.avamenu-icon-87:before {
+  content: "\e953";
+}
+.avamenu-icon-88:before {
+  content: "\e954";
+}
+.avamenu-icon-89:before {
+  content: "\e955";
+}
+.avamenu-icon-90:before {
+  content: "\e956";
+}
+.avamenu-icon-91:before {
+  content: "\e957";
+}
+.avamenu-icon-92:before {
+  content: "\e958";
+}
+.avamenu-icon-93:before {
+  content: "\e959";
+}
+.avamenu-icon-94:before {
+  content: "\e95a";
+}
+.avamenu-icon-95:before {
+  content: "\e95b";
+}

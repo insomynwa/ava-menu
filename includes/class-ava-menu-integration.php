@@ -5,12 +5,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Jet_Menu_Integration' ) ) {
+if ( ! class_exists( 'Ava_Menu_Integration' ) ) {
 
 	/**
-	 * Define Jet_Menu_Integration class
+	 * Define Ava_Menu_Integration class
 	 */
-	class Jet_Menu_Integration {
+	class Ava_Menu_Integration {
 
 		/**
 		 * A reference to an instance of this class.
@@ -39,10 +39,10 @@ if ( ! class_exists( 'Jet_Menu_Integration' ) ) {
 		public function editor_styles() {
 
 			wp_enqueue_style(
-				'jet-menu-font',
-				jet_menu()->plugin_url( 'assets/public/lib/jetmenu-font/css/jetmenu.css' ),
+				'ava-menu-font',
+				ava_menu()->plugin_url( 'assets/public/lib/avamenu-font/css/avamenu.css' ),
 				array(),
-				jet_menu()->get_version()
+				ava_menu()->get_version()
 			);
 
 		}
@@ -55,7 +55,7 @@ if ( ! class_exists( 'Jet_Menu_Integration' ) ) {
 		 */
 		public function register_addons( $widgets_manager ) {
 
-			foreach ( glob( jet_menu()->plugin_path( 'includes/widgets/' ) . '*.php' ) as $file ) {
+			foreach ( glob( ava_menu()->plugin_path( 'includes/widgets/' ) . '*.php' ) as $file ) {
 				$this->register_addon( $file, $widgets_manager );
 			}
 
@@ -100,7 +100,7 @@ if ( ! class_exists( 'Jet_Menu_Integration' ) ) {
 			$elements_manager->add_category(
 				$cherry_cat,
 				array(
-					'title' => esc_html__( 'JetElements', 'jet-menu' ),
+					'title' => esc_html__( 'AvaElements', 'ava-menu' ),
 					'icon'  => 'font',
 				),
 				1
@@ -126,10 +126,10 @@ if ( ! class_exists( 'Jet_Menu_Integration' ) ) {
 }
 
 /**
- * Returns instance of Jet_Menu_Integration
+ * Returns instance of Ava_Menu_Integration
  *
  * @return object
  */
-function jet_menu_integration() {
-	return Jet_Menu_Integration::get_instance();
+function ava_menu_integration() {
+	return Ava_Menu_Integration::get_instance();
 }

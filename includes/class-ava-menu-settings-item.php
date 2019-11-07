@@ -5,12 +5,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
+if ( ! class_exists( 'Ava_Menu_Settings_Item' ) ) {
 
 	/**
-	 * Define Jet_Menu_Settings_Item class
+	 * Define Ava_Menu_Settings_Item class
 	 */
-	class Jet_Menu_Settings_Item {
+	class Ava_Menu_Settings_Item {
 
 		/**
 		 * A reference to an instance of this class.
@@ -27,7 +27,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 		 */
 		protected $templates = array();
 
-		protected $meta_key = 'jet_menu_settings';
+		protected $meta_key = 'ava_menu_settings';
 
 		/**
 		 * Constructor for the class
@@ -56,7 +56,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 			}
 
 			add_action( 'admin_footer', array( $this, 'print_tabs_templates' ) );
-			add_action( 'wp_ajax_jet_save_menu', array( $this, 'save_menu_settings' ) );
+			add_action( 'wp_ajax_ava_save_menu', array( $this, 'save_menu_settings' ) );
 
 		}
 
@@ -73,7 +73,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 				return;
 			}
 
-			jet_menu_assets()->print_templates_array( $this->templates );
+			ava_menu_assets()->print_templates_array( $this->templates );
 		}
 
 		/**
@@ -83,62 +83,62 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 		 */
 		public function get_tabs() {
 
-			return apply_filters( 'jet-menu/settings/tabs', array(
+			return apply_filters( 'ava-menu/settings/tabs', array(
 				'content' => array(
-					'label'        => esc_html__( 'Content', 'jet-menu' ),
+					'label'        => esc_html__( 'Content', 'ava-menu' ),
 					'template'     => false,
 					'templateFile' => false,
-					'action'       => 'jet_menu_tab_content',
+					'action'       => 'ava_menu_tab_content',
 					'callback'     => array( $this, 'get_tab_content' ),
 					'data'         => array(),
 					'depthFrom'    => 0,
 					'depthTo'      => 1,
 				),
 				'settings' => array(
-					'label'        => esc_html__( 'Settings', 'jet-menu' ),
+					'label'        => esc_html__( 'Settings', 'ava-menu' ),
 					'template'     => false,
 					'templateFile' => false,
-					'action'       => 'jet_menu_tab_settings',
+					'action'       => 'ava_menu_tab_settings',
 					'callback'     => array( $this, 'get_tab_settings' ),
 					'data'         => array(),
 					'depthFrom'    => 0,
 					'depthTo'      => 1,
 				),
 				'icon' => array(
-					'label'        => esc_html__( 'Icon', 'jet-menu' ),
+					'label'        => esc_html__( 'Icon', 'ava-menu' ),
 					'template'     => false,
 					'templateFile' => false,
-					'action'       => 'jet_menu_tab_icon',
+					'action'       => 'ava_menu_tab_icon',
 					'callback'     => array( $this, 'get_tab_icon' ),
 					'data'         => array(),
 					'depthFrom'    => 0,
 					'depthTo'      => 100,
 				),
 				'badges' => array(
-					'label'        => esc_html__( 'Badges', 'jet-menu' ),
+					'label'        => esc_html__( 'Badges', 'ava-menu' ),
 					'template'     => false,
 					'templateFile' => false,
-					'action'       => 'jet_menu_tab_badges',
+					'action'       => 'ava_menu_tab_badges',
 					'callback'     => array( $this, 'get_tab_badges' ),
 					'data'         => array(),
 					'depthFrom'    => 0,
 					'depthTo'      => 100,
 				),
 				'misc' => array(
-					'label'        => esc_html__( 'Misc', 'jet-menu' ),
+					'label'        => esc_html__( 'Misc', 'ava-menu' ),
 					'template'     => false,
 					'templateFile' => false,
-					'action'       => 'jet_menu_tab_misc',
+					'action'       => 'ava_menu_tab_misc',
 					'callback'     => array( $this, 'get_tab_misc' ),
 					'data'         => array(),
 					'depthFrom'    => 0,
 					'depthTo'      => 100,
 				),
 				'vertical_menu' => array(
-					'label'        => esc_html__( 'Vertical Menu', 'jet-menu' ),
+					'label'        => esc_html__( 'Vertical Menu', 'ava-menu' ),
 					'template'     => false,
 					'templateFile' => false,
-					'action'       => 'jet_menu_tab_vertical_menu',
+					'action'       => 'ava_menu_tab_vertical_menu',
 					'callback'     => array( $this, 'get_tab_vertical_menu' ),
 					'data'         => array(),
 					'depthFrom'    => 0,
@@ -157,24 +157,24 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 
 			if ( ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'You are not allowed to do this', 'jet-menu' ),
+					'message' => esc_html__( 'You are not allowed to do this', 'ava-menu' ),
 				) );
 			}
 
 			$menu_id  = $this->get_requested_menu_id();
 			$settings = $this->get_settings( $menu_id );
-			$builder  = jet_menu()->get_core()->init_module( 'cherry-ui-elements', array() );
-			$template = jet_menu()->get_template( 'admin/tab-content.php' );
+			$builder  = ava_menu()->get_core()->init_module( 'cherry-ui-elements', array() );
+			$template = ava_menu()->get_template( 'admin/tab-content.php' );
 			$instance = $builder->get_ui_element_instance( 'switcher', array(
 				'type'   => 'switcher',
 				'id'     => 'enabled_' . $menu_id,
 				'name'   => 'enabled',
 				'value'  => isset( $settings['enabled'] ) ? $settings['enabled'] : '',
 				'toggle' => array(
-					'true_toggle'  => esc_html__( 'Yes', 'jet-menu' ),
-					'false_toggle' => esc_html__( 'No', 'jet-menu' ),
+					'true_toggle'  => esc_html__( 'Yes', 'ava-menu' ),
+					'false_toggle' => esc_html__( 'No', 'ava-menu' ),
 				),
-				'label'  => esc_html__( 'Mega Submenu Enabled', 'jet-menu' ),
+				'label'  => esc_html__( 'Mega Submenu Enabled', 'ava-menu' ),
 			) );
 
 			$enabled = $instance->render();
@@ -197,7 +197,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 
 			if ( ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'You are not allowed to do this', 'jet-menu' ),
+					'message' => esc_html__( 'You are not allowed to do this', 'ava-menu' ),
 				) );
 			}
 
@@ -208,12 +208,12 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'type'        => 'iconpicker',
 					'id'          => 'menu_icon',
 					'name'        => 'menu_icon',
-					'label'       => esc_html__( 'Menu icon', 'jet-menu' ),
+					'label'       => esc_html__( 'Menu icon', 'ava-menu' ),
 					'auto_parse'  => true,
 					'value'       => '',
 					'icon_data'   => array(
-						'icon_set'    => 'jetMenuIcons',
-						'icon_css'    => jet_menu()->plugin_url( 'assets/public/css/font-awesome.min.css' ),
+						'icon_set'    => 'avaMenuIcons',
+						'icon_css'    => ava_menu()->plugin_url( 'assets/public/css/font-awesome.min.css' ),
 						'icon_base'   => 'fa',
 						'icon_prefix' => '',
 						'icons'       => false,
@@ -225,7 +225,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'name'   => 'icon_color',
 					'alpha'  => true,
 					'value'  => '',
-					'label'  => esc_html__( 'Icon color', 'jet-menu' ),
+					'label'  => esc_html__( 'Icon color', 'ava-menu' ),
 				),
 			);
 
@@ -243,7 +243,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 
 			if ( ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'You are not allowed to do this', 'jet-menu' ),
+					'message' => esc_html__( 'You are not allowed to do this', 'ava-menu' ),
 				) );
 			}
 
@@ -254,7 +254,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'type'        => 'text',
 					'id'          => 'menu_badge',
 					'name'        => 'menu_badge',
-					'label'       => esc_html__( 'Menu badge', 'jet-menu' ),
+					'label'       => esc_html__( 'Menu badge', 'ava-menu' ),
 					'value'       => '',
 				),
 				'badge_color' => array(
@@ -263,7 +263,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'name'   => 'badge_color',
 					'alpha'  => true,
 					'value'  => '',
-					'label'  => esc_html__( 'Badge color', 'jet-menu' ),
+					'label'  => esc_html__( 'Badge color', 'ava-menu' ),
 				),
 				'badge_bg_color' => array(
 					'type'   => 'colorpicker',
@@ -271,7 +271,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'name'   => 'badge_bg_color',
 					'alpha'  => true,
 					'value'  => '',
-					'label'  => esc_html__( 'Badge background color', 'jet-menu' ),
+					'label'  => esc_html__( 'Badge background color', 'ava-menu' ),
 				),
 			);
 
@@ -289,7 +289,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 
 			if ( ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'You are not allowed to do this', 'jet-menu' ),
+					'message' => esc_html__( 'You are not allowed to do this', 'ava-menu' ),
 				) );
 			}
 
@@ -300,7 +300,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'type'  => 'switcher',
 					'id'    => 'hide_item_text',
 					'name'  => 'hide_item_text',
-					'label' => esc_html__( 'Hide item navigation label', 'jet-menu' ),
+					'label' => esc_html__( 'Hide item navigation label', 'ava-menu' ),
 					'value' => '',
 					'toggle' => array(
 						'true_toggle'  => 'On',
@@ -311,7 +311,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'type'  => 'dimensions',
 					'id'    => 'item_padding',
 					'name'  => 'item_padding',
-					'label' => esc_html__( 'Set custom padding for this item', 'jet-menu' ),
+					'label' => esc_html__( 'Set custom padding for this item', 'ava-menu' ),
 					'range' => array(
 						'px' => array(
 							'min'  => 0,
@@ -337,7 +337,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 
 			if ( ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'You are not allowed to do this', 'jet-menu' ),
+					'message' => esc_html__( 'You are not allowed to do this', 'ava-menu' ),
 				) );
 			}
 
@@ -352,7 +352,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'max_value'  => 2000,
 					'min_value'  => 200,
 					'step_value' => 1,
-					'label'      => esc_html__( 'Set custom mega menu width for this item (px)', 'jet-menu' ),
+					'label'      => esc_html__( 'Set custom mega menu width for this item (px)', 'ava-menu' ),
 				),
 				'vertical_mega_menu_position' => array(
 					'type'    => 'radio',
@@ -361,13 +361,13 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'value'   => 'default',
 					'options' => array(
 						'default' => array(
-							'label' => esc_html__( 'Relative the menu item', 'jet-menu' ),
+							'label' => esc_html__( 'Relative the menu item', 'ava-menu' ),
 						),
 						'top'     => array(
-							'label' => esc_html__( 'Relative the menu container', 'jet-menu' ),
+							'label' => esc_html__( 'Relative the menu container', 'ava-menu' ),
 						),
 					),
-					'label'   => esc_html__( 'Vertical mega menu position', 'jet-menu' ),
+					'label'   => esc_html__( 'Vertical mega menu position', 'ava-menu' ),
 				),
 			);
 
@@ -385,7 +385,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 
 			if ( ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'You are not allowed to do this', 'jet-menu' ),
+					'message' => esc_html__( 'You are not allowed to do this', 'ava-menu' ),
 				) );
 			}
 
@@ -399,13 +399,13 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'value'   => 'default',
 					'options' => array(
 						'default' => array(
-							'label' => esc_html__( 'Default', 'jet-menu' ),
+							'label' => esc_html__( 'Default', 'ava-menu' ),
 						),
 						'relative-item' => array(
-							'label' => esc_html__( 'Relative the menu item', 'jet-menu' ),
+							'label' => esc_html__( 'Relative the menu item', 'ava-menu' ),
 						),
 					),
-					'label'   => esc_html__( 'Mega menu position', 'jet-menu' ),
+					'label'   => esc_html__( 'Mega menu position', 'ava-menu' ),
 				),
 				'custom_mega_menu_width' => array(
 					'type'       => 'slider',
@@ -415,7 +415,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 					'max_value'  => 2000,
 					'min_value'  => 200,
 					'step_value' => 1,
-					'label'      => esc_html__( 'Set custom mega menu width for this item (px)', 'jet-menu' ),
+					'label'      => esc_html__( 'Set custom mega menu width for this item (px)', 'ava-menu' ),
 				),
 			);
 
@@ -433,7 +433,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 
 			if ( ! current_user_can( 'manage_options' ) ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'You are not allowed to do this', 'jet-menu' ),
+					'message' => esc_html__( 'You are not allowed to do this', 'ava-menu' ),
 				) );
 			}
 
@@ -459,10 +459,10 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 
 			$this->set_item_settings( $menu_id, $new_settings );
 
-			do_action( 'jet-menu/item-settings/save' );
+			do_action( 'ava-menu/item-settings/save' );
 
 			wp_send_json_success( array(
-				'message' => esc_html__( 'Success!', 'jet-menu' ),
+				'message' => esc_html__( 'Success!', 'ava-menu' ),
 			) );
 
 		}
@@ -477,7 +477,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 		public function sanitize_field( $key, $value ) {
 
 			$default            = 'esc_attr';
-			$specific_callbacks = apply_filters( 'jet-menu/settings/tabs/sanitize-callbacks', array(
+			$specific_callbacks = apply_filters( 'ava-menu/settings/tabs/sanitize-callbacks', array(
 				'icon_size'    => 'absint',
 				'menu_badge'   => 'wp_kses_post',
 				'item_padding' => array( $this, 'sanitize_dimensions' ),
@@ -509,7 +509,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 
 			if ( ! $menu_id ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'Incorrect input data', 'jet-menu' ),
+					'message' => esc_html__( 'Incorrect input data', 'ava-menu' ),
 				) );
 			}
 
@@ -524,7 +524,7 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 		 */
 		public function render_ui_elements( $elements = array(), $menu_id = null ) {
 
-			$builder  = jet_menu()->get_core()->init_module( 'cherry-ui-elements', array() );
+			$builder  = ava_menu()->get_core()->init_module( 'cherry-ui-elements', array() );
 			$content  = '';
 			$settings = $this->get_settings( $menu_id );
 
@@ -578,10 +578,10 @@ if ( ! class_exists( 'Jet_Menu_Settings_Item' ) ) {
 }
 
 /**
- * Returns instance of Jet_Menu_Settings_Item
+ * Returns instance of Ava_Menu_Settings_Item
  *
  * @return object
  */
-function jet_menu_settings_item() {
-	return Jet_Menu_Settings_Item::get_instance();
+function ava_menu_settings_item() {
+	return Ava_Menu_Settings_Item::get_instance();
 }

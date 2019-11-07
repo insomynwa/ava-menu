@@ -56,7 +56,7 @@ gulp.task('watch', () => {
 gulp.task( 'checktextdomain', () => {
 	return gulp.src( ['**/*.php', '!cherry-framework/**/*.php'] )
 		.pipe( checktextdomain( {
-			text_domain: 'jet-menu',
+			text_domain: 'ava-menu',
 			keywords:    [
 				'__:1,2d',
 				'_e:1,2d',

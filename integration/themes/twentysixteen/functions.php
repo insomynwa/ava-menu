@@ -4,19 +4,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // disable direct access
 }
 
-add_action( 'wp_enqueue_scripts', 'jet_menu_twentysixteen_scripts', 0 );
+add_action( 'wp_enqueue_scripts', 'ava_menu_twentysixteen_scripts', 0 );
 
 /**
  * Enqueue twentysixteen compatibility script
  *
  * @return void
  */
-function jet_menu_twentysixteen_scripts() {
+function ava_menu_twentysixteen_scripts() {
 	wp_enqueue_script(
-		'jet-menu-twentysixteen',
-		jet_menu()->get_theme_url( 'assets/js/script.js' ),
+		'ava-menu-twentysixteen',
+		ava_menu()->get_theme_url( 'assets/js/script.js' ),
 		array( 'jquery' ),
-		jet_menu()->get_version(),
+		ava_menu()->get_version(),
 		true
 	);
 }

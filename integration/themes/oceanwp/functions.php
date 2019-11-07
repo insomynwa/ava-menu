@@ -1,16 +1,16 @@
 <?php
 
-add_filter( 'wp_nav_menu_items', 'jet_menu_oceanwp_fix_header_search', 999, 2 );
-add_filter( 'wp_nav_menu_args', 'jet_menu_oceanwp_fix_menu_args', 100000 );
-add_action( 'wp_enqueue_scripts', 'jet_menu_oceanwp_styles', 999 );
+add_filter( 'wp_nav_menu_items', 'ava_menu_oceanwp_fix_header_search', 999, 2 );
+add_filter( 'wp_nav_menu_args', 'ava_menu_oceanwp_fix_menu_args', 100000 );
+add_action( 'wp_enqueue_scripts', 'ava_menu_oceanwp_styles', 999 );
 
 
 /**
- * Make header search in OceanWP theme compatible with JetMenu
+ * Make header search in OceanWP theme compatible with AvaMenu
  * @return [type] [description]
  */
-function jet_menu_oceanwp_fix_header_search( $items, $args ) {
-	if ( ! isset( $args->menu_class ) || 'jet-menu' !== $args->menu_class ) {
+function ava_menu_oceanwp_fix_header_search( $items, $args ) {
+	if ( ! isset( $args->menu_class ) || 'ava-menu' !== $args->menu_class ) {
 		return $items;
 	}
 
@@ -20,7 +20,7 @@ function jet_menu_oceanwp_fix_header_search( $items, $args ) {
 			'site-search-toggle',
 		),
 		array(
-			'search-toggle-li jet-menu-item jet-simple-menu-item jet-regular-item jet-responsive-menu-item',
+			'search-toggle-li ava-menu-item ava-simple-menu-item ava-regular-item ava-responsive-menu-item',
 			'site-search-toggle top-level-link',
 		),
 		$items
@@ -34,9 +34,9 @@ function jet_menu_oceanwp_fix_header_search( $items, $args ) {
  * Fix nav menu arguments
  * @return array
  */
-function jet_menu_oceanwp_fix_menu_args( $args ) {
+function ava_menu_oceanwp_fix_menu_args( $args ) {
 
-	if ( ! isset( $args['menu_class'] ) || 'jet-menu' !== $args['menu_class'] ) {
+	if ( ! isset( $args['menu_class'] ) || 'ava-menu' !== $args['menu_class'] ) {
 		return $args;
 	}
 
@@ -51,11 +51,11 @@ function jet_menu_oceanwp_fix_menu_args( $args ) {
  *
  * @return void
  */
-function jet_menu_oceanwp_styles() {
+function ava_menu_oceanwp_styles() {
 	wp_enqueue_style(
-		'jet-menu-oceanwp',
-		jet_menu()->get_theme_url( 'assets/css/style.css' ),
+		'ava-menu-oceanwp',
+		ava_menu()->get_theme_url( 'assets/css/style.css' ),
 		array(),
-		jet_menu()->get_version()
+		ava_menu()->get_version()
 	);
 }

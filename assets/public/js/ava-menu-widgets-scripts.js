@@ -2,13 +2,13 @@
 
 	"use strict";
 
-	var JetMenuWidget = {
+	var AvaMenuWidget = {
 
 		init: function() {
 
 			var widgets = {
-				'jet-mega-menu.default' : JetMenuWidget.widgetMegaMenu,
-				'jet-custom-menu.default' : JetMenuWidget.widgetCustomMenu
+				'ava-mega-menu.default' : AvaMenuWidget.widgetMegaMenu,
+				'ava-custom-menu.default' : AvaMenuWidget.widgetCustomMenu
 			};
 
 			$.each( widgets, function( widget, callback ) {
@@ -18,35 +18,35 @@
 		},
 
 		widgetMegaMenu: function( $scope ) {
-			var $target                  = $scope.find( '.jet-menu-container' ),
+			var $target                  = $scope.find( '.ava-menu-container' ),
 				rollUp                   = false,
-				jetMenuMouseleaveDelay   = 500,
-				jetMenuMegaWidthType     = 'container',
-				jetMenuMegaWidthSelector = '',
-				jetMenuMegaOpenSubType   = 'hover',
-				jetMenuMobileBreakpoint  = 768;
+				avaMenuMouseleaveDelay   = 500,
+				avaMenuMegaWidthType     = 'container',
+				avaMenuMegaWidthSelector = '',
+				avaMenuMegaOpenSubType   = 'hover',
+				avaMenuMobileBreakpoint  = 768;
 
-			if ( window.jetMenuPublicSettings && window.jetMenuPublicSettings.menuSettings ) {
-				rollUp                   = ( 'true' === jetMenuPublicSettings.menuSettings.jetMenuRollUp ) ? true : false;
-				jetMenuMouseleaveDelay   = jetMenuPublicSettings.menuSettings.jetMenuMouseleaveDelay || 500;
-				jetMenuMegaWidthType     = jetMenuPublicSettings.menuSettings.jetMenuMegaWidthType || 'container';
-				jetMenuMegaWidthSelector = jetMenuPublicSettings.menuSettings.jetMenuMegaWidthSelector || '';
-				jetMenuMegaOpenSubType   = jetMenuPublicSettings.menuSettings.jetMenuMegaOpenSubType || 'hover';
-				jetMenuMobileBreakpoint  = jetMenuPublicSettings.menuSettings.jetMenuMobileBreakpoint || 768;
+			if ( window.avaMenuPublicSettings && window.avaMenuPublicSettings.menuSettings ) {
+				rollUp                   = ( 'true' === avaMenuPublicSettings.menuSettings.avaMenuRollUp ) ? true : false;
+				avaMenuMouseleaveDelay   = avaMenuPublicSettings.menuSettings.avaMenuMouseleaveDelay || 500;
+				avaMenuMegaWidthType     = avaMenuPublicSettings.menuSettings.avaMenuMegaWidthType || 'container';
+				avaMenuMegaWidthSelector = avaMenuPublicSettings.menuSettings.avaMenuMegaWidthSelector || '';
+				avaMenuMegaOpenSubType   = avaMenuPublicSettings.menuSettings.avaMenuMegaOpenSubType || 'hover';
+				avaMenuMobileBreakpoint  = avaMenuPublicSettings.menuSettings.avaMenuMobileBreakpoint || 768;
 			}
 
-			$target.JetMenu( {
+			$target.AvaMenu( {
 				enabled: rollUp,
-				mouseLeaveDelay: +jetMenuMouseleaveDelay,
-				megaWidthType: jetMenuMegaWidthType,
-				megaWidthSelector: jetMenuMegaWidthSelector,
-				openSubType: jetMenuMegaOpenSubType,
-				threshold: +jetMenuMobileBreakpoint
+				mouseLeaveDelay: +avaMenuMouseleaveDelay,
+				megaWidthType: avaMenuMegaWidthType,
+				megaWidthSelector: avaMenuMegaWidthSelector,
+				openSubType: avaMenuMegaOpenSubType,
+				threshold: +avaMenuMobileBreakpoint
 			} );
 		},
 
 		widgetCustomMenu: function( $scope ) {
-			var $target = $scope.find( '.jet-custom-nav' ),
+			var $target = $scope.find( '.ava-custom-nav' ),
 				instance = null,
 				menuItem = null;
 
@@ -54,26 +54,26 @@
 				return;
 			}
 
-			if ( JetMenuWidget.mobileAndTabletcheck() ) {
-				$scope.on( 'touchstart', '.jet-custom-nav__item > a, .jet-custom-nav__item > a .jet-dropdown-arrow', touchStartItem );
-				$scope.on( 'touchend', '.jet-custom-nav__item > a, .jet-custom-nav__item > a .jet-dropdown-arrow', touchEndItem );
+			if ( AvaMenuWidget.mobileAndTabletcheck() ) {
+				$scope.on( 'touchstart', '.ava-custom-nav__item > a, .ava-custom-nav__item > a .ava-dropdown-arrow', touchStartItem );
+				$scope.on( 'touchend', '.ava-custom-nav__item > a, .ava-custom-nav__item > a .ava-dropdown-arrow', touchEndItem );
 			} else {
-				$scope.on( 'mouseenter mouseover', '.jet-custom-nav__item', mouseEnterHandler );
-				$scope.on( 'mouseleave', '.jet-custom-nav__item', mouseLeaveHandler );
+				$scope.on( 'mouseenter mouseover', '.ava-custom-nav__item', mouseEnterHandler );
+				$scope.on( 'mouseleave', '.ava-custom-nav__item', mouseLeaveHandler );
 			}
 
 			function mouseEnterHandler( event ) {
-				menuItem = $( event.target ).parents( '.jet-custom-nav__item' );
+				menuItem = $( event.target ).parents( '.ava-custom-nav__item' );
 				menuItem.addClass( 'hover-state' );
 			}
 
 			function mouseLeaveHandler( event ) {
-				menuItem = $( event.target ).parents( '.jet-custom-nav__item' );
+				menuItem = $( event.target ).parents( '.ava-custom-nav__item' );
 				menuItem.removeClass( 'hover-state' );
 			}
 
 			function touchStartItem( event ) {
-				var $this = $( event.currentTarget ).closest( '.jet-custom-nav__item' );
+				var $this = $( event.currentTarget ).closest( '.ava-custom-nav__item' );
 
 				$this.data( 'offset', $this.offset().top );
 				$this.data( 'windowOffset', $( window ).scrollTop() );
@@ -93,11 +93,11 @@
 				event.stopPropagation();
 
 				$currentTarget = $( event.currentTarget );
-				$this          = $currentTarget.closest( '.jet-custom-nav__item' );
-				$siblingsItems = $this.siblings( '.jet-custom-nav__item.menu-item-has-children' );
+				$this          = $currentTarget.closest( '.ava-custom-nav__item' );
+				$siblingsItems = $this.siblings( '.ava-custom-nav__item.menu-item-has-children' );
 				$link          = $( '> a', $this );
 				linkHref       = $link.attr( 'href' );
-				subMenu        = $( '.jet-custom-nav__sub:first, .jet-custom-nav__mega-sub:first', $this );
+				subMenu        = $( '.ava-custom-nav__sub:first, .ava-custom-nav__mega-sub:first', $this );
 				offset         = $this.data( 'offset' );
 				windowOffset   = $this.data( 'windowOffset' );
 
@@ -105,7 +105,7 @@
 					return false;
 				}
 
-				if ( $currentTarget.hasClass( 'jet-dropdown-arrow' ) ) {
+				if ( $currentTarget.hasClass( 'ava-dropdown-arrow' ) ) {
 
 					if ( !subMenu[0] ) {
 						return false;
@@ -115,26 +115,26 @@
 						$this.addClass( 'hover-state' );
 
 						$siblingsItems.removeClass( 'hover-state' );
-						$( '.jet-custom-nav__item.menu-item-has-children', $siblingsItems ).removeClass( 'hover-state' );
+						$( '.ava-custom-nav__item.menu-item-has-children', $siblingsItems ).removeClass( 'hover-state' );
 					} else {
 						$this.removeClass( 'hover-state' );
 
-						$( '.jet-custom-nav__item.menu-item-has-children', $this ).removeClass( 'hover-state' );
+						$( '.ava-custom-nav__item.menu-item-has-children', $this ).removeClass( 'hover-state' );
 					}
 				}
 
-				if ( $currentTarget.hasClass( 'jet-custom-nav__item-link' ) ) {
+				if ( $currentTarget.hasClass( 'ava-custom-nav__item-link' ) ) {
 
 					if ( '#' === linkHref ) {
 						if ( ! $this.hasClass( 'hover-state' ) ) {
 							$this.addClass( 'hover-state' );
 
 							$siblingsItems.removeClass( 'hover-state' );
-							$( '.jet-custom-nav__item.menu-item-has-children', $siblingsItems ).removeClass( 'hover-state' );
+							$( '.ava-custom-nav__item.menu-item-has-children', $siblingsItems ).removeClass( 'hover-state' );
 						} else {
 							$this.removeClass( 'hover-state' );
 
-							$( '.jet-custom-nav__item.menu-item-has-children', $this ).removeClass( 'hover-state' );
+							$( '.ava-custom-nav__item.menu-item-has-children', $this ).removeClass( 'hover-state' );
 						}
 					} else {
 
@@ -150,11 +150,11 @@
 
 			function setSubMenuPosition(){
 				if ( initSubMenuPosition ) {
-					$target.find( '.jet-custom-nav__sub.inverse-side' ).removeClass( 'inverse-side' );
+					$target.find( '.ava-custom-nav__sub.inverse-side' ).removeClass( 'inverse-side' );
 					initSubMenuPosition = false;
 				}
 
-				var subMenu  = $( '.jet-custom-nav__sub', $target ),
+				var subMenu  = $( '.ava-custom-nav__sub', $target ),
 					$body    = $( 'body' ),
 					maxWidth = $body.outerWidth( true ),
 					isMobile = 'mobile' === elementor.getCurrentDeviceMode();
@@ -168,27 +168,27 @@
 						var $this = $( this ),
 							subMenuOffsetLeft = $this.offset().left,
 							subMenuOffsetRight = subMenuOffsetLeft + $this.outerWidth( true ),
-							subMenuPosition = $this.closest( '.jet-custom-nav' ).hasClass( 'jet-custom-nav--dropdown-left-side' ) ? 'left-side' : 'right-side';
+							subMenuPosition = $this.closest( '.ava-custom-nav' ).hasClass( 'ava-custom-nav--dropdown-left-side' ) ? 'left-side' : 'right-side';
 
 						if ( 'right-side' === subMenuPosition ) {
 							if ( subMenuOffsetRight >= maxWidth ) {
 								$this.addClass( 'inverse-side' );
-								$this.find( '.jet-custom-nav__sub' ).addClass( 'inverse-side' );
+								$this.find( '.ava-custom-nav__sub' ).addClass( 'inverse-side' );
 
 								initSubMenuPosition = true;
 							} else if ( subMenuOffsetLeft < 0 ) {
 								$this.removeClass( 'inverse-side' );
-								$this.find( '.jet-custom-nav__sub' ).removeClass( 'inverse-side' );
+								$this.find( '.ava-custom-nav__sub' ).removeClass( 'inverse-side' );
 							}
 						} else {
 							if ( subMenuOffsetLeft < 0 ) {
 								$this.addClass( 'inverse-side' );
-								$this.find( '.jet-custom-nav__sub' ).addClass( 'inverse-side' );
+								$this.find( '.ava-custom-nav__sub' ).addClass( 'inverse-side' );
 
 								initSubMenuPosition = true;
 							} else if ( subMenuOffsetRight >= maxWidth ) {
 								$this.removeClass( 'inverse-side' );
-								$this.find( '.jet-custom-nav__sub' ).removeClass( 'inverse-side' );
+								$this.find( '.ava-custom-nav__sub' ).removeClass( 'inverse-side' );
 							}
 						}
 					} );
@@ -196,12 +196,12 @@
 			}
 
 			setSubMenuPosition();
-			$( window ).on( 'resize.JetCustomMenu orientationchange.JetCustomMenu', setSubMenuPosition );
+			$( window ).on( 'resize.AvaCustomMenu orientationchange.AvaCustomMenu', setSubMenuPosition );
 
 			var initMaxMegaMenuWidth = false;
 
 			function setMaxMegaMenuWidth(){
-				var megaMenu = $( '.jet-custom-nav__mega-sub', $target ),
+				var megaMenu = $( '.ava-custom-nav__mega-sub', $target ),
 					$body    = $( 'body' ),
 					maxWidth = $body.outerWidth( true ),
 					isMobile = 'mobile' === elementor.getCurrentDeviceMode();
@@ -224,7 +224,7 @@
 							megaMenuTranslateX = $this.css( 'transform' ).replace( /,/g, "" ).split( " " )[4] || 0,
 							megaMenuOffsetLeft = $this.offset().left - megaMenuTranslateX,
 							megaMenuOffsetRight = megaMenuOffsetLeft + $this.outerWidth( true ),
-							megaMenuPosition = $this.closest( '.jet-custom-nav' ).hasClass( 'jet-custom-nav--dropdown-left-side' ) ? 'left-side' : 'right-side';
+							megaMenuPosition = $this.closest( '.ava-custom-nav' ).hasClass( 'ava-custom-nav--dropdown-left-side' ) ? 'left-side' : 'right-side';
 
 						if ( 'right-side' === megaMenuPosition ) {
 							if ( megaMenuOffsetRight >= maxWidth ) {
@@ -248,7 +248,7 @@
 			}
 
 			setMaxMegaMenuWidth();
-			$( window ).on( 'resize.JetCustomMenu orientationchange.JetCustomMenu', setMaxMegaMenuWidth );
+			$( window ).on( 'resize.AvaCustomMenu orientationchange.AvaCustomMenu', setMaxMegaMenuWidth );
 
 		},
 
@@ -266,6 +266,6 @@
 		}
 	};
 
-	$( window ).on( 'elementor/frontend/init', JetMenuWidget.init );
+	$( window ).on( 'elementor/frontend/init', AvaMenuWidget.init );
 
 }( jQuery, window.elementorFrontend ) );

@@ -4,12 +4,12 @@
  */
 
 // If class `Popups_Options_Page` doesn't exists yet.
-if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
+if ( ! class_exists( 'Ava_Menu_Options_Page' ) ) {
 
 	/**
-	 * Jet_Menu_Options_Page class.
+	 * Ava_Menu_Options_Page class.
 	 */
-	class Jet_Menu_Options_Page {
+	class Ava_Menu_Options_Page {
 
 		/**
 		 * A reference to an instance of this class.
@@ -58,12 +58,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 * @var array
 		 */
 		public $default_options = array(
-			'jet-menu-animation'             => 'fade',
-			'jet-menu-mega-bg-type'          => 'fill-color',
-			'jet-menu-mega-bg-color'         => '#fff',
-			'jet-menu-mega-bg-color-opacity' => 100,
-			'jet-menu-mega-bg-image'         => '',
-			'jet-menu-mega-padding'          => array(
+			'ava-menu-animation'             => 'fade',
+			'ava-menu-mega-bg-type'          => 'fill-color',
+			'ava-menu-mega-bg-color'         => '#fff',
+			'ava-menu-mega-bg-color-opacity' => 100,
+			'ava-menu-mega-bg-image'         => '',
+			'ava-menu-mega-padding'          => array(
 				'units'     => 'px',
 				'is_linked' => true,
 				'size'      => array(
@@ -88,7 +88,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 * @since 1.0.0
 		 * @var object
 		 */
-		private $options_slug = 'jet_menu_options';
+		private $options_slug = 'ava_menu_options';
 
 		/**
 		 * Class constructor.
@@ -99,7 +99,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 */
 		public function __construct() {
 
-			$this->fonts_loader = jet_menu()->get_core()->init_module(
+			$this->fonts_loader = ava_menu()->get_core()->init_module(
 				'cherry-google-fonts-loader',
 				array(
 					'prefix'  => $this->options_slug,
@@ -107,71 +107,71 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					'single'  => true,
 					'options' => array(
 						'main' => array(
-							'family'  => 'jet-top-menu-font-family',
-							'style'   => 'jet-top-menu-font-style',
-							'weight'  => 'jet-top-menu-font-weight',
-							'charset' => 'jet-top-menu-subset',
+							'family'  => 'ava-top-menu-font-family',
+							'style'   => 'ava-top-menu-font-style',
+							'weight'  => 'ava-top-menu-font-weight',
+							'charset' => 'ava-top-menu-subset',
 						),
 						'main-desc' => array(
-							'family'  => 'jet-top-menu-desc-font-family',
-							'style'   => 'jet-top-menu-desc-font-style',
-							'weight'  => 'jet-top-menu-desc-font-weight',
-							'charset' => 'jet-top-menu-desc-subset',
+							'family'  => 'ava-top-menu-desc-font-family',
+							'style'   => 'ava-top-menu-desc-font-style',
+							'weight'  => 'ava-top-menu-desc-font-weight',
+							'charset' => 'ava-top-menu-desc-subset',
 						),
 						'sub' => array(
-							'family'  => 'jet-sub-menu-font-family',
-							'style'   => 'jet-sub-menu-font-style',
-							'weight'  => 'jet-sub-menu-font-weight',
-							'charset' => 'jet-sub-menu-subset',
+							'family'  => 'ava-sub-menu-font-family',
+							'style'   => 'ava-sub-menu-font-style',
+							'weight'  => 'ava-sub-menu-font-weight',
+							'charset' => 'ava-sub-menu-subset',
 						),
 						'sub-desc' => array(
-							'family'  => 'jet-sub-menu-desc-font-family',
-							'style'   => 'jet-sub-menu-desc-font-style',
-							'weight'  => 'jet-sub-menu-desc-font-weight',
-							'charset' => 'jet-sub-menu-desc-subset',
+							'family'  => 'ava-sub-menu-desc-font-family',
+							'style'   => 'ava-sub-menu-desc-font-style',
+							'weight'  => 'ava-sub-menu-desc-font-weight',
+							'charset' => 'ava-sub-menu-desc-subset',
 						),
 						'top-badge' => array(
-							'family'  => 'jet-menu-top-badge-font-family',
-							'style'   => 'jet-menu-top-badge-font-style',
-							'weight'  => 'jet-menu-top-badge-font-weight',
-							'charset' => 'jet-menu-top-badge-subset',
+							'family'  => 'ava-menu-top-badge-font-family',
+							'style'   => 'ava-menu-top-badge-font-style',
+							'weight'  => 'ava-menu-top-badge-font-weight',
+							'charset' => 'ava-menu-top-badge-subset',
 						),
 						'sub-badge' => array(
-							'family'  => 'jet-menu-sub-badge-font-family',
-							'style'   => 'jet-menu-sub-badge-font-style',
-							'weight'  => 'jet-menu-sub-badge-font-weight',
-							'charset' => 'jet-menu-sub-badge-subset',
+							'family'  => 'ava-menu-sub-badge-font-family',
+							'style'   => 'ava-menu-sub-badge-font-style',
+							'weight'  => 'ava-menu-sub-badge-font-weight',
+							'charset' => 'ava-menu-sub-badge-subset',
 						),
 					),
 				)
 			);
 
 			$sys_messages = array(
-				'invalid_base_data' => esc_html__( 'Unable to process the request without nonce or server error', 'jet-menu' ),
-				'no_right'          => esc_html__( 'No right for this action', 'jet-menu' ),
-				'invalid_nonce'     => esc_html__( 'Stop CHEATING!!!', 'jet-menu' ),
+				'invalid_base_data' => esc_html__( 'Unable to process the request without nonce or server error', 'ava-menu' ),
+				'no_right'          => esc_html__( 'No right for this action', 'ava-menu' ),
+				'invalid_nonce'     => esc_html__( 'Stop CHEATING!!!', 'ava-menu' ),
 				'access_is_allowed' => '',
-				'wait_processing'   => esc_html__( 'Please wait, processing the previous request', 'jet-menu' ),
+				'wait_processing'   => esc_html__( 'Please wait, processing the previous request', 'ava-menu' ),
 			);
 
-			jet_menu()->get_core()->init_module(
+			ava_menu()->get_core()->init_module(
 				'cherry-handler',
 				array(
-					'id'           => 'jet_menu_save_options_ajax',
-					'action'       => 'jet_menu_save_options_ajax',
+					'id'           => 'ava_menu_save_options_ajax',
+					'action'       => 'ava_menu_save_options_ajax',
 					'capability'   => 'manage_options',
-					'callback'     => array( $this , 'jet_menu_save_options_callback' ),
+					'callback'     => array( $this , 'ava_menu_save_options_callback' ),
 					'sys_messages' => $sys_messages,
 				)
 			);
 
-			jet_menu()->get_core()->init_module(
+			ava_menu()->get_core()->init_module(
 				'cherry-handler',
 				array(
-					'id'           => 'jet_menu_restore_options_ajax',
-					'action'       => 'jet_menu_restore_options_ajax',
+					'id'           => 'ava_menu_restore_options_ajax',
+					'action'       => 'ava_menu_restore_options_ajax',
 					'capability'   => 'manage_options',
-					'callback'     => array( $this , 'jet_menu_restore_options_callback' ),
+					'callback'     => array( $this , 'ava_menu_restore_options_callback' ),
 					'sys_messages' => $sys_messages,
 				)
 			);
@@ -186,8 +186,8 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			}
 
-			add_action( 'wp_ajax_jet_menu_import_options', array( $this, 'process_import' ) );
-			add_filter( 'jet-data-importer/export/options-to-export', array( $this, 'export_menu_options' ) );
+			add_action( 'wp_ajax_ava_menu_import_options', array( $this, 'process_import' ) );
+			add_filter( 'ava-data-importer/export/options-to-export', array( $this, 'export_menu_options' ) );
 
 		}
 
@@ -210,8 +210,8 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		public function interface_builder_init() {
 			$screen = get_current_screen();
 
-			if ( 'toplevel_page_jet-menu' === $screen->base ) {
-				$this->builder = jet_menu()->get_core()->init_module( 'cherry-interface-builder', array() );
+			if ( 'toplevel_page_ava-menu' === $screen->base ) {
+				$this->builder = ava_menu()->get_core()->init_module( 'cherry-interface-builder', array() );
 			}
 		}
 
@@ -224,10 +224,10 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 */
 		public function add_menu_item() {
 			add_menu_page(
-				esc_html__( 'JetMenu', 'jet-menu' ),
-				esc_html__( 'JetMenu', 'jet-menu' ),
+				esc_html__( 'AvaMenu', 'ava-menu' ),
+				esc_html__( 'AvaMenu', 'ava-menu' ),
 				'manage_options',
-				jet_menu()->plugin_slug,
+				ava_menu()->plugin_slug,
 				array( $this, 'render_options_page' ),
 				'',
 				100
@@ -240,7 +240,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		public function jet_menu_save_options_callback() {
+		public function ava_menu_save_options_callback() {
 
 			if ( ! empty( $_REQUEST['data'] ) ) {
 				$data = $_REQUEST['data'];
@@ -255,7 +255,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		public function jet_menu_restore_options_callback() {
+		public function ava_menu_restore_options_callback() {
 			$default_options = get_option( $this->options_slug . '_default' );
 			$this->save_options( $this->options_slug, $default_options );
 		}
@@ -271,25 +271,25 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$default_mobile_breakpoint = $this->get_default_mobile_breakpoint();
 
-			jet_menu_dynmic_css()->init_builder( $this->builder );
+			ava_menu_dynmic_css()->init_builder( $this->builder );
 
 			$this->builder->register_section(
 				array(
-					'jet_menu_options_section' => array(
+					'ava_menu_options_section' => array(
 						'type'        => 'section',
 						'scroll'      => false,
-						'title'       => esc_html__( 'JetMenu', 'jet-menu' ),
-						'description' => esc_html__( 'General JetMenu Settings', 'jet-menu' ),
+						'title'       => esc_html__( 'AvaMenu', 'ava-menu' ),
+						'description' => esc_html__( 'General AvaMenu Settings', 'ava-menu' ),
 					),
 				)
 			);
 
 			$this->builder->register_form(
 				array(
-					'jet-menu-options-form' => array(
+					'ava-menu-options-form' => array(
 						'type'    => 'form',
 						'enctype' => 'multipart/form-data',
-						'parent'  => 'jet_menu_options_section',
+						'parent'  => 'ava_menu_options_section',
 					),
 				)
 			);
@@ -298,11 +298,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				array(
 					'option_page_content' => array(
 						'type'   => 'settings',
-						'parent' => 'jet-menu-options-form',
+						'parent' => 'ava-menu-options-form',
 					),
 					'option_page_footer' => array(
 						'type'   => 'settings',
-						'parent' => 'jet-menu-options-form',
+						'parent' => 'ava-menu-options-form',
 						'class'  => 'option-page-footer',
 					),
 				)
@@ -313,41 +313,41 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					'tab_vertical' => array(
 						'type'   => 'component-tab-vertical',
 						'parent' => 'option_page_content',
-						'view'   => jet_menu()->get_template( 'admin/component-tab-vertical.php' ),
+						'view'   => ava_menu()->get_template( 'admin/component-tab-vertical.php' ),
 					),
 				)
 			);
 
-			$tabs = apply_filters( 'jet-menu/options-page/tabs', array(
+			$tabs = apply_filters( 'ava-menu/options-page/tabs', array(
 				'general_tab' => array(
 					'parent'      => 'tab_vertical',
-					'title'       => esc_html__( 'General', 'jet-menu' ),
+					'title'       => esc_html__( 'General', 'ava-menu' ),
 				),
 				'styles_tab' => array(
 					'parent'      => 'tab_vertical',
-					'title'       => esc_html__( 'Styles', 'jet-menu' ),
+					'title'       => esc_html__( 'Styles', 'ava-menu' ),
 				),
 				'main_items_styles_tab' => array(
 					'parent'      => 'tab_vertical',
-					'title'       => esc_html__( 'Main Menu Styles', 'jet-menu' ),
+					'title'       => esc_html__( 'Main Menu Styles', 'ava-menu' ),
 				),
 				'sub_items_styles_tab' => array(
 					'parent'      => 'tab_vertical',
-					'title'       => esc_html__( 'Sub Menu Styles', 'jet-menu' ),
+					'title'       => esc_html__( 'Sub Menu Styles', 'ava-menu' ),
 				),
 				'mobile_menu_tab' => array(
 					'parent'      => 'tab_vertical',
-					'title'       => esc_html__( 'Mobile Menu', 'jet-menu' ),
+					'title'       => esc_html__( 'Mobile Menu', 'ava-menu' ),
 				),
 				'advanced_tab' => array(
 					'parent'      => 'tab_vertical',
-					'title'       => esc_html__( 'Advanced', 'jet-menu' ),
+					'title'       => esc_html__( 'Advanced', 'ava-menu' ),
 				),
 			) );
 
 			$this->builder->register_settings( $tabs );
 
-			$import_template = jet_menu()->get_template( 'admin/settings-import-export.php' );
+			$import_template = ava_menu()->get_template( 'admin/settings-import-export.php' );
 
 			ob_start();
 			include $import_template;
@@ -355,10 +355,10 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$this->builder->register_html(
 				array(
-					'jet-menu-import-export' => array(
+					'ava-menu-import-export' => array(
 						'type'   => 'html',
 						'parent' => 'option_page_footer',
-						'class'  => 'jet-menu-import-export',
+						'class'  => 'ava-menu-import-export',
 						'html'   => $import_export,
 					),
 				)
@@ -366,21 +366,21 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$this->builder->register_control(
 				array(
-					'jet-menu-reset-options' => array(
+					'ava-menu-reset-options' => array(
 						'type'          => 'button',
 						'parent'        => 'option_page_footer',
 						'style'         => 'normal',
 						'view_wrapping' => false,
-						'class'         => 'jet-reset-options',
-						'content'       => esc_html__( 'Reset', 'jet-menu' ),
+						'class'         => 'ava-reset-options',
+						'content'       => esc_html__( 'Reset', 'ava-menu' ),
 					),
-					'jet-menu-save-options' => array(
+					'ava-menu-save-options' => array(
 						'type'          => 'button',
 						'parent'        => 'option_page_footer',
 						'style'         => 'success',
 						'class'         => 'custom-class',
 						'view_wrapping' => false,
-						'content'       => '<span class="text">' . esc_html__( 'Save', 'jet-menu' ) . '</span>' . $this->spinner . $this->button_icon,
+						'content'       => '<span class="text">' . esc_html__( 'Save', 'ava-menu' ) . '</span>' . $this->spinner . $this->button_icon,
 					),
 				)
 			);
@@ -389,101 +389,101 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$this->builder->register_control(
 				array(
-					'jet-menu-animation' => array(
+					'ava-menu-animation' => array(
 						'type'             => 'select',
 						'parent'           => 'general_tab',
-						'title'            => esc_html__( 'Animation', 'jet-menu' ),
+						'title'            => esc_html__( 'Animation', 'ava-menu' ),
 						'multiple'         => false,
 						'filter'           => true,
-						'value'            => $this->get_option( 'jet-menu-animation' ),
+						'value'            => $this->get_option( 'ava-menu-animation' ),
 						'options'          => array(
-							'none'      => esc_html__( 'None', 'jet-menu' ),
-							'fade'      => esc_html__( 'Fade', 'jet-menu' ),
-							'move-up'   => esc_html__( 'Move Up', 'jet-menu' ),
-							'move-down' => esc_html__( 'Move Down', 'jet-menu' ),
+							'none'      => esc_html__( 'None', 'ava-menu' ),
+							'fade'      => esc_html__( 'Fade', 'ava-menu' ),
+							'move-up'   => esc_html__( 'Move Up', 'ava-menu' ),
+							'move-down' => esc_html__( 'Move Down', 'ava-menu' ),
 						),
 						'placeholder'      => 'Select',
 						'label'            => '',
 						'class'            => '',
 					),
 
-					'jet-menu-roll-up' => array(
+					'ava-menu-roll-up' => array(
 						'type'        => 'switcher',
 						'parent'      => 'general_tab',
-						'title'       => esc_html__( 'Menu rollUp', 'jet-menu' ),
-						'description' => esc_html__( 'Enable this option in order to reduce the menu size by grouping extra menu items  and hiding them under the suspension dots.', 'jet-menu' ),
-						'value'       => $this->get_option( 'jet-menu-roll-up', 'false' ),
+						'title'       => esc_html__( 'Menu rollUp', 'ava-menu' ),
+						'description' => esc_html__( 'Enable this option in order to reduce the menu size by grouping extra menu items  and hiding them under the suspension dots.', 'ava-menu' ),
+						'value'       => $this->get_option( 'ava-menu-roll-up', 'false' ),
 						'toggle'      => array(
 							'true_toggle'  => 'On',
 							'false_toggle' => 'Off',
 						),
 					),
 
-					'jet-menu-mouseleave-delay' => array(
+					'ava-menu-mouseleave-delay' => array(
 						'type'       => 'slider',
 						'parent'     => 'general_tab',
-						'title'      => esc_html__( 'Mouse Leave Delay', 'jet-menu' ),
+						'title'      => esc_html__( 'Mouse Leave Delay', 'ava-menu' ),
 						'max_value'  => 10000,
 						'min_value'  => 0,
-						'value'      => $this->get_option( 'jet-menu-mouseleave-delay', 500 ),
+						'value'      => $this->get_option( 'ava-menu-mouseleave-delay', 500 ),
 						'step_value' => 100,
 					),
 
-					'jet-mega-menu-width-type' => array(
+					'ava-mega-menu-width-type' => array(
 						'type'     => 'radio',
 						'parent'   => 'general_tab',
-						'title'    => esc_html__( 'Mega menu base width', 'jet-menu' ),
-						'value'    => $this->get_option( 'jet-mega-menu-width-type', 'container' ),
+						'title'    => esc_html__( 'Mega menu base width', 'ava-menu' ),
+						'value'    => $this->get_option( 'ava-mega-menu-width-type', 'container' ),
 						'options'  => array(
 							'container' => array(
-								'label' => esc_html__( 'Width same as main container width', 'jet-menu' ),
+								'label' => esc_html__( 'Width same as main container width', 'ava-menu' ),
 							),
 							'items'     => array(
-								'label' => esc_html__( 'Width same as total items width', 'jet-menu' ),
+								'label' => esc_html__( 'Width same as total items width', 'ava-menu' ),
 							),
 							'selector'  => array(
-								'label' =>  esc_html__( 'Width same as Custom css selector width', 'jet-menu' ),
-								'slave' => 'jet-mega-menu-selector-width-type',
+								'label' =>  esc_html__( 'Width same as Custom css selector width', 'ava-menu' ),
+								'slave' => 'ava-mega-menu-selector-width-type',
 							)
 						),
 						'label'    => '',
 						'class'    => '',
 					),
 
-					'jet-mega-menu-selector-width-type' => array(
+					'ava-mega-menu-selector-width-type' => array(
 						'type'     => 'text',
 						'parent'   => 'general_tab',
-						'title'    => esc_html__( 'Mega menu width selector', 'jet-menu' ),
-						'value'    => $this->get_option( 'jet-mega-menu-selector-width-type', '' ),
+						'title'    => esc_html__( 'Mega menu width selector', 'ava-menu' ),
+						'value'    => $this->get_option( 'ava-mega-menu-selector-width-type', '' ),
 						'label'    => '',
 						'class'    => '',
-						'master'   => 'jet-mega-menu-selector-width-type',
+						'master'   => 'ava-mega-menu-selector-width-type',
 					),
 
-					'jet-menu-open-sub-type' => array(
+					'ava-menu-open-sub-type' => array(
 						'type'        => 'select',
 						'parent'      => 'general_tab',
-						'title'       => esc_html__( 'Sub menu open event', 'jet-menu' ),
+						'title'       => esc_html__( 'Sub menu open event', 'ava-menu' ),
 						'multiple'    => false,
 						'filter'      => true,
-						'value'       => $this->get_option( 'jet-menu-open-sub-type', 'hover' ),
+						'value'       => $this->get_option( 'ava-menu-open-sub-type', 'hover' ),
 						'options'     => array(
-							'hover'       => esc_html__( 'Hover', 'jet-menu' ),
-							'click'       => esc_html__( 'Click', 'jet-menu' ),
+							'hover'       => esc_html__( 'Hover', 'ava-menu' ),
+							'click'       => esc_html__( 'Click', 'ava-menu' ),
 						),
 						'placeholder' => 'Select',
 						'label'       => '',
 						'class'       => '',
 					),
 
-					'jet-menu-mobile-breakpoint' => array(
+					'ava-menu-mobile-breakpoint' => array(
 						'type'        => 'slider',
 						'parent'      => 'general_tab',
-						'title'       => esc_html__( 'Mobile breakpoint (px)', 'jet-menu' ),
-						'description' => esc_html__( 'Sets the breakpoint between desktop menu and mobile menu. Below this breakpoint mobile menu will appear.', 'jet-menu' ),
+						'title'       => esc_html__( 'Mobile breakpoint (px)', 'ava-menu' ),
+						'description' => esc_html__( 'Sets the breakpoint between desktop menu and mobile menu. Below this breakpoint mobile menu will appear.', 'ava-menu' ),
 						'max_value'   => 1200,
 						'min_value'   => 480,
-						'value'       => $this->get_option( 'jet-menu-mobile-breakpoint', $default_mobile_breakpoint ),
+						'value'       => $this->get_option( 'ava-menu-mobile-breakpoint', $default_mobile_breakpoint ),
 						'step_value'  => 1,
 					),
 				)
@@ -491,15 +491,15 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$template = get_template();
 
-			if ( file_exists( jet_menu()->plugin_path( "integration/themes/{$template}" ) ) ) {
+			if ( file_exists( ava_menu()->plugin_path( "integration/themes/{$template}" ) ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-disable-integration-' . $template => array(
+						'ava-menu-disable-integration-' . $template => array(
 							'type'        => 'switcher',
 							'parent'      => 'general_tab',
-							'title'       => esc_html__( 'Disable default theme integration file', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-disable-integration-' . $template, 'false' ),
+							'title'       => esc_html__( 'Disable default theme integration file', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-disable-integration-' . $template, 'false' ),
 							'toggle'      => array(
 								'true_toggle'  => 'On',
 								'false_toggle' => 'Off',
@@ -512,11 +512,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$this->builder->register_control(
 				array(
-					'jet-menu-cache-css' => array(
+					'ava-menu-cache-css' => array(
 						'type'        => 'switcher',
 						'parent'      => 'general_tab',
-						'title'       => esc_html__( 'Cache menu CSS', 'jet-menu' ),
-						'value'       => $this->get_option( 'jet-menu-cache-css', 'true' ),
+						'title'       => esc_html__( 'Cache menu CSS', 'ava-menu' ),
+						'value'       => $this->get_option( 'ava-menu-cache-css', 'true' ),
 						'toggle'      => array(
 							'true_toggle'  => 'On',
 							'false_toggle' => 'Off',
@@ -531,17 +531,17 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$this->builder->register_control(
 				array(
-					'jet-menu-container-alignment' => array(
+					'ava-menu-container-alignment' => array(
 						'type'     => 'select',
 						'parent'   => 'styles_tab',
-						'title'    => esc_html__( 'Menu items alignment', 'jet-menu' ),
+						'title'    => esc_html__( 'Menu items alignment', 'ava-menu' ),
 						'multiple' => false,
-						'value'    => $this->get_option( 'jet-menu-container-alignment' ),
+						'value'    => $this->get_option( 'ava-menu-container-alignment' ),
 						'options'  => array(
-							'flex-end'   => esc_html__( 'End', 'jet-menu' ),
-							'center'     => esc_html__( 'Center', 'jet-menu' ),
-							'flex-start' => esc_html__( 'Start', 'jet-menu' ),
-							'stretch'    => esc_html__( 'Stretch', 'jet-menu' ),
+							'flex-end'   => esc_html__( 'End', 'ava-menu' ),
+							'center'     => esc_html__( 'Center', 'ava-menu' ),
+							'flex-start' => esc_html__( 'Start', 'ava-menu' ),
+							'stretch'    => esc_html__( 'Stretch', 'ava-menu' ),
 						),
 						'label'    => '',
 						'class'    => '',
@@ -549,18 +549,18 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				)
 			);
 
-			jet_menu_dynmic_css()->add_background_options( array(
-				'name'     => 'jet-menu-container',
-				'label'    => esc_html__( 'Menu container', 'jet-menu' ),
+			ava_menu_dynmic_css()->add_background_options( array(
+				'name'     => 'ava-menu-container',
+				'label'    => esc_html__( 'Menu container', 'ava-menu' ),
 				'parent'   => 'styles_tab',
 				'defaults' => array(
 					'color' => '#ffffff',
 				),
 			) );
 
-			jet_menu_dynmic_css()->add_border_options( array(
-				'name'     => 'jet-menu-container',
-				'label'    => esc_html__( 'Menu container', 'jet-menu' ),
+			ava_menu_dynmic_css()->add_border_options( array(
+				'name'     => 'ava-menu-container',
+				'label'    => esc_html__( 'Menu container', 'ava-menu' ),
 				'parent'   => 'styles_tab',
 				'defaults' => array(
 					'top'    => '1',
@@ -570,18 +570,18 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				),
 			) );
 
-			jet_menu_dynmic_css()->add_box_shadow_options( array(
-				'name'     => 'jet-menu-container',
-				'label'    => esc_html__( 'Menu container', 'jet-menu' ),
+			ava_menu_dynmic_css()->add_box_shadow_options( array(
+				'name'     => 'ava-menu-container',
+				'label'    => esc_html__( 'Menu container', 'ava-menu' ),
 				'parent'   => 'styles_tab',
 			) );
 
 			$this->builder->register_control(
 				array(
-					'jet-menu-mega-border-radius' => array(
+					'ava-menu-mega-border-radius' => array(
 						'type'        => 'dimensions',
 						'parent'      => 'styles_tab',
-						'title'       => esc_html__( 'Menu container border radius', 'jet-menu' ),
+						'title'       => esc_html__( 'Menu container border radius', 'ava-menu' ),
 						'range'       => array(
 							'px' => array(
 								'min'  => 0,
@@ -594,32 +594,32 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 								'step' => 1,
 							),
 						),
-						'value' => $this->get_option( 'jet-menu-mega-border-radius' ),
+						'value' => $this->get_option( 'ava-menu-mega-border-radius' ),
 					),
-					'jet-menu-inherit-first-radius' => array(
+					'ava-menu-inherit-first-radius' => array(
 						'type'   => 'switcher',
-						'title'  => esc_html__( 'Inherit border radius for the first menu item from main container', 'jet-menu' ),
-						'value'  => $this->get_option( 'jet-menu-inherit-first-radius' ),
+						'title'  => esc_html__( 'Inherit border radius for the first menu item from main container', 'ava-menu' ),
+						'value'  => $this->get_option( 'ava-menu-inherit-first-radius' ),
 						'toggle' => array(
 							'true_toggle'  => 'On',
 							'false_toggle' => 'Off',
 						),
 						'parent' => 'styles_tab',
 					),
-					'jet-menu-inherit-last-radius' => array(
+					'ava-menu-inherit-last-radius' => array(
 						'type'   => 'switcher',
-						'title'  => esc_html__( 'Inherit border radius for the last menu item from main container', 'jet-menu' ),
-						'value'  => $this->get_option( 'jet-menu-inherit-last-radius' ),
+						'title'  => esc_html__( 'Inherit border radius for the last menu item from main container', 'ava-menu' ),
+						'value'  => $this->get_option( 'ava-menu-inherit-last-radius' ),
 						'toggle' => array(
 							'true_toggle'  => 'On',
 							'false_toggle' => 'Off',
 						),
 						'parent' => 'styles_tab',
 					),
-					'jet-menu-mega-padding' => array(
+					'ava-menu-mega-padding' => array(
 						'type'        => 'dimensions',
 						'parent'      => 'styles_tab',
-						'title'       => esc_html__( 'Menu container padding', 'jet-menu' ),
+						'title'       => esc_html__( 'Menu container padding', 'ava-menu' ),
 						'range'       => array(
 							'px' => array(
 								'min'  => 0,
@@ -627,16 +627,16 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 								'step' => 1,
 							),
 						),
-						'value' => $this->get_option( 'jet-menu-mega-padding' ),
+						'value' => $this->get_option( 'ava-menu-mega-padding' ),
 					),
-					'jet-menu-min-width' => array(
+					'ava-menu-min-width' => array(
 						'type'        => 'slider',
 						'parent'      => 'styles_tab',
-						'title'       => esc_html__( 'Menu container min width (px)', 'jet-menu' ),
-						'description' => esc_html__( 'Set 0 to automatic width detection', 'jet-menu' ),
+						'title'       => esc_html__( 'Menu container min width (px)', 'ava-menu' ),
+						'description' => esc_html__( 'Set 0 to automatic width detection', 'ava-menu' ),
 						'max_value'   => 900,
 						'min_value'   => 0,
-						'value'       => $this->get_option( 'jet-menu-min-width', 0 ),
+						'value'       => $this->get_option( 'ava-menu-min-width', 0 ),
 						'step_value'  => 1,
 					),
 				)
@@ -646,21 +646,21 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$this->section_start( 'main_items_styles_tab' );
 
-			jet_menu_dynmic_css()->add_typography_options(
+			ava_menu_dynmic_css()->add_typography_options(
 				array(
-					'label'   => esc_html__( 'Top level menu', 'jet-menu' ),
-					'name'    => 'jet-top-menu',
+					'label'   => esc_html__( 'Top level menu', 'ava-menu' ),
+					'name'    => 'ava-top-menu',
 					'parent'  => 'main_items_styles_tab',
 				)
 			);
 
 			$this->builder->register_control(
 				array(
-					'jet-show-top-menu-desc' => array(
+					'ava-show-top-menu-desc' => array(
 						'type'   => 'switcher',
 						'parent' => 'main_items_styles_tab',
-						'title'  => esc_html__( 'Show Item Description', 'jet-menu' ),
-						'value'  => $this->get_option( 'jet-show-top-menu-desc', 'true' ),
+						'title'  => esc_html__( 'Show Item Description', 'ava-menu' ),
+						'value'  => $this->get_option( 'ava-show-top-menu-desc', 'true' ),
 						'toggle' => array(
 							'true_toggle'  => 'On',
 							'false_toggle' => 'Off',
@@ -669,24 +669,24 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				)
 			);
 
-			jet_menu_dynmic_css()->add_typography_options(
+			ava_menu_dynmic_css()->add_typography_options(
 				array(
-					'label'   => esc_html__( 'Top level menu description', 'jet-menu' ),
-					'name'    => 'jet-top-menu-desc',
+					'label'   => esc_html__( 'Top level menu description', 'ava-menu' ),
+					'name'    => 'ava-top-menu-desc',
 					'parent'  => 'main_items_styles_tab',
 				)
 			);
 
 			$this->builder->register_control(
 				array(
-					'jet-menu-item-max-width' => array(
+					'ava-menu-item-max-width' => array(
 						'type'        => 'slider',
 						'parent'      => 'main_items_styles_tab',
-						'title'       => esc_html__( 'Top level item max width (%)', 'jet-menu' ),
-						'description' => esc_html__( 'Set 0 to automatic width detection', 'jet-menu' ),
+						'title'       => esc_html__( 'Top level item max width (%)', 'ava-menu' ),
+						'description' => esc_html__( 'Set 0 to automatic width detection', 'ava-menu' ),
 						'max_value'   => 100,
 						'min_value'   => 0,
-						'value'       => $this->get_option( 'jet-menu-item-max-width', 0 ),
+						'value'       => $this->get_option( 'ava-menu-item-max-width', 0 ),
 						'step_value'  => 1,
 					),
 				)
@@ -705,15 +705,15 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				array(
 					'item_default_tab' => array(
 						'parent' => 'menu_items_tabs',
-						'title'  => esc_html__( 'Default', 'jet-menu' ),
+						'title'  => esc_html__( 'Default', 'ava-menu' ),
 					),
 					'item_hover_tab' => array(
 						'parent' => 'menu_items_tabs',
-						'title'  => esc_html__( 'Hover', 'jet-menu' ),
+						'title'  => esc_html__( 'Hover', 'ava-menu' ),
 					),
 					'item_active_tab' => array(
 						'parent' => 'menu_items_tabs',
-						'title'  => esc_html__( 'Active', 'jet-menu' ),
+						'title'  => esc_html__( 'Active', 'ava-menu' ),
 					),
 				)
 			);
@@ -730,11 +730,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-item-text-color' . $opt => array(
+						'ava-menu-item-text-color' . $opt => array(
 							'type'        => 'colorpicker',
 							'parent'      => 'item_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item text color', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-item-text-color' . $opt ),
+							'title'       => esc_html__( 'Item text color', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-item-text-color' . $opt ),
 							'alpha'       => true,
 						),
 					)
@@ -742,11 +742,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-item-desc-color' . $opt => array(
+						'ava-menu-item-desc-color' . $opt => array(
 							'type'        => 'colorpicker',
 							'parent'      => 'item_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item description color', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-item-desc-color' . $opt ),
+							'title'       => esc_html__( 'Item description color', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-item-desc-color' . $opt ),
 							'alpha'       => true,
 						),
 					)
@@ -754,11 +754,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-top-icon-color' . $opt => array(
+						'ava-menu-top-icon-color' . $opt => array(
 							'type'        => 'colorpicker',
 							'parent'      => 'item_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item Icon Color', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-top-icon-color' . $opt ),
+							'title'       => esc_html__( 'Item Icon Color', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-top-icon-color' . $opt ),
 							'alpha'       => true,
 						),
 					)
@@ -766,25 +766,25 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-top-arrow-color' . $opt => array(
+						'ava-menu-top-arrow-color' . $opt => array(
 							'type'        => 'colorpicker',
 							'parent'      => 'item_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item drop-down arrow color', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-top-arrow-color' . $opt ),
+							'title'       => esc_html__( 'Item drop-down arrow color', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-top-arrow-color' . $opt ),
 							'alpha'       => true,
 						),
 					)
 				);
 
-				jet_menu_dynmic_css()->add_background_options( array(
-					'name'     => 'jet-menu-item' . $opt,
-					'label'    => esc_html__( 'Item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_background_options( array(
+					'name'     => 'ava-menu-item' . $opt,
+					'label'    => esc_html__( 'Item', 'ava-menu' ),
 					'parent'   => 'item_' . $tab . '_tab',
 				) );
 
-				jet_menu_dynmic_css()->add_border_options( array(
-					'name'     => 'jet-menu-item' . $opt,
-					'label'    => esc_html__( 'Item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_border_options( array(
+					'name'     => 'ava-menu-item' . $opt,
+					'label'    => esc_html__( 'Item', 'ava-menu' ),
 					'parent'   => 'item_' . $tab . '_tab',
 					'defaults' => array(
 						'top'    => '1',
@@ -794,9 +794,9 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					),
 				) );
 
-				jet_menu_dynmic_css()->add_border_options( array(
-					'name'     => 'jet-menu-first-item' . $opt,
-					'label'    => esc_html__( 'First item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_border_options( array(
+					'name'     => 'ava-menu-first-item' . $opt,
+					'label'    => esc_html__( 'First item', 'ava-menu' ),
 					'parent'   => 'item_' . $tab . '_tab',
 					'defaults' => array(
 						'top'    => '1',
@@ -806,9 +806,9 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					),
 				) );
 
-				jet_menu_dynmic_css()->add_border_options( array(
-					'name'     => 'jet-menu-last-item' . $opt,
-					'label'    => esc_html__( 'Last item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_border_options( array(
+					'name'     => 'ava-menu-last-item' . $opt,
+					'label'    => esc_html__( 'Last item', 'ava-menu' ),
 					'parent'   => 'item_' . $tab . '_tab',
 					'defaults' => array(
 						'top'    => '1',
@@ -818,18 +818,18 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					),
 				) );
 
-				jet_menu_dynmic_css()->add_box_shadow_options( array(
-					'name'     => 'jet-menu-item' . $opt,
-					'label'    => esc_html__( 'Item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_box_shadow_options( array(
+					'name'     => 'ava-menu-item' . $opt,
+					'label'    => esc_html__( 'Item', 'ava-menu' ),
 					'parent'   => 'item_' . $tab . '_tab',
 				) );
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-item-border-radius' . $opt => array(
+						'ava-menu-item-border-radius' . $opt => array(
 							'type'        => 'dimensions',
 							'parent'      => 'item_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item border radius', 'jet-menu' ),
+							'title'       => esc_html__( 'Item border radius', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => 0,
@@ -842,12 +842,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-item-border-radius' . $opt ),
+							'value' => $this->get_option( 'ava-menu-item-border-radius' . $opt ),
 						),
-						'jet-menu-item-padding' . $opt => array(
+						'ava-menu-item-padding' . $opt => array(
 							'type'        => 'dimensions',
 							'parent'      => 'item_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item padding', 'jet-menu' ),
+							'title'       => esc_html__( 'Item padding', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => 0,
@@ -855,12 +855,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-item-padding' . $opt ),
+							'value' => $this->get_option( 'ava-menu-item-padding' . $opt ),
 						),
-						'jet-menu-item-margin' . $opt => array(
+						'ava-menu-item-margin' . $opt => array(
 							'type'        => 'dimensions',
 							'parent'      => 'item_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item margin', 'jet-menu' ),
+							'title'       => esc_html__( 'Item margin', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => -50,
@@ -868,7 +868,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-item-margin' . $opt ),
+							'value' => $this->get_option( 'ava-menu-item-margin' . $opt ),
 						),
 					)
 				);
@@ -890,11 +890,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				array(
 					'sub_panel_simple_tab' => array(
 						'parent' => 'menu_sub_panel_tabs',
-						'title'  => esc_html__( 'Simple Submenu Panel', 'jet-menu' ),
+						'title'  => esc_html__( 'Simple Submenu Panel', 'ava-menu' ),
 					),
 					'sub_panel_mega_tab' => array(
 						'parent' => 'menu_sub_panel_tabs',
-						'title'  => esc_html__( 'Mega Submenu Panel', 'jet-menu' ),
+						'title'  => esc_html__( 'Mega Submenu Panel', 'ava-menu' ),
 					),
 				)
 			);
@@ -911,28 +911,28 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				if ( 'simple' === $tab ) {
 					$this->builder->register_control(
 						array(
-							'jet-menu-sub-panel-width-simple' => array(
+							'ava-menu-sub-panel-width-simple' => array(
 								'type'       => 'slider',
 								'max_value'  => 400,
 								'min_value'  => 100,
-								'value'      => $this->get_option( 'jet-menu-sub-panel-width-simple', 200 ),
+								'value'      => $this->get_option( 'ava-menu-sub-panel-width-simple', 200 ),
 								'step_value' => 1,
-								'title'      => esc_html__( 'Panel Width', 'jet-menu' ),
+								'title'      => esc_html__( 'Panel Width', 'ava-menu' ),
 								'parent'     => 'sub_panel_simple_tab',
 							),
 						)
 					);
 				}
 
-				jet_menu_dynmic_css()->add_background_options( array(
-					'name'     => 'jet-menu-sub-panel' . $opt,
-					'label'    => esc_html__( 'Panel', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_background_options( array(
+					'name'     => 'ava-menu-sub-panel' . $opt,
+					'label'    => esc_html__( 'Panel', 'ava-menu' ),
 					'parent'   => 'sub_panel_' . $tab . '_tab',
 				) );
 
-				jet_menu_dynmic_css()->add_border_options( array(
-					'name'     => 'jet-menu-sub-panel' . $opt,
-					'label'    => esc_html__( 'Panel', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_border_options( array(
+					'name'     => 'ava-menu-sub-panel' . $opt,
+					'label'    => esc_html__( 'Panel', 'ava-menu' ),
 					'parent'   => 'sub_panel_' . $tab . '_tab',
 					'defaults' => array(
 						'top'    => '1',
@@ -942,18 +942,18 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					),
 				) );
 
-				jet_menu_dynmic_css()->add_box_shadow_options( array(
-					'name'     => 'jet-menu-sub-panel' . $opt,
-					'label'    => esc_html__( 'Panel', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_box_shadow_options( array(
+					'name'     => 'ava-menu-sub-panel' . $opt,
+					'label'    => esc_html__( 'Panel', 'ava-menu' ),
 					'parent'   => 'sub_panel_' . $tab . '_tab',
 				) );
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-sub-panel-border-radius' . $opt => array(
+						'ava-menu-sub-panel-border-radius' . $opt => array(
 							'type'        => 'dimensions',
 							'parent'      => 'sub_panel_' . $tab . '_tab',
-							'title'       => esc_html__( 'Panel border radius', 'jet-menu' ),
+							'title'       => esc_html__( 'Panel border radius', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => 0,
@@ -966,12 +966,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-sub-panel-border-radius' . $opt ),
+							'value' => $this->get_option( 'ava-menu-sub-panel-border-radius' . $opt ),
 						),
-						'jet-menu-sub-panel-padding' . $opt => array(
+						'ava-menu-sub-panel-padding' . $opt => array(
 							'type'        => 'dimensions',
 							'parent'      => 'sub_panel_' . $tab . '_tab',
-							'title'       => esc_html__( 'Panel padding', 'jet-menu' ),
+							'title'       => esc_html__( 'Panel padding', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => 0,
@@ -979,12 +979,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-sub-panel-padding' . $opt ),
+							'value' => $this->get_option( 'ava-menu-sub-panel-padding' . $opt ),
 						),
-						'jet-menu-sub-panel-margin' . $opt => array(
+						'ava-menu-sub-panel-margin' . $opt => array(
 							'type'        => 'dimensions',
 							'parent'      => 'sub_panel_' . $tab . '_tab',
-							'title'       => esc_html__( 'Panel margin', 'jet-menu' ),
+							'title'       => esc_html__( 'Panel margin', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => -50,
@@ -992,7 +992,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-sub-panel-margin' . $opt ),
+							'value' => $this->get_option( 'ava-menu-sub-panel-margin' . $opt ),
 						),
 					)
 				);
@@ -1003,21 +1003,21 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$this->section_start( 'sub_items_styles_tab' );
 
-			jet_menu_dynmic_css()->add_typography_options(
+			ava_menu_dynmic_css()->add_typography_options(
 				array(
-					'label'   => esc_html__( 'Submenu', 'jet-menu' ),
-					'name'    => 'jet-sub-menu',
+					'label'   => esc_html__( 'Submenu', 'ava-menu' ),
+					'name'    => 'ava-sub-menu',
 					'parent'  => 'sub_items_styles_tab',
 				)
 			);
 
 			$this->builder->register_control(
 				array(
-					'jet-show-sub-menu-desc' => array(
+					'ava-show-sub-menu-desc' => array(
 						'type'   => 'switcher',
 						'parent' => 'sub_items_styles_tab',
-						'title'  => esc_html__( 'Show Submenu Item Description', 'jet-menu' ),
-						'value'  => $this->get_option( 'jet-show-sub-menu-desc', 'true' ),
+						'title'  => esc_html__( 'Show Submenu Item Description', 'ava-menu' ),
+						'value'  => $this->get_option( 'ava-show-sub-menu-desc', 'true' ),
 						'toggle' => array(
 							'true_toggle'  => 'On',
 							'false_toggle' => 'Off',
@@ -1026,10 +1026,10 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				)
 			);
 
-			jet_menu_dynmic_css()->add_typography_options(
+			ava_menu_dynmic_css()->add_typography_options(
 				array(
-					'label'   => esc_html__( 'Submenu descriptions', 'jet-menu' ),
-					'name'    => 'jet-sub-menu-desc',
+					'label'   => esc_html__( 'Submenu descriptions', 'ava-menu' ),
+					'name'    => 'ava-sub-menu-desc',
 					'parent'  => 'sub_items_styles_tab',
 				)
 			);
@@ -1049,15 +1049,15 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				array(
 					'sub_default_tab' => array(
 						'parent' => 'menu_sub_tabs',
-						'title'  => esc_html__( 'Default', 'jet-menu' ),
+						'title'  => esc_html__( 'Default', 'ava-menu' ),
 					),
 					'sub_hover_tab' => array(
 						'parent' => 'menu_sub_tabs',
-						'title'  => esc_html__( 'Hover', 'jet-menu' ),
+						'title'  => esc_html__( 'Hover', 'ava-menu' ),
 					),
 					'sub_active_tab' => array(
 						'parent' => 'menu_sub_tabs',
-						'title'  => esc_html__( 'Active', 'jet-menu' ),
+						'title'  => esc_html__( 'Active', 'ava-menu' ),
 					),
 				)
 			);
@@ -1074,11 +1074,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-sub-text-color' . $opt => array(
+						'ava-menu-sub-text-color' . $opt => array(
 							'type'        => 'colorpicker',
 							'parent'      => 'sub_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item text color', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-sub-text-color' . $opt ),
+							'title'       => esc_html__( 'Item text color', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-sub-text-color' . $opt ),
 							'alpha'       => true,
 						),
 					)
@@ -1086,11 +1086,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-sub-desc-color' . $opt => array(
+						'ava-menu-sub-desc-color' . $opt => array(
 							'type'        => 'colorpicker',
 							'parent'      => 'sub_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item descriptions color', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-sub-desc-color' . $opt ),
+							'title'       => esc_html__( 'Item descriptions color', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-sub-desc-color' . $opt ),
 							'alpha'       => true,
 						),
 					)
@@ -1098,11 +1098,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-sub-icon-color' . $opt => array(
+						'ava-menu-sub-icon-color' . $opt => array(
 							'type'        => 'colorpicker',
 							'parent'      => 'sub_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item icon color', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-sub-icon-color' . $opt ),
+							'title'       => esc_html__( 'Item icon color', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-sub-icon-color' . $opt ),
 							'alpha'       => true,
 						),
 					)
@@ -1110,25 +1110,25 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-sub-arrow-color' . $opt => array(
+						'ava-menu-sub-arrow-color' . $opt => array(
 							'type'        => 'colorpicker',
 							'parent'      => 'sub_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item drop-down arrow color', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-sub-arrow-color' . $opt ),
+							'title'       => esc_html__( 'Item drop-down arrow color', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-sub-arrow-color' . $opt ),
 							'alpha'       => true,
 						),
 					)
 				);
 
-				jet_menu_dynmic_css()->add_background_options( array(
-					'name'     => 'jet-menu-sub' . $opt,
-					'label'    => esc_html__( 'Item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_background_options( array(
+					'name'     => 'ava-menu-sub' . $opt,
+					'label'    => esc_html__( 'Item', 'ava-menu' ),
 					'parent'   => 'sub_' . $tab . '_tab',
 				) );
 
-				jet_menu_dynmic_css()->add_border_options( array(
-					'name'     => 'jet-menu-sub' . $opt,
-					'label'    => esc_html__( 'Item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_border_options( array(
+					'name'     => 'ava-menu-sub' . $opt,
+					'label'    => esc_html__( 'Item', 'ava-menu' ),
 					'parent'   => 'sub_' . $tab . '_tab',
 					'defaults' => array(
 						'top'    => '1',
@@ -1138,9 +1138,9 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					),
 				) );
 
-				jet_menu_dynmic_css()->add_border_options( array(
-					'name'     => 'jet-menu-sub-first' . $opt,
-					'label'    => esc_html__( 'First item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_border_options( array(
+					'name'     => 'ava-menu-sub-first' . $opt,
+					'label'    => esc_html__( 'First item', 'ava-menu' ),
 					'parent'   => 'sub_' . $tab . '_tab',
 					'defaults' => array(
 						'top'    => '1',
@@ -1150,9 +1150,9 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					),
 				) );
 
-				jet_menu_dynmic_css()->add_border_options( array(
-					'name'     => 'jet-menu-sub-last' . $opt,
-					'label'    => esc_html__( 'Last item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_border_options( array(
+					'name'     => 'ava-menu-sub-last' . $opt,
+					'label'    => esc_html__( 'Last item', 'ava-menu' ),
 					'parent'   => 'sub_' . $tab . '_tab',
 					'defaults' => array(
 						'top'    => '1',
@@ -1162,18 +1162,18 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					),
 				) );
 
-				jet_menu_dynmic_css()->add_box_shadow_options( array(
-					'name'     => 'jet-menu-sub' . $opt,
-					'label'    => esc_html__( 'Item', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_box_shadow_options( array(
+					'name'     => 'ava-menu-sub' . $opt,
+					'label'    => esc_html__( 'Item', 'ava-menu' ),
 					'parent'   => 'sub_' . $tab . '_tab',
 				) );
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-sub-border-radius' . $opt => array(
+						'ava-menu-sub-border-radius' . $opt => array(
 							'type'        => 'dimensions',
 							'parent'      => 'sub_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item border radius', 'jet-menu' ),
+							'title'       => esc_html__( 'Item border radius', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => 0,
@@ -1186,12 +1186,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-sub-border-radius' . $opt ),
+							'value' => $this->get_option( 'ava-menu-sub-border-radius' . $opt ),
 						),
-						'jet-menu-sub-padding' . $opt => array(
+						'ava-menu-sub-padding' . $opt => array(
 							'type'        => 'dimensions',
 							'parent'      => 'sub_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item padding', 'jet-menu' ),
+							'title'       => esc_html__( 'Item padding', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => 0,
@@ -1199,12 +1199,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-sub-padding' . $opt ),
+							'value' => $this->get_option( 'ava-menu-sub-padding' . $opt ),
 						),
-						'jet-menu-sub-margin' . $opt => array(
+						'ava-menu-sub-margin' . $opt => array(
 							'type'        => 'dimensions',
 							'parent'      => 'sub_' . $tab . '_tab',
-							'title'       => esc_html__( 'Item margin', 'jet-menu' ),
+							'title'       => esc_html__( 'Item margin', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => -50,
@@ -1212,7 +1212,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-sub-margin' . $opt ),
+							'value' => $this->get_option( 'ava-menu-sub-margin' . $opt ),
 						),
 					)
 				);
@@ -1234,15 +1234,15 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				array(
 					'advanced_icon' => array(
 						'parent' => 'menu_advanced_tabs',
-						'title'  => esc_html__( 'Icon', 'jet-menu' ),
+						'title'  => esc_html__( 'Icon', 'ava-menu' ),
 					),
 					'advanced_badge' => array(
 						'parent' => 'menu_advanced_tabs',
-						'title'  => esc_html__( 'Badge', 'jet-menu' ),
+						'title'  => esc_html__( 'Badge', 'ava-menu' ),
 					),
 					'advanced_arrow' => array(
 						'parent' => 'menu_advanced_tabs',
-						'title'  => esc_html__( 'Drop-down Arrow', 'jet-menu' ),
+						'title'  => esc_html__( 'Drop-down Arrow', 'ava-menu' ),
 					),
 				)
 			);
@@ -1259,12 +1259,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					'top_icon' => array(
 						'type'   => 'settings',
 						'parent' => 'icons_accordion',
-						'title'  => esc_html__( 'Top Level Icon', 'jet-menu' ),
+						'title'  => esc_html__( 'Top Level Icon', 'ava-menu' ),
 					),
 					'sub_icon' => array(
 						'type'   => 'settings',
 						'parent' => 'icons_accordion',
-						'title'  => esc_html__( 'Sub Level Icon', 'jet-menu' ),
+						'title'  => esc_html__( 'Sub Level Icon', 'ava-menu' ),
 					),
 				)
 			);
@@ -1277,19 +1277,19 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-' . $level . '-icon-size' => array(
+						'ava-menu-' . $level . '-icon-size' => array(
 							'type'       => 'slider',
 							'max_value'  => 150,
 							'min_value'  => 10,
-							'value'      => $this->get_option( 'jet-menu-' . $level . '-icon-size' ),
+							'value'      => $this->get_option( 'ava-menu-' . $level . '-icon-size' ),
 							'step_value' => 1,
-							'title'      => esc_html__( 'Icon size', 'jet-menu' ),
+							'title'      => esc_html__( 'Icon size', 'ava-menu' ),
 							'parent'     => $level . '_icon',
 						),
-						'jet-menu-' . $level . '-icon-margin' => array(
+						'ava-menu-' . $level . '-icon-margin' => array(
 							'type'        => 'dimensions',
 							'parent'      => $level . '_icon',
-							'title'       => esc_html__( 'Icon margin', 'jet-menu' ),
+							'title'       => esc_html__( 'Icon margin', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => -50,
@@ -1297,41 +1297,41 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-' . $level . '-icon-margin' ),
+							'value' => $this->get_option( 'ava-menu-' . $level . '-icon-margin' ),
 						),
-						'jet-menu-' . $level . '-icon-ver-position' => array(
+						'ava-menu-' . $level . '-icon-ver-position' => array(
 							'type'     => 'select',
 							'parent'   => $level . '_icon',
-							'title'    => esc_html__( 'Icon vertical position', 'jet-menu' ),
+							'title'    => esc_html__( 'Icon vertical position', 'ava-menu' ),
 							'multiple' => false,
 							'filter'   => false,
-							'value'    => $this->get_option( 'jet-menu-' . $level . '-icon-ver-position' ),
+							'value'    => $this->get_option( 'ava-menu-' . $level . '-icon-ver-position' ),
 							'options'  => array(
-								'center' => esc_html__( 'Center', 'jet-menu' ),
-								'top'    => esc_html__( 'Top', 'jet-menu' ),
-								'bottom' => esc_html__( 'Bottom', 'jet-menu' ),
+								'center' => esc_html__( 'Center', 'ava-menu' ),
+								'top'    => esc_html__( 'Top', 'ava-menu' ),
+								'bottom' => esc_html__( 'Bottom', 'ava-menu' ),
 							),
 						),
-						'jet-menu-' . $level . '-icon-hor-position' => array(
+						'ava-menu-' . $level . '-icon-hor-position' => array(
 							'type'     => 'select',
 							'parent'   => $level . '_icon',
-							'title'    => esc_html__( 'Icon horizontal position', 'jet-menu' ),
+							'title'    => esc_html__( 'Icon horizontal position', 'ava-menu' ),
 							'multiple' => false,
 							'filter'   => false,
-							'value'    => $this->get_option( 'jet-menu-' . $level . '-icon-hor-position' ),
+							'value'    => $this->get_option( 'ava-menu-' . $level . '-icon-hor-position' ),
 							'options'  => array(
-								'left'   => esc_html__( 'Left', 'jet-menu' ),
-								'right'  => esc_html__( 'Right', 'jet-menu' ),
-								'center' => esc_html__( 'Center', 'jet-menu' ),
+								'left'   => esc_html__( 'Left', 'ava-menu' ),
+								'right'  => esc_html__( 'Right', 'ava-menu' ),
+								'center' => esc_html__( 'Center', 'ava-menu' ),
 							),
 						),
-						'jet-menu-' . $level . '-icon-order' => array(
+						'ava-menu-' . $level . '-icon-order' => array(
 							'type'       => 'slider',
 							'max_value'  => 10,
 							'min_value'  => -10,
-							'value'      => $this->get_option( 'jet-menu-' . $level . '-icon-order' ),
+							'value'      => $this->get_option( 'ava-menu-' . $level . '-icon-order' ),
 							'step_value' => 1,
-							'title'      => esc_html__( 'Icon order', 'jet-menu' ),
+							'title'      => esc_html__( 'Icon order', 'ava-menu' ),
 							'parent'     => $level . '_icon',
 						),
 					)
@@ -1353,12 +1353,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					'top_badge' => array(
 						'type'   => 'settings',
 						'parent' => 'badges_accordion',
-						'title'  => esc_html__( 'Top Level Badge', 'jet-menu' ),
+						'title'  => esc_html__( 'Top Level Badge', 'ava-menu' ),
 					),
 					'sub_badge' => array(
 						'type'   => 'settings',
 						'parent' => 'badges_accordion',
-						'title'  => esc_html__( 'Sub Level Badge', 'jet-menu' ),
+						'title'  => esc_html__( 'Sub Level Badge', 'ava-menu' ),
 					),
 				)
 			);
@@ -1369,35 +1369,35 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->section_start( $level . '_badge' );
 
-				jet_menu_dynmic_css()->add_typography_options(
+				ava_menu_dynmic_css()->add_typography_options(
 					array(
-						'label'   => esc_html__( 'Badge', 'jet-menu' ),
-						'name'    => 'jet-menu-' . $level . '-badge',
+						'label'   => esc_html__( 'Badge', 'ava-menu' ),
+						'name'    => 'ava-menu-' . $level . '-badge',
 						'parent'  => $level . '_badge',
 					)
 				);
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-' . $level . '-badge-text-color' => array(
+						'ava-menu-' . $level . '-badge-text-color' => array(
 							'type'        => 'colorpicker',
 							'parent'      => $level . '_badge',
-							'title'       => esc_html__( 'Badge text color', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-' . $level . '-badge-text-color' ),
+							'title'       => esc_html__( 'Badge text color', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-' . $level . '-badge-text-color' ),
 							'alpha'       => true,
 						),
 					)
 				);
 
-				jet_menu_dynmic_css()->add_background_options( array(
-					'name'     => 'jet-menu-' . $level . '-badge-bg',
-					'label'    => esc_html__( 'Badge', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_background_options( array(
+					'name'     => 'ava-menu-' . $level . '-badge-bg',
+					'label'    => esc_html__( 'Badge', 'ava-menu' ),
 					'parent'   => $level . '_badge',
 				) );
 
-				jet_menu_dynmic_css()->add_border_options( array(
-					'name'     => 'jet-menu-' . $level . '-badge',
-					'label'    => esc_html__( 'Badge', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_border_options( array(
+					'name'     => 'ava-menu-' . $level . '-badge',
+					'label'    => esc_html__( 'Badge', 'ava-menu' ),
 					'parent'   => $level . '_badge',
 					'defaults' => array(
 						'top'    => '1',
@@ -1407,18 +1407,18 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					),
 				) );
 
-				jet_menu_dynmic_css()->add_box_shadow_options( array(
-					'name'     => 'jet-menu-' . $level . '-badge',
-					'label'    => esc_html__( 'Badge', 'jet-menu' ),
+				ava_menu_dynmic_css()->add_box_shadow_options( array(
+					'name'     => 'ava-menu-' . $level . '-badge',
+					'label'    => esc_html__( 'Badge', 'ava-menu' ),
 					'parent'   => $level . '_badge',
 				) );
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-' . $level . '-badge-border-radius' => array(
+						'ava-menu-' . $level . '-badge-border-radius' => array(
 							'type'        => 'dimensions',
 							'parent'      => $level . '_badge',
-							'title'       => esc_html__( 'Badge border radius', 'jet-menu' ),
+							'title'       => esc_html__( 'Badge border radius', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => 0,
@@ -1431,12 +1431,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-' . $level . '-badge-border-radius' ),
+							'value' => $this->get_option( 'ava-menu-' . $level . '-badge-border-radius' ),
 						),
-						'jet-menu-' . $level . '-badge-padding' => array(
+						'ava-menu-' . $level . '-badge-padding' => array(
 							'type'        => 'dimensions',
 							'parent'      => $level . '_badge',
-							'title'       => esc_html__( 'Badge padding', 'jet-menu' ),
+							'title'       => esc_html__( 'Badge padding', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => 0,
@@ -1444,12 +1444,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-' . $level . '-badge-padding' ),
+							'value' => $this->get_option( 'ava-menu-' . $level . '-badge-padding' ),
 						),
-						'jet-menu-' . $level . '-badge-margin' => array(
+						'ava-menu-' . $level . '-badge-margin' => array(
 							'type'        => 'dimensions',
 							'parent'      => $level . '_badge',
-							'title'       => esc_html__( 'Badge margin', 'jet-menu' ),
+							'title'       => esc_html__( 'Badge margin', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => -50,
@@ -1457,48 +1457,48 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-' . $level . '-badge-margin' ),
+							'value' => $this->get_option( 'ava-menu-' . $level . '-badge-margin' ),
 						),
-						'jet-menu-' . $level . '-badge-ver-position' => array(
+						'ava-menu-' . $level . '-badge-ver-position' => array(
 							'type'     => 'select',
 							'parent'   => $level . '_badge',
-							'title'    => esc_html__( 'Badge vertical position (may be overridden with order)', 'jet-menu' ),
+							'title'    => esc_html__( 'Badge vertical position (may be overridden with order)', 'ava-menu' ),
 							'multiple' => false,
 							'filter'   => false,
-							'value'    => $this->get_option( 'jet-menu-' . $level . '-badge-ver-position' ),
+							'value'    => $this->get_option( 'ava-menu-' . $level . '-badge-ver-position' ),
 							'options'  => array(
-								'top'    => esc_html__( 'Top', 'jet-menu' ),
-								'center' => esc_html__( 'Center', 'jet-menu' ),
-								'bottom' => esc_html__( 'Bottom', 'jet-menu' ),
+								'top'    => esc_html__( 'Top', 'ava-menu' ),
+								'center' => esc_html__( 'Center', 'ava-menu' ),
+								'bottom' => esc_html__( 'Bottom', 'ava-menu' ),
 							),
 						),
-						'jet-menu-' . $level . '-badge-hor-position' => array(
+						'ava-menu-' . $level . '-badge-hor-position' => array(
 							'type'     => 'select',
 							'parent'   => $level . '_badge',
-							'title'    => esc_html__( 'Badge horizontal position', 'jet-menu' ),
+							'title'    => esc_html__( 'Badge horizontal position', 'ava-menu' ),
 							'multiple' => false,
 							'filter'   => false,
-							'value'    => $this->get_option( 'jet-menu-' . $level . '-badge-hor-position' ),
+							'value'    => $this->get_option( 'ava-menu-' . $level . '-badge-hor-position' ),
 							'options'  => array(
-								'right'  => esc_html__( 'Right', 'jet-menu' ),
-								'center' => esc_html__( 'Center', 'jet-menu' ),
-								'left'   => esc_html__( 'Left', 'jet-menu' ),
+								'right'  => esc_html__( 'Right', 'ava-menu' ),
+								'center' => esc_html__( 'Center', 'ava-menu' ),
+								'left'   => esc_html__( 'Left', 'ava-menu' ),
 							),
 						),
-						'jet-menu-' . $level . '-badge-order' => array(
+						'ava-menu-' . $level . '-badge-order' => array(
 							'type'       => 'slider',
 							'max_value'  => 10,
 							'min_value'  => -10,
-							'value'      => $this->get_option( 'jet-menu-' . $level . '-badge-order' ),
+							'value'      => $this->get_option( 'ava-menu-' . $level . '-badge-order' ),
 							'step_value' => 1,
-							'title'      => esc_html__( 'Badge order', 'jet-menu' ),
+							'title'      => esc_html__( 'Badge order', 'ava-menu' ),
 							'parent'     => $level . '_badge',
 						),
-						'jet-menu-' . $level . '-badge-hide' => array(
+						'ava-menu-' . $level . '-badge-hide' => array(
 							'type'        => 'switcher',
 							'parent'     => $level . '_badge',
-							'title'       => esc_html__( 'Hide badge on mobile', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-' . $level . '-badge-hide', 'false' ),
+							'title'       => esc_html__( 'Hide badge on mobile', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-' . $level . '-badge-hide', 'false' ),
 							'toggle'      => array(
 								'true_toggle'  => 'Yes',
 								'false_toggle' => 'No',
@@ -1523,12 +1523,12 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 					'top_arrow' => array(
 						'type'   => 'settings',
 						'parent' => 'arrows_accordion',
-						'title'  => esc_html__( 'Top Level Arrow', 'jet-menu' ),
+						'title'  => esc_html__( 'Top Level Arrow', 'ava-menu' ),
 					),
 					'sub_arrow' => array(
 						'type'   => 'settings',
 						'parent' => 'arrows_accordion',
-						'title'  => esc_html__( 'Sub Level Arrow', 'jet-menu' ),
+						'title'  => esc_html__( 'Sub Level Arrow', 'ava-menu' ),
 					),
 				)
 			);
@@ -1541,32 +1541,32 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 				$this->builder->register_control(
 					array(
-						'jet-menu-' . $level . '-arrow' => array(
+						'ava-menu-' . $level . '-arrow' => array(
 							'type'        => 'iconpicker',
-							'label'       => esc_html__( 'Arrow icon', 'jet-menu' ),
-							'value'       => $this->get_option( 'jet-menu-' . $level . '-arrow', $default ),
+							'label'       => esc_html__( 'Arrow icon', 'ava-menu' ),
+							'value'       => $this->get_option( 'ava-menu-' . $level . '-arrow', $default ),
 							'parent'      => $level . '_arrow',
 							'icon_data'   => array(
-								'icon_set'    => 'jetMenuIcons',
-								'icon_css'    => jet_menu()->plugin_url( 'assets/public/css/font-awesome.min.css' ),
+								'icon_set'    => 'avaMenuIcons',
+								'icon_css'    => ava_menu()->plugin_url( 'assets/public/css/font-awesome.min.css' ),
 								'icon_base'   => 'fa',
 								'icon_prefix' => '',
 								'icons'       => $this->get_arrows_icons(),
 							),
 						),
-						'jet-menu-' . $level . '-arrow-size' => array(
+						'ava-menu-' . $level . '-arrow-size' => array(
 							'type'       => 'slider',
 							'max_value'  => 150,
 							'min_value'  => 10,
-							'value'      => $this->get_option( 'jet-menu-' . $level . '-arrow-size' ),
+							'value'      => $this->get_option( 'ava-menu-' . $level . '-arrow-size' ),
 							'step_value' => 1,
-							'title'      => esc_html__( 'Arrow size', 'jet-menu' ),
+							'title'      => esc_html__( 'Arrow size', 'ava-menu' ),
 							'parent'     => $level . '_arrow',
 						),
-						'jet-menu-' . $level . '-arrow-margin' => array(
+						'ava-menu-' . $level . '-arrow-margin' => array(
 							'type'        => 'dimensions',
 							'parent'      => $level . '_arrow',
-							'title'       => esc_html__( 'Arrow margin', 'jet-menu' ),
+							'title'       => esc_html__( 'Arrow margin', 'ava-menu' ),
 							'range'       => array(
 								'px' => array(
 									'min'  => -50,
@@ -1574,41 +1574,41 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 									'step' => 1,
 								),
 							),
-							'value' => $this->get_option( 'jet-menu-' . $level . '-arrow-margin' ),
+							'value' => $this->get_option( 'ava-menu-' . $level . '-arrow-margin' ),
 						),
-						'jet-menu-' . $level . '-arrow-ver-position' => array(
+						'ava-menu-' . $level . '-arrow-ver-position' => array(
 							'type'     => 'select',
 							'parent'   => $level . '_arrow',
-							'title'    => esc_html__( 'Arrow vertical position', 'jet-menu' ),
+							'title'    => esc_html__( 'Arrow vertical position', 'ava-menu' ),
 							'multiple' => false,
 							'filter'   => false,
-							'value'    => $this->get_option( 'jet-menu-' . $level . '-arrow-ver-position' ),
+							'value'    => $this->get_option( 'ava-menu-' . $level . '-arrow-ver-position' ),
 							'options'  => array(
-								'center' => esc_html__( 'Center', 'jet-menu' ),
-								'top'    => esc_html__( 'Top', 'jet-menu' ),
-								'bottom' => esc_html__( 'Bottom', 'jet-menu' ),
+								'center' => esc_html__( 'Center', 'ava-menu' ),
+								'top'    => esc_html__( 'Top', 'ava-menu' ),
+								'bottom' => esc_html__( 'Bottom', 'ava-menu' ),
 							),
 						),
-						'jet-menu-' . $level . '-arrow-hor-position' => array(
+						'ava-menu-' . $level . '-arrow-hor-position' => array(
 							'type'     => 'select',
 							'parent'   => $level . '_arrow',
-							'title'    => esc_html__( 'Arrow horizontal position', 'jet-menu' ),
+							'title'    => esc_html__( 'Arrow horizontal position', 'ava-menu' ),
 							'multiple' => false,
 							'filter'   => false,
-							'value'    => $this->get_option( 'jet-menu-' . $level . '-arrow-hor-position' ),
+							'value'    => $this->get_option( 'ava-menu-' . $level . '-arrow-hor-position' ),
 							'options'  => array(
-								'right'  => esc_html__( 'Right', 'jet-menu' ),
-								'center' => esc_html__( 'Center', 'jet-menu' ),
-								'left'   => esc_html__( 'Left', 'jet-menu' ),
+								'right'  => esc_html__( 'Right', 'ava-menu' ),
+								'center' => esc_html__( 'Center', 'ava-menu' ),
+								'left'   => esc_html__( 'Left', 'ava-menu' ),
 							),
 						),
-						'jet-menu-' . $level . '-arrow-order' => array(
+						'ava-menu-' . $level . '-arrow-order' => array(
 							'type'       => 'slider',
 							'max_value'  => 10,
 							'min_value'  => -10,
-							'value'      => $this->get_option( 'jet-menu-' . $level . '-arrow-order' ),
+							'value'      => $this->get_option( 'ava-menu-' . $level . '-arrow-order' ),
 							'step_value' => 1,
-							'title'      => esc_html__( 'Arrow order', 'jet-menu' ),
+							'title'      => esc_html__( 'Arrow order', 'ava-menu' ),
 							'parent'     => $level . '_arrow',
 						),
 					)
@@ -1622,32 +1622,32 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$this->builder->register_control(
 				array(
-					'jet-menu-mobile-toggle-color' => array(
+					'ava-menu-mobile-toggle-color' => array(
 						'type'        => 'colorpicker',
 						'parent'      => 'mobile_menu_tab',
-						'title'       => esc_html__( 'Toggle text color', 'jet-menu' ),
-						'value'       => $this->get_option( 'jet-menu-mobile-toggle-color' ),
+						'title'       => esc_html__( 'Toggle text color', 'ava-menu' ),
+						'value'       => $this->get_option( 'ava-menu-mobile-toggle-color' ),
 						'alpha'       => true,
 					),
-					'jet-menu-mobile-toggle-bg' => array(
+					'ava-menu-mobile-toggle-bg' => array(
 						'type'        => 'colorpicker',
 						'parent'      => 'mobile_menu_tab',
-						'title'       => esc_html__( 'Toggle background color', 'jet-menu' ),
-						'value'       => $this->get_option( 'jet-menu-mobile-toggle-bg' ),
+						'title'       => esc_html__( 'Toggle background color', 'ava-menu' ),
+						'value'       => $this->get_option( 'ava-menu-mobile-toggle-bg' ),
 						'alpha'       => true,
 					),
-					'jet-menu-mobile-container-bg' => array(
+					'ava-menu-mobile-container-bg' => array(
 						'type'        => 'colorpicker',
 						'parent'      => 'mobile_menu_tab',
-						'title'       => esc_html__( 'Container background color', 'jet-menu' ),
-						'value'       => $this->get_option( 'jet-menu-mobile-container-bg' ),
+						'title'       => esc_html__( 'Container background color', 'ava-menu' ),
+						'value'       => $this->get_option( 'ava-menu-mobile-container-bg' ),
 						'alpha'       => true,
 					),
-					'jet-menu-mobile-cover-bg' => array(
+					'ava-menu-mobile-cover-bg' => array(
 						'type'        => 'colorpicker',
 						'parent'      => 'mobile_menu_tab',
-						'title'       => esc_html__( 'Cover background color', 'jet-menu' ),
-						'value'       => $this->get_option( 'jet-menu-mobile-cover-bg' ),
+						'title'       => esc_html__( 'Cover background color', 'ava-menu' ),
+						'value'       => $this->get_option( 'ava-menu-mobile-cover-bg' ),
 						'alpha'       => true,
 					),
 				)
@@ -1658,7 +1658,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 			/**
 			 * Hook fires before page render
 			 */
-			do_action( 'jet-menu/options-page/before-render', $this->builder, $this );
+			do_action( 'ava-menu/options-page/before-render', $this->builder, $this );
 
 			$this->builder->render();
 		}
@@ -1670,7 +1670,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 * @return void
 		 */
 		public function section_start( $section ) {
-			do_action( 'jet-menu/options-page/section-start/' . $section, $this->builder, $this );
+			do_action( 'ava-menu/options-page/section-start/' . $section, $this->builder, $this );
 		}
 
 		/**
@@ -1680,11 +1680,11 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 * @return void
 		 */
 		public function section_end( $section ) {
-			do_action( 'jet-menu/options-page/section-end/' . $section, $this->builder, $this );
+			do_action( 'ava-menu/options-page/section-end/' . $section, $this->builder, $this );
 		}
 
 		public function get_arrows_icons() {
-			return apply_filters( 'jet-menu/arrow-icons', array(
+			return apply_filters( 'ava-menu/arrow-icons', array(
 				'fa-angle-down',
 				'fa-angle-double-down',
 				'fa-arrow-circle-down',
@@ -1720,7 +1720,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		public function export_url() {
 			return add_query_arg(
 				array(
-					'jet-action' => 'export-options',
+					'ava-action' => 'export-options',
 				),
 				esc_url( admin_url( 'admin.php' ) )
 			);
@@ -1733,7 +1733,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 */
 		public function process_reset() {
 
-			if ( ! isset( $_GET['jet-action'] ) || 'reset-options' !== $_GET['jet-action'] ) {
+			if ( ! isset( $_GET['ava-action'] ) || 'reset-options' !== $_GET['ava-action'] ) {
 				return;
 			}
 
@@ -1745,7 +1745,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			wp_redirect(
 				add_query_arg(
-					array( 'page' => jet_menu()->plugin_slug ),
+					array( 'page' => ava_menu()->plugin_slug ),
 					esc_url( admin_url( 'admin.php' ) )
 				)
 			);
@@ -1760,7 +1760,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 		 */
 		public function process_export() {
 
-			if ( ! isset( $_GET['jet-action'] ) || 'export-options' !== $_GET['jet-action'] ) {
+			if ( ! isset( $_GET['ava-action'] ) || 'export-options' !== $_GET['ava-action'] ) {
 				return;
 			}
 
@@ -1774,9 +1774,9 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 				$options = array();
 			}
 
-			$file = 'jet-menu-options-' . date( 'm-d-Y' ) . '.json';
+			$file = 'ava-menu-options-' . date( 'm-d-Y' ) . '.json';
 			$data = json_encode( array(
-				'jet_menu' => true,
+				'ava_menu' => true,
 				'options'  => $options,
 			) );
 
@@ -1809,16 +1809,16 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 
 			$options = isset( $_POST['data'] ) ? $_POST['data'] : array();
 
-			if ( empty( $options['jet_menu'] ) || empty( $options['options'] ) ) {
+			if ( empty( $options['ava_menu'] ) || empty( $options['options'] ) ) {
 				wp_send_json_error( array(
-					'message' => esc_html__( 'Incorrect data in options file', 'jet-menu' ),
+					'message' => esc_html__( 'Incorrect data in options file', 'ava-menu' ),
 				) );
 			}
 
 			$this->save_options( $this->options_slug, $options['options'] );
 
 			wp_send_json_success( array(
-				'message' => esc_html__( 'Options successfully imported. Page will be reloaded.', 'jet-menu' ),
+				'message' => esc_html__( 'Options successfully imported. Page will be reloaded.', 'ava-menu' ),
 			) );
 
 		}
@@ -1848,7 +1848,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 			update_option( $option_name, $options );
 			$this->fonts_loader->reset_fonts_cache();
 
-			do_action( 'jet-menu/options-page/save' );
+			do_action( 'ava-menu/options-page/save' );
 		}
 
 		/**
@@ -1941,7 +1941,7 @@ if ( ! class_exists( 'Jet_Menu_Options_Page' ) ) {
 	}
 }
 
-if ( ! function_exists( 'jet_menu_option_page' ) ) {
+if ( ! function_exists( 'ava_menu_option_page' ) ) {
 
 	/**
 	 * Returns instanse of the plugin class.
@@ -1949,7 +1949,7 @@ if ( ! function_exists( 'jet_menu_option_page' ) ) {
 	 * @since  1.0.0
 	 * @return object
 	 */
-	function jet_menu_option_page() {
-		return Jet_Menu_Options_Page::get_instance();
+	function ava_menu_option_page() {
+		return Ava_Menu_Options_Page::get_instance();
 	}
 }
